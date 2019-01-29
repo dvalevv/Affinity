@@ -1,0 +1,75 @@
+<!DOCTYPE php>
+
+<?php  //queries
+/*------------------------------------*/
+//setup
+include 'config.inc.php';
+$conn = new mysqli($database_host, $database_user, $database_pass,
+                   $database_name);
+
+/*------------------------------------*/
+//for creating a new user.
+function createUser($username, $name, $email, $password)
+{
+    $sql_search = "INSERT INTO `User` (`Username`, `Name`, `Email`, `Password`)"
+                  ." VALUES (".$username.",".$name.",".&email.",".$password.")";
+    $conn->query($sql_search);
+}
+
+/*------------------------------------*/
+//checking if the username is taken
+function checkForExistingUsername($username)
+{
+    $sql_search = "SELECT `Username` FROM `User` WHERE Username = '"
+                  .$username."'";
+    $result = $conn->query($sql_search);
+    //this if can be changed
+    if($result->num_rows != 0)
+        return true;
+    else
+        return false;
+}
+
+/*------------------------------------*/
+//updating an existing user private details (email and password only)
+function updateUser(&username, $email, $password)
+{
+    $sql_search = "UPDATE `User` SET `Email`= '".$email."',
+                  `Password`='".$password."' WHERE Username = '".$username."'";
+    $conn->query($sql_search);
+}
+
+/*------------------------------------*/
+//log in function
+function logIn(&username, $password)
+{
+    $sql_search = "SELECT `Username`, `Password` FROM `User` WHERE Username = '"
+                  .$username."' AND Password = '".$password."'";
+    $result = $conn->query($sql_search);
+    //this if can be changed
+    if($result->num_rows != 0)
+        return true;
+    else
+        return false;
+}
+
+/*------------------------------------*/
+
+/*------------------------------------*/
+
+/*------------------------------------*/
+
+/*------------------------------------*/
+
+/*------------------------------------*/
+
+/*------------------------------------*/
+
+/*------------------------------------*/
+
+/*------------------------------------*/
+
+
+
+
+?>
