@@ -9,7 +9,7 @@
     What the body needs:
     NavBar?
       Section for login -
-      - username/email field
+      - email field
       - password field
       Section for registration -
       Fields:
@@ -31,11 +31,12 @@
     <!-- Login section: takes username/email and password -->
     <section id="login">
       <h2>Login</h2>
-      <form>
-        Username/email:
-        <input type="text" name="user"> <br>
+      <!-- Form should validate user on this site. -->
+      <form method="post" action="./profile.html">
+        Email:
+        <input type="text" name="email"> <br>
         Password:
-        <input type="text" name="password"> <br>
+        <input type="password" name="password"> <br>
         <input type="submit" value="Log in">
       </form>
     </section>
@@ -43,7 +44,8 @@
     <!-- Register section: takes user info. -->
     <section id="register">
       <h2>Register</h2>
-      <form>
+      <!-- Form should validate user on this site. -->
+      <form method="post" action="./profile.html">
         First name:
         <input type="text" name="firstName"> <br>
         Last name:
@@ -51,9 +53,9 @@
         Email:
         <input type="text" name="email"> <br>
         Password:
-        <input type="text" name="password"> <br>
+        <input type="password" name="password"> <br>
         Confirm password:
-        <input type="text" name="password"> <br>
+        <input type="password" name="cPassword"> <br>
         Likes:
         <input type="text" name="likes"> <br>
         <input type="submit" value="Register">
