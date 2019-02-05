@@ -34,9 +34,9 @@ if(!checkForExistingUsername($username) && $password == $cPassword)
   for($l = 0; $l < sizeof($likes); $l++)
     addANewLikeableObject($username, $likes[$l]);
 
-  header("Location: ../Affinity/Homepage.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
+  header("Location: ../Affinity/webPages/profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
 }
 else
-  header("Location: ../Affinity/FailedRegPage.html"); 
+  header("Location: ../Affinity/webPages/profile.html"); 
 exit;
 ?>
