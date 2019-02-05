@@ -30,7 +30,7 @@ function test_input($data)
 if(!checkForExistingUsername($username) && $password == $cPassword)
 {
   createUser($username, $firstName." ".$lastName, $email, $password);
-
+  echo "creating...";
   for($l = 0; $l < sizeof($likes); $l++)
     addANewLikeableObject($username, $likes[$l]);
 
