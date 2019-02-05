@@ -239,7 +239,21 @@ function addANewDislikableObject($username, $object)
     $conn->query($sql_search);
 }
 /*------------------------------------*/
-
+//get objects from the likes table
+function getListOfLikableObjectsForUser($username)
+{
+    $sql_search = "SELECT * FROM `Likes` WHERE Username = '"
+                .$username."'";
+    $listOfLikableObjects = $conn->query($sql_search);
+    return $listOfLikableObjects;
+}
 /*------------------------------------*/
-
+//get objects from the dislikes table
+function getListOfDislikableObjectsForUser($username)
+{
+    $sql_search = "SELECT * FROM `Dislikes` WHERE Username = '"
+                .$username."'";
+    $listOfDislikableObjects = $conn->query($sql_search);
+    return $listOfDislikableObjects;
+}
 ?>
