@@ -3,7 +3,7 @@ for possible methods of implementation:
 https://stackoverflow.com/questions/11958243/button-that-runs-a-php-script-without-changing-current-page
 using hidden frames seems to be simplest method so consider using -->
 <?php
-include '/home/h51205jo/Affinity/SQL_Scripts/php_queries'; // Vlad's query file is imported
+include '../SQL_Scripts/php_queries'; // Vlad's query file is imported
 session_start();
 $username = $password = "";
 
