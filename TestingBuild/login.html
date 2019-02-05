@@ -1,0 +1,72 @@
+<!-- Web page for login/register -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login/Register</title>
+  </head>
+  <body>
+    <!--
+    What the body needs:
+    NavBar?
+      Section for login -
+      - email field
+      - password field
+      Section for registration -
+      Fields:
+      - name (Could separate to first/last)
+      - email
+      - password
+      - confirm password
+      - likes list
+      Buttons:
+      - Facebook
+      - LinkedIn
+    -->
+    <!-- Temp links: -->
+    <iframe style="display:none;" name="login"></iframe>
+    <iframe style="display:none;" name="register"></iframe>
+    <a href="profile.html">profile</a>
+    <a href="settings.html">settings</a>
+    <!-- End of temp links-->
+
+    <h1>Login/Register</h1>
+    <!-- Login section: takes username/email and password -->
+    <section id="login">
+      <h2>Login</h2>
+      <!-- Form should validate user on this site. -->
+      <form method="post" action="AffinityLogin.php" target="login">
+        Email:
+        <input type="text" name="email"> <br>
+        Password:
+        <input type="password" name="password"> <br>
+        <input type="submit" value="Log in">
+      </form>
+    </section>
+
+    <!-- Register section: takes user info. -->
+    <section id="register">
+      <h2>Register</h2>
+      <!-- Form should validate user on this site. -->
+      <form method="post" action="AffinityRegistration.php" target="register">
+        Username:
+        <input type="text" name="username"> <br>
+        First name:
+        <input type="text" name="firstName"> <br>
+        Last name:
+        <input type="text" name="lastName"> <br>
+        Email:
+        <input type="text" name="email"> <br>
+        Password:
+        <input type="password" name="password"> <br>
+        Confirm password:
+        <input type="password" name="cPassword"> <br>
+        Likes:
+        <input type="text" name="likes"> <br>
+        <input type="submit" value="Register">
+      </form>
+      <p>Connect with:
+      <button type="button">Facebook</button>
+      <button type="button">LinkedIn</button>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+mysql -h dbhost.cs.man.ac.uk -p 2018_comp10120_y8 << IN
+
+DELETE FROM User;
+
+INSERT INTO User(Username, Name, Email, Password) VALUES 
+	("Vlad.Iacob", "Vlad", "email1@email.com", "pass1"),
+	("Ben.Rimmer", "Ben","email2@email.com", "pass2"),
+	("Juan.Giraldo", "Juan", "email3@email.com", "pass3"),
+	("Denislav.Valev", "Denislav", "email4@email.com", "pass4"),
+	("Jason.Ozuzu", "Jason", "email5@email.com", "pass5"),
+	("Rumaan.Nasir", "Rumaan", "email6@email.com", "pass6"),
+	("Michael.Browne", "Michael", "email7@email.com", "pass7");
+
+
+DELETE FROM Event;
+
+INSERT INTO Event(Event_ID, Master, Expiration_Date, Visibility, Name, Location, Description) VALUES 
+    ("1","Vlad.Iacob","2019-07-20","1","event","Manchester","some event to test"),
+	("2","Wow","2045-05-4","0","private Event","Manchester2","some event to test no 2");
+
+DELETE FROM Likes;
+
+INSERT INTO Likes (Object, Username) VALUES 
+    ("speedcubing", "Vlad.Iacob"),
+    ("mathematics", "Vlad.Iacob"),
+    ("gaming", "Vlad.Iacob"),
+	("", "Ben.Rimmer"),
+	("", "Juan.Giraldo"),
+	("", "Denislav.Valev"),
+	("", "Jason.Ozuzu"),
+	("", "Rumaan.Nasir"),
+	("", "Michael.Browne");
+
+DELETE FROM Dislikes;
+
+INSERT INTO Dislikes (Object, Username) VALUES 
+    ("humanistic studies", "Vlad.Iacob"),
+    ("smocking", "Vlad.Iacob"),
+    ("drinking", "Vlad.Iacob"),
+	("", "Ben.Rimmer"),
+	("", "Juan.Giraldo"),
+	("", "Denislav.Valev"),
+	("", "Jason.Ozuzu"),
+	("", "Rumaan.Nasir"),
+	("", "Michael.Browne");
+
+DELETE FROM Participating;
+
+INSERT INTO Participating (Username, Event_ID) VALUES 
+    ("Vlad.Iacob", "1"),
+	("Ben.Rimmer", "1"),
+	("Juan.Giraldo", "1"),
+	("Denislav.Valev", "1"),
+	("Jason.Ozuzu", "1"),
+	("Rumaan.Nasir", "1"),
+	("Michael.Browne", "1"),
+	("Denislav.Valev", "2"),
+	("Jason.Ozuzu", "2"),
+	("Rumaan.Nasir", "2");
+
+IN
+
+
