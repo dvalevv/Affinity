@@ -4,14 +4,16 @@ https://stackoverflow.com/questions/11958243/button-that-runs-a-php-script-witho
 using hidden frames seems to be simplest method so consider using -->
 <?php
 include '../Affinity/SQL_Scripts/php_queries'; // Vlad's query file is imported
-$username = $password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")       // The data is retrieved from the source and is treated for sq1
 {                                               // injection
   $username = test_input($_POST["username"]);
-  $name = test_input($_POST["name"]);
+  $firstName = test_input($_POST["firstName"]);
+  $lastName = test_input($_POST["lastName"]);
   $email = test_input($_POST["email"]);
   $password = test_input($_POST["password"]);
+  $cPassword = test_input($_POST["cPassword"]);
+  $likes = explode(" ", test_input($_POST["likes"]));
 }
 	
 //Handling sql injection
@@ -25,13 +27,16 @@ function test_input($data)
 // If the username entered isn't already in the database, then everything proceeds as normal and an entry for them is created in the database.
 // If not, then the user should be redirected to an appropriate page (which will likely be the original registration page but with a message
 // indicating a failed registration
-if(!checkForExistingUsername($username))
+if(!checkForExistingUsername($username) && $password == $cPassword)
 {
-  createUser($username, $name, $email, $password);
-  // Code for entering the users likes/dislikes to the database will be here. Will be written later.
-  header("Location: /home/h51205jo/Affinity/Homepage.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
+  createUser($username, $firstName." ".$lastName, $email, $password);
+
+  for($l = 0; $l < sizeof($likes); $l++)
+    addANewLikeableObject($username, $likes[$l]);
+
+  header("Location: ../Affinity/Homepage.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
 }
 else
-  header("Location: /home/h51205jo/Affinity/FailedRegPage.html"); 
+  header("Location: ../Affinity/FailedRegPage.html"); 
 exit;
 ?>

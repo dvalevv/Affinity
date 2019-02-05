@@ -5,7 +5,6 @@ using hidden frames seems to be simplest method so consider using -->
 <?php
 include '../SQL_Scripts/php_queries'; // Vlad's query file is imported
 session_start();
-$username = $password = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")       // The data is retrieved from the source and is treated for sq1
 {                                               // injection
@@ -26,10 +25,10 @@ function test_input($data)
 // the login had failed and that they should try again)
 if(logIn($username, $password))
 {
-  $_SESSION['userdata'] = getUserData($username);                // Explanation for use of 'Session' at: https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
-  header("Location: /home/h51205jo/Affinity/Homepage.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
+  $_SESSION['userdata'] = getListOfLikableObjectsForUser($username);                // Explanation for use of 'Session' at: https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
+  header("Location: ../Affinity/Homepage.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
 }
 else
-  header("Location: /home/h51205jo/Affinity/FailedLoginPage.html"); 
+  header("Location: ../Affinity/FailedLoginPage.html"); 
 exit;
 ?>
