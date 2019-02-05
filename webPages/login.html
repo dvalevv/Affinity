@@ -23,6 +23,8 @@
       - LinkedIn
     -->
     <!-- Temp links: -->
+    <iframe style="display:none;" name="login"></iframe>
+    <iframe style="display:none;" name="register"></iframe>
     <a href="./profile.html">profile</a>
     <a href="./settings.html">settings</a>
     <!-- End of temp links-->
@@ -32,7 +34,7 @@
     <section id="login">
       <h2>Login</h2>
       <!-- Form should validate user on this site. -->
-      <form method="post" action="./profile.html">
+      <form method="post" action="AffinityLogin.php" target="login">
         Email:
         <input type="text" name="email"> <br>
         Password:
@@ -45,7 +47,7 @@
     <section id="register">
       <h2>Register</h2>
       <!-- Form should validate user on this site. -->
-      <form method="post" action="./profile.html">
+      <form method="post" action="AffinityRegistration.php" target="register">
         Username:
         <input type="text" name="username"> <br>
         First name:
