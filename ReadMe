@@ -1,6 +1,7 @@
 Fix log:
 
--php_queries : added 'global $conn;' to all functions
+-php_queries : added 'global $conn;' to all functions also fixed some typos and 
+               some overloading functions that do not work in php
 
 -affinityLogin : fixing names: php_queries.php and profile.html
 
