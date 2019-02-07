@@ -1,0 +1,46 @@
+<!-- Web page for login/register -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Settings</title>
+  </head>
+  <body>
+    <!--
+    What the body needs:
+    NavBar?
+      Section for settings -
+      Fields:
+      - photo
+      - name (Could separate to first/last)
+      - email
+      - change password (maybe enter old password to confirm change)
+      - confirm password
+      - likes list
+    -->
+    <!-- Temp links: -->
+    <a href="./login.html">login</a>
+    <a href="./profile.html">profile</a>
+    <!-- End of temp links-->
+
+    <!-- Register section: takes user info. -->
+    <h1>Settings</h1>
+    <form method="post">
+      Photo:
+      <img src="" alt="Profile picture">
+      <p>(Some way to change profile picture goes here)</p>
+      First name:
+      <input type="text" name="firstName"> <br>
+      Last name:
+      <input type="text" name="lastName"> <br>
+      Email:
+      <input type="text" name="email"> <br>
+      Password:
+      <input type="password" name="password"> <br>
+      Confirm password:
+      <input type="password" name="cPassword"> <br>
+      Likes:
+      <input type="text" name="likes"> <br>
+      <input type="submit" value="Save Changes">
+    </form>
+  </body>
+</html>
