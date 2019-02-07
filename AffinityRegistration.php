@@ -3,7 +3,7 @@ for possible methods of implementation:
 https://stackoverflow.com/questions/11958243/button-that-runs-a-php-script-without-changing-current-page
 using hidden frames seems to be simplest method so consider using -->
 <?php
-include '../SQL_Scripts/php_queries'; // Vlad's query file is imported
+include 'php_queries.php'; // Vlad's query file is imported
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")       // The data is retrieved from the source and is treated for sq1
 {                                               // injection
@@ -27,16 +27,16 @@ function test_input($data)
 // If the username entered isn't already in the database, then everything proceeds as normal and an entry for them is created in the database.
 // If not, then the user should be redirected to an appropriate page (which will likely be the original registration page but with a message
 // indicating a failed registration
-if(!checkForExistingUsername($username) && $password == $cPassword)
+if($password == $cPassword && !checkForExistingUsername($username))
 {
   createUser($username, $firstName." ".$lastName, $email, $password);
 
   for($l = 0; $l < sizeof($likes); $l++)
     addANewLikeableObject($username, $likes[$l]);
 
-  header("Location: ../Affinity/webPages/profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
+  header("Location: profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
 }
 else
-  header("Location: ../Affinity/webPages/profile.html"); 
+  header("Location: profile.html"); 
 exit;
 ?>

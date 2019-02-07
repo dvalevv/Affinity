@@ -16,6 +16,7 @@ $conn = new mysqli($database_host, $database_user, $database_pass,
 //for creating a new user.
 function createUser($username, $name, $email, $password)
 {
+    global $conn;
     $sql_search = "INSERT INTO `User` (`Username`, `Name`, `Email`, `Password`)"
                 ." VALUES ('".$username."','".$name."','".$email."','".$password."')";
     $conn->query($sql_search);
@@ -25,6 +26,7 @@ function createUser($username, $name, $email, $password)
 //get data from user
 function getUserData($username)
 {
+    global $conn;
     $sql_search = "SELECT `Name`, `Email` FROM `User` WHERE Username = '"
                 .$username."'";
     $result = $conn->query($sql_search);
@@ -43,6 +45,7 @@ function getUserData($username)
 //checking if the username is taken
 function checkForExistingUsername($username)
 {
+    global $conn;
     $sql_search = "SELECT `Username` FROM `User` WHERE Username = '"
                 .$username."'";
     $result = $conn->query($sql_search);
@@ -57,6 +60,7 @@ function checkForExistingUsername($username)
 //updating an existing user's private details (email and password only)
 function updateUser($username, $email, $password)
 {
+    global $conn;
     $sql_search = "UPDATE `User` SET `Email`= '".$email."', `Password`='"
                 .$password."' WHERE Username = '".$username."'";
     $conn->query($sql_search);
@@ -66,6 +70,7 @@ function updateUser($username, $email, $password)
 //log in function
 function logIn($username, $password)
 {
+    global $conn;
     $sql_search = "SELECT `Username`, `Password` FROM `User` WHERE Username = '"
                 .$username."' AND Password = '".$password."'";
     $result = $conn->query($sql_search);
@@ -83,6 +88,7 @@ function logIn($username, $password)
 function createEvent($eventId, $master, $expirationDate, $visibility, $name,
                      $location, $description)
 {
+    global $conn;
     $sql_search = "INSERT INTO `Event`(`Event_ID`, `Master`, `Expiration_Date`,"
                 ."`Visibility`, `Name`, `Location`, `Description`)"
                 ."VALUES('".$eventId."','".$master."','".$expirationDate."','"
@@ -94,6 +100,7 @@ function createEvent($eventId, $master, $expirationDate, $visibility, $name,
 function createEvent($master, $expirationDate, $visibility, $name, $location,
                      $description)
 {
+    global $conn;
     $sql_nextEventID = "SELECT Event_ID FROM `Event` ORDER BY `Event`.`Event_ID` DESC";
     $result = $conn->querry($sql_nextEventID);
     $eventIdArray = $result->fetch_assoc();
@@ -110,6 +117,7 @@ function createEvent($master, $expirationDate, $visibility, $name, $location,
 //get data from event
 function getEventData($eventId)
 {
+    global $conn;
     $sql_search = "SELECT * FROM `Event` WHERE Event_ID = '"
                 .$eventId."'";
     $result = $conn->query($sql_search);
@@ -132,6 +140,7 @@ function getEventData($eventId)
 //updating an existing event's details (name, visibility, location, description only)
 function updateEvent($eventId, $name, $visibility, $location, $description)
 {
+    global $conn;
     $sql_search = "UPDATE `Event` SET `Name`= '".$name."',
                 `Visibility`='".$visibility."', `Location` = '".$location
                 ."', `Description` = '".$description."' WHERE Event_ID = '".$eventId."'";
@@ -141,6 +150,7 @@ function updateEvent($eventId, $name, $visibility, $location, $description)
 //or update by master ! in this case, $eventid does not matter, use 0 or null
 function updateEvent($eventId, $name, $visibility, $location, $description, $master)
 {
+    global $conn;
     $sql_search = "UPDATE `Event` SET `Name`= '".$name."',
                 `Visibility`='".$visibility."', `Location` = '".$location
                 ."', `Description` = '".$description."' WHERE Master = '".$master."'";
@@ -151,6 +161,7 @@ function updateEvent($eventId, $name, $visibility, $location, $description, $mas
 //deleting an event
 function deteleEvent($eventId)
 {
+    global $conn;
     //deleting the event from the Event table
     $sql_search = "DELETE FROM `Event` WHERE Event_ID ='"
                 .$eventId."'";
@@ -168,6 +179,7 @@ function deteleEvent($eventId)
 //this returns an array of Event_IDs for each event the user is participating
 function getListOfEventsForUser($username)
 {
+    global $conn;
     $sql_search = "SELECT `Event_ID` FROM `Participating` WHERE Username = '"
                 .$username."'";
     $listOfEvent_IDs = $conn->query($sql_search);
@@ -178,6 +190,7 @@ function getListOfEventsForUser($username)
 //this returns an array of Usernames for each user that is participating
 function getListOfUsersForEvent($eventId)
 {
+    global $conn;
     $sql_search = "SELECT `Username` FROM `Participating` WHERE Event_ID = '"
                 .$eventId."'";
     $listOfUsernames = $conn->query($sql_search);
@@ -188,6 +201,7 @@ function getListOfUsersForEvent($eventId)
 //this deletes every entry of an event in the participating table
 function deteleAllEventEntriesInParticipating($eventId)
 {
+    global $conn;
     $sql_search = "DELETE FROM `Participating` WHERE Event_ID ='"
                 .$eventId."'";
     $conn->query($sql_search);
@@ -197,6 +211,7 @@ function deteleAllEventEntriesInParticipating($eventId)
 //adds a new instance in the participating table
 function addANewParticipation($username, $eventID)
 {
+    global $conn;
     $sql_search = "INSERT INTO `Participating` (`Username`, `Event_ID`) "
                 ."VALUES ('".$username."','".$eventId."')";
     $conn->query($sql_search);
@@ -207,6 +222,7 @@ function addANewParticipation($username, $eventID)
 //this deletes an instance in the likes table
 function deteleObjectFromLikes($username, $object)
 {
+    global $conn;
     $sql_search = "DELETE FROM `Likes` WHERE Username ='"
                 .$username."' AND Object = '".$object."'";
     $conn->query($sql_search);
@@ -216,6 +232,7 @@ function deteleObjectFromLikes($username, $object)
 //adds a new instance in the likes table
 function addANewLikableObject($username, $object)
 {
+    global $conn;
     $sql_search = "INSERT INTO `Likes` (`Object`, `Username`) "
                 ."VALUES ('".$object."','".$username."')";
     $conn->query($sql_search);
@@ -225,6 +242,7 @@ function addANewLikableObject($username, $object)
 //this deletes an instance in the dislikes table
 function deteleObjectFromDislikes($username, $object)
 {
+    global $conn;
     $sql_search = "DELETE FROM `Dislikes` WHERE Username ='"
                 .$username."' AND Object = '".$object."'";
     $conn->query($sql_search);
@@ -234,6 +252,7 @@ function deteleObjectFromDislikes($username, $object)
 //adds a new instance in the likes table
 function addANewDislikableObject($username, $object)
 {
+    global $conn;
     $sql_search = "INSERT INTO `Dislikes` (`Object`, `Username`) "
                 ."VALUES ('".$object."','".$username."')";
     $conn->query($sql_search);
@@ -242,6 +261,7 @@ function addANewDislikableObject($username, $object)
 //get objects from the likes table
 function getListOfLikableObjectsForUser($username)
 {
+    global $conn;
     $sql_search = "SELECT * FROM `Likes` WHERE Username = '"
                 .$username."'";
     $listOfLikableObjects = $conn->query($sql_search);
@@ -251,6 +271,7 @@ function getListOfLikableObjectsForUser($username)
 //get objects from the dislikes table
 function getListOfDislikableObjectsForUser($username)
 {
+    global $conn;
     $sql_search = "SELECT * FROM `Dislikes` WHERE Username = '"
                 .$username."'";
     $listOfDislikableObjects = $conn->query($sql_search);

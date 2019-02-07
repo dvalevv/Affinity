@@ -3,7 +3,7 @@ for possible methods of implementation:
 https://stackoverflow.com/questions/11958243/button-that-runs-a-php-script-without-changing-current-page
 using hidden frames seems to be simplest method so consider using -->
 <?php
-include '../SQL_Scripts/php_queries'; // Vlad's query file is imported
+include 'php_queries.php'; // Vlad's query file is imported
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")       // The data is retrieved from the source and is treated for sq1
@@ -26,11 +26,9 @@ function test_input($data)
 if(logIn($username, $password))
 {
   $_SESSION['userdata'] = getListOfLikableObjectsForUser($username);                // Explanation for use of 'Session' at: https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
-  // echo "OPENED";
-  header("Location: ../Affinity/webPages/profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
+  header("Location: profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
 }
 else
-  // echo "OPENED";
-  header("Location: ../Affinity/webPages/profile.html"); 
+  header("Location: profile.html"); 
 exit;
 ?>
