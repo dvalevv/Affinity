@@ -1,0 +1,13 @@
+Fix log:
+
+-php_queries : added 'global $conn;' to all functions
+
+-affinityLogin : fixing names: php_queries.php and profile.html
+
+-affinityRegister: fixing names: php_queries.php and profile.html
+                : reversed the comparetion between password and the confirmation
+                : maybe think of a way to check the passwords in html and NOT in php
+
+- fixed the link between Rumaan's and Ben's pages
+
+- fixed naming the scripts in Ben's pages
