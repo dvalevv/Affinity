@@ -85,8 +85,8 @@ function logIn($username, $password)
 //functions for the event
 /*------------------------------------*//*------------------------------------*/
 //for creating a new event.
-function createEvent($eventId, $master, $expirationDate, $visibility, $name,
-                     $location, $description)
+function createEventWithID($eventId, $master, $expirationDate, $visibility, $name,
+                           $location, $description)
 {
     global $conn;
     $sql_search = "INSERT INTO `Event`(`Event_ID`, `Master`, `Expiration_Date`,"
@@ -138,7 +138,7 @@ function getEventData($eventId)
 
 /*------------------------------------*/
 //updating an existing event's details (name, visibility, location, description only)
-function updateEvent($eventId, $name, $visibility, $location, $description)
+function updateEventWithID($eventId, $name, $visibility, $location, $description)
 {
     global $conn;
     $sql_search = "UPDATE `Event` SET `Name`= '".$name."',
@@ -230,7 +230,7 @@ function deteleObjectFromLikes($username, $object)
 
 /*------------------------------------*/
 //adds a new instance in the likes table
-function addANewLikableObject($username, $object)
+function addANewLikeableObject($username, $object)
 {
     global $conn;
     $sql_search = "INSERT INTO `Likes` (`Object`, `Username`) "
@@ -250,7 +250,7 @@ function deteleObjectFromDislikes($username, $object)
 
 /*------------------------------------*/
 //adds a new instance in the likes table
-function addANewDislikableObject($username, $object)
+function addANewDislikeableObject($username, $object)
 {
     global $conn;
     $sql_search = "INSERT INTO `Dislikes` (`Object`, `Username`) "
@@ -259,7 +259,7 @@ function addANewDislikableObject($username, $object)
 }
 /*------------------------------------*/
 //get objects from the likes table
-function getListOfLikableObjectsForUser($username)
+function getListOfLikeableObjectsForUser($username)
 {
     global $conn;
     $sql_search = "SELECT * FROM `Likes` WHERE Username = '"
@@ -269,7 +269,7 @@ function getListOfLikableObjectsForUser($username)
 }
 /*------------------------------------*/
 //get objects from the dislikes table
-function getListOfDislikableObjectsForUser($username)
+function getListOfDislikeableObjectsForUser($username)
 {
     global $conn;
     $sql_search = "SELECT * FROM `Dislikes` WHERE Username = '"
