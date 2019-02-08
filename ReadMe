@@ -12,3 +12,5 @@ Fix log:
 - fixed the link between Rumaan's and Ben's pages
 
 - fixed naming the scripts in Ben's pages
+
+-toy for jason: echo '<script language="javascript">window.location.href = "redirect.php"</script>'; // using javascript to redirect. refer to: https://stackoverflow.com/questions/5411538/redirect-from-an-html-page
