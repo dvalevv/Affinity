@@ -159,7 +159,7 @@ function updateEvent($eventId, $name, $visibility, $location, $description, $mas
 
 /*------------------------------------*/
 //deleting an event
-function deteleEvent($eventId)
+function deleteEvent($eventId)  // Fixed spelling of function
 {
     global $conn;
     //deleting the event from the Event table
@@ -199,7 +199,7 @@ function getListOfUsersForEvent($eventId)
 
 /*------------------------------------*/
 //this deletes every entry of an event in the participating table
-function deteleAllEventEntriesInParticipating($eventId)
+function deleteAllEventEntriesInParticipating($eventId) // Fixed typo 
 {
     global $conn;
     $sql_search = "DELETE FROM `Participating` WHERE Event_ID ='"
@@ -220,7 +220,7 @@ function addANewParticipation($username, $eventID)
 
 /*------------------------------------*/
 //this deletes an instance in the likes table
-function deteleObjectFromLikes($username, $object)
+function deleteObjectFromLikes($username, $object) // Fixed typo
 {
     global $conn;
     $sql_search = "DELETE FROM `Likes` WHERE Username ='"
@@ -240,7 +240,7 @@ function addANewLikeableObject($username, $object)
 
 /*------------------------------------*/
 //this deletes an instance in the dislikes table
-function deteleObjectFromDislikes($username, $object)
+function deleteObjectFromDislikes($username, $object) // Fixed typo
 {
     global $conn;
     $sql_search = "DELETE FROM `Dislikes` WHERE Username ='"
