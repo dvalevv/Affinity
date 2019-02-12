@@ -38,11 +38,11 @@ INSERT INTO Likes (Object, Username) VALUES
 	("criket", "Rumaan.Nasir"),
 	("football", "Rumaan.Nasir"),
 	("pool", "Rumaan.Nasir"),
-	("gym", "Michael.Browne");
-	("uk rap", "Michael.Browne");
-	("pizza", "Michael.Browne");
-	("sleep", "Michael.Browne");
-	("partying", "Michael.Browne");
+	("gym", "Michael.Browne"),
+	("uk rap", "Michael.Browne"),
+	("pizza", "Michael.Browne"),
+	("sleep", "Michael.Browne"),
+	("partying", "Michael.Browne"),
 	("socialising", "Michael.Browne");
 
 IN
