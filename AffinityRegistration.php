@@ -34,9 +34,10 @@ if($password == $cPassword && !checkForExistingUsername($username))
   for($l = 0; $l < sizeof($likes); $l++)
     addANewLikeableObject($username, $likes[$l]);
 
-  header("Location: profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
+  // header("Location: profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
+  echo '<script language="javascript"> window.location.href = "profileRedirect.php"</script>';
 }
 else
-  header("Location: profile.html"); 
+  echo '<script language="javascript"> window.location.href = "loginRedirect.php"</script>';
 exit;
 ?>
