@@ -26,15 +26,19 @@
       <h2>Create your own event:</h2>
       <!-- Form should validate user on this site. -->
       <form method="post">
-        Event name:
+        Event name:<br>
         <input type="text" name="name"> <br>
+        Event location:<br>
+	<input type="text" name="location"> <br>
         Event description:<br>
         <textarea name="description" rows="4" cols="30"></textarea> <br>
         Event publicity: <br>
         private:
         <input type="radio" name="publicity" value="private">
         public:
-        <input type="radio" name="publicity" value="public"> <br>
+        <input type="radio" name="publicity" value="public"> <br><br>
+	Event expiration date:<br>
+	<input type="text" name="expirationDate"> <br>
         <input type="submit" value="Submit Event">
         <!-- This will submit to the events table-->
       </form>
@@ -44,7 +48,7 @@
     are creating/are nearby, so they can automatically join that event.
     -->
     <div id="browsePublicEvents">
-      <h2>Some facility here to browse current public events</h2>
+      <h2>Possibly some facility here to browse current public events</h2>
     </div>
   </body>
 </html>
