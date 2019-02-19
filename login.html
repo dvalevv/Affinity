@@ -7,7 +7,7 @@
     <meta name="author" content="Team Y8">
     <meta name="description" content="Login or register to an account."/>
 	
-    <link rel="stylesheet" type="text/css" href="css/main.css">    
+    <link rel="stylesheet" type="text/css" href="css/newcss.css">    
   </head>
   <body>
     <!--Include the JavaScript SDK on the page.-->
@@ -48,46 +48,52 @@
         </ul>
       </nav>
     </header>
+    
+    <div class="short"></div>
 
-    <h1>Login/Register</h1>
+    <h1 class="center">Login/Register</h1>
     <!-- Login section: takes username/email and password -->
-    <section id="login">
-      <h2>Login</h2>
-      <!-- Form should validate user on this site. -->
-      <form method="post" action="AffinityLogin.php">
-        Email:
-        <input type="text" name="email"> <br>
-        Password:
-        <input type="password" name="password"> <br>
-        <input type="submit" value="Log in">
-      </form>
-    </section>
-
+    <div class="halfLeft tall">
+      <section id="login">
+        <h2>Login</h2>
+        <!-- Form should validate user on this site. -->
+        <form method="post" action="AffinityLogin.php">
+          Email:
+          <input type="text" name="email"> <br>
+          Password:
+          <input type="password" name="password"> <br>
+          <input type="submit" value="Log in">
+        </form>
+      </section>
+    </div>
+    
     <!-- Register section: takes user info. -->
-    <section id="register">
-      <h2>Register</h2>
-      <!-- Form should validate user on this site. -->
-      <form method="post" action="AffinityRegistration.php">
-        Username:
-        <input type="text" name="username"> <br>
-        First name:
-        <input type="text" name="firstName"> <br>
-        Last name:
-        <input type="text" name="lastName"> <br>
-        Email:
-        <input type="text" name="email"> <br>
-        Password:
-        <input type="password" name="password"> <br>
-        Confirm password:
-        <input type="password" name="cPassword"> <br>
-        Likes:
-        <input type="text" name="likes"> <br>
-        <input type="submit" value="Register">
-      </form>
-      <h5>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; OR</h5>
-      <!-- Fb login button -->
-      <div class="fb-login-button" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>  <br>
-      <button type="button">LinkedIn</button>
-    </section>
+    <div class="halfRight tall">
+      <section id="register">
+        <h2>Register</h2>
+        <!-- Form should validate user on this site. -->
+        <form method="post" action="AffinityRegistration.php">
+          Username:
+          <input type="text" name="username"> <br>
+          First name:
+          <input type="text" name="firstName"> <br>
+          Last name:
+          <input type="text" name="lastName"> <br>
+          Email:
+          <input type="text" name="email"> <br>
+          Password:
+          <input type="password" name="password"> <br>
+          Confirm password:
+          <input type="password" name="cPassword"> <br>
+          Likes:
+          <input type="text" name="likes"> <br>
+          <input type="submit" value="Register">
+        </form>
+        <h5>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; OR</h5>
+        <!-- Fb login button -->
+        <div class="fb-login-button" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>  <br>
+        <button type="button">LinkedIn</button>
+      </section>
+    </div>
   </body>
 </html>

@@ -1,0 +1,92 @@
+/* Testing out a new CSS that can be applied to all pages
+   with specific classes/IDs for web pages with specific
+   styles.
+*/
+
+/* Header - full width, grey colour, 50px height */
+header {
+  width: 96.5%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: #ddd;
+  height: 50px;
+  position: fixed;
+  top: 0;
+}
+
+/* Nav bar: right side */
+nav {
+  float: right;
+}
+
+/* Nav bar items: no list style, left float, 
+   shifted right 20px
+*/
+nav ul li {
+  list-style: none;
+  float: left;
+  margin-right: 20px;
+}
+
+/* Nav bar links: remove decoration, make them bold */
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.center {
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
+  background: #eee;
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.halfLeft, .halfRight {
+  width: 48%;
+  margin-left: 1%;
+  margin-right: 1%;
+  background: #eee;
+  overflow: auto;
+  position: relative;
+}
+
+.halfLeft {  
+  float: left;
+}
+
+.halfRight {  
+  float: right;
+}
+
+.short {
+  height: 50px;
+}
+
+.medium {
+  height: 240px;
+}
+
+.tall {
+  height: 500px;
+}
+
+
+#login, #register {
+  background: #bbb;
+  width: 90%;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
