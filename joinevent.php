@@ -11,7 +11,7 @@
     <div class="container">
         <div class="header">
             <div class="logo">
-                <img src="images/logo.png" alt="Logo">
+                <img src="img/logo.png" alt="Logo">
             </div>
             <div class="menu">
                 <ul>
@@ -26,19 +26,25 @@
         <div class="body">
             <div class="col-3 myevent">
                 <h2>Your Event:</h2>
-                <img src="images/eventshow.png" alt="EventShow">
+                <img src="img/eventshow.png" alt="EventShow">
             </div>
-            <?php
-            if(isset($_GET["eventData"]))
-              $eventData = $_GET["eventData"];
+<?php
+            include "php_queries.php";
+            if(isset($_GET["eventName"]) && isset($_GET["eventLocation"]) && isset($_GET["eventExpiration"]))
+            {   
+              $eventName = $_GET["eventName"];
+              $eventLocation = $_GET["eventLocation"];
+              $eventExpiration = $_GET["eventExpiration"];
+            } 
 
-            echo "<div class="col-7">
-                <p>$eventData["Name"]</p>                    
-                <p>$eventData["Location"] . " " . $eventData["Expiration_Date"]</p>
+            echo "<div class=\"col-7\">
+                <p>$eventName</p>                    
+                <p>$eventLocation. $eventExpiration</p>
                 <button>Click Here to Find a Match</button>
             </div>
-            <div class="clear-both"></div>";
-            ?>
+            <div class=\"clear-both\"></div>";
+?>
+
 <!--
             <div class="col-7">
                 <p>Behemoth</p>                    

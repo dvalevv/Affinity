@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +9,7 @@
   <div class="container">
     <div class="header">
       <div class="logo">
-        <img src="images/logo.png" alt="Logo">
+        <img src="img/logo.png" alt="Logo">
       </div>
       <div class="menu">
         <ul>
@@ -26,48 +24,53 @@
     </div>
 
     <!-- Adding code for generating events and displaying their details on the page (Jason) -->    
-    <?php
+<?php
+    ini_set('display_errors', 1); // Useful code for displaying the cause of errors. Sourced from link: https://stackoverflow.com/questions/17693391/500-internal-server-error-for-php-file-not-for-html
     include "php_queries.php";
-    session_start();
-    $eventList = getAllEventID(); // Need a function to get the eventID of every event in the database
+    $eventList = getAllEventID(); // Need a function to get the eventID of every event in the database. This function for some reason does not currently return an array, making the code faulty
     $noOfEvents = sizeof($eventList);
-    
-    if(noOfEvents == 0)
-      break;
 
-    else if((noOfEvents % 3) == 0)
+    if($noOfEvents == 0)
+      echo "No events to display";
+
+    else if(($noOfEvents % 3) == 0)
     {
-      for($i = 0; $i < noOfEvents; $i+3)
+      for($i = 0; $i < $noOfEvents; $i+3)
+      {
         $event1 = getEventData($eventList[$i]); $event2 = getEventData($eventList[$i+1]); $event3 = getEventData($eventList[$i+2]);
         // Useful info on sending data to the next page via a hyperlink: https://stackoverflow.com/questions/9696194/how-to-send-a-data-to-php-page-when-clicking-on-a-link
-        echo "<div class="body">
-      <div class="col-3">
-        <div class="event">
-          <a href="joinevent.php?eventData=$event1"> $event1["Name"] <img src="images/event.png" alt="$event1["Name"]"></a>
+        echo "<div class=\"body\">
+      <div class=\"col-3\">
+        <div class=\"event\">
+          <a href=\"joinevent.php?eventName=$event1[Name]&&eventLocation=$event1[Location]&&eventExpiration=$event1[Expiration_Date]\"><img src=\"img/event.png\" alt=\"$event1[Name]\"></a>
         </div>
-        <div class="event">
-          <a href="joinevent.php?eventData=$event2"> $event2["Name"] <img src="images/event.png" alt="$event2["Name"]"></a>
+        <div class=\"event\">
+          <a href=\"joinevent.php?eventName=$event2[Name]&&eventLocation=$event2[Location]&&eventExpiration=$event2[Expiration_Date]\"><img src=\"img/event.png\" alt=\"$event2[Name]\"></a>
         </div>
-        <div class="event">
-          <a href="joinevent.php?eventData=$event3"> $event3["Name"] <img src="images/event.png" alt="$event3["Name"]"></a>
+        <div class=\"event\">
+          <a href=\"joinevent.php?eventName=$event3[Name]&&eventLocation=$event3[Location]&&eventExpiration=$event3[Expiration_Date]\"><img src=\"img/event.png\" alt=\"$event3[Name]\"></a>
         </div>
       </div>
-      <div class="clear-both"></div>
+      <div class=\"clear-both\"></div>
     </div>";
+     }
     }
     else
     {
-      for($i = 0; $i < noOfEvents; $i++)
-        $event = getEventData($eventList[$i]);
-        echo "<div class="body">
-      <div class="col-3">
-        <div class="event">
-          <a href="joinevent.php?eventData=$event"> $event["Name"] <img src="images/event.png" alt="$event["Name"]"></a>
+      for($i = 0; $i < $noOfEvents; $i++)
+      {
+        // $event = getEventData($eventList[$i]); // requires modification to getEventData function to allow it to return an array. Currently returns a mysqli object.
+        $event = getEventData(1);
+        echo "<div class=\"body\">
+      <div class=\"col-3\">
+        <div class=\"event\">
+          <a href=\"joinevent.php?eventName=$event[Name]&&eventLocation=$event[Location]&&eventExpiration=$event[Expiration_Date]\"><img src=\"img/event.png\" alt=\"$event[Name]\"></a>
         </div>
-      <div class="clear-both"></div>
+      <div class=\"clear-both\"></div>
     </div>";
+     }
     }
-    ?>
+?>
 
 <!--
     <div class="body">
