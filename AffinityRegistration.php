@@ -35,7 +35,7 @@ if($password == $cPassword && !checkForExistingUsername($username))
     addANewLikeableObject($username, $likes[$l]);
 
   // header("Location: profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
-  echo '<script language="javascript"> window.location.href = "profileRedirect.php"</script>';
+  echo '<script language="javascript"> window.location.href = "homepageRedirect.php"</script>';
 }
 else
   echo '<script language="javascript"> window.location.href = "loginRedirect.php"</script>';

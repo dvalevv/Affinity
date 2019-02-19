@@ -28,7 +28,7 @@ if(logIn($username, $password))
   $_SESSION['userdata'] = getListOfLikableObjectsForUser($username);                // Explanation for use of 'Session' at: https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
   // header("Location: profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241 Removed to fix redirects
 
-  echo '<script language="javascript"> window.location.href = "profileRedirect.php"</script>';
+  echo '<script language="javascript"> window.location.href = "homepageRedirect.php"</script>';
 }
 else
   echo '<script language="javascript"> window.location.href = "loginRedirect.php"</script>';
