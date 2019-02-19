@@ -137,6 +137,16 @@ function getEventData($eventId)
 }
 
 /*------------------------------------*/
+//get all events id
+function getAllEventID()
+{
+    global $conn;
+    $sql_search = "SELECT Event_ID FROM `Event`";
+    $result = $conn->query($sql_search);
+    return $result;
+}
+
+/*------------------------------------*/
 //updating an existing event's details (name, visibility, location, description only)
 function updateEventWithID($eventId, $name, $visibility, $location, $description)
 {
