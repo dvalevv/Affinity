@@ -16,7 +16,7 @@
       <div class="menu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="events.php">Events</a></li>
 	  <li><a href="createevent.html">Create Event</a></li>
           <li><a href="settings.html">Settings</a></li>
           <li><a href="login.html">Login</a></li>
