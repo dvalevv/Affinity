@@ -28,14 +28,16 @@
                 <h2>Your Event:</h2>
                 <img src="img/eventshow.png" alt="EventShow">
             </div>
+
 <?php
             include "php_queries.php";
-            if(isset($_GET["eventName"]) && isset($_GET["eventLocation"]) && isset($_GET["eventExpiration"]))
-            {   
+
+            if(isset($_GET["eventName"]))
               $eventName = $_GET["eventName"];
+            if(isset($_GET["eventLocation"]))
               $eventLocation = $_GET["eventLocation"];
-              $eventExpiration = $_GET["eventExpiration"];
-            } 
+            if(isset($_GET["eventExpirationDate"]))
+              $eventExpiration_Date = $_GET["eventExpirationDate"];
 
             echo "<div class=\"col-7\">
                 <p>$eventName</p>                    
