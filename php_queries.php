@@ -7,8 +7,7 @@
 /*------------------------------------*/
 //setup
 include 'config.inc.php';
-$conn = new mysqli($database_host, $database_user, $database_pass,
-                   $database_name);
+$conn = new mysqli($database_host, $database_user, $database_pass, $database_name);
 
 /*------------------------------------*//*------------------------------------*/
 //functions for the user

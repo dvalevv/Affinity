@@ -3,11 +3,12 @@ for possible methods of implementation:
 https://stackoverflow.com/questions/11958243/button-that-runs-a-php-script-without-changing-current-page
 using hidden frames seems to be simplest method so consider using -->
 <?php
+//ini_set('display_errors', 1); 
 include 'php_queries.php'; // Vlad's query file is imported
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST")       // The data is retrieved from the source and is treated for sq1
-{                                               // injection
+if ($_SERVER["REQUEST_METHOD"] == "POST")       // The data is retrieved from the source and is treated for sql
+{                                                                                         // injection
   $username = test_input($_POST["username"]);
   $password = test_input($_POST["password"]);
 }
@@ -23,11 +24,10 @@ function test_input($data)
 // Successful login means the users data will sent to the next page before redirection. Failed login means the user should
 // be redirected to the failed login page (which will likely just be the original login page with a note saying that
 // the login had failed and that they should try again)
-if(logIn($username, $password))
+if(logIn($username, $password) && $username != "" && $password != "")
 {
-  $_SESSION['userdata'] = getListOfLikableObjectsForUser($username);                // Explanation for use of 'Session' at: https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
+  $_SESSION['userdata'] = getListOfLikeableObjectsForUser($username);                // Explanation for use of 'Session' at: https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
   // header("Location: profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241 Removed to fix redirects
-
   echo '<script language="javascript"> window.location.href = "homepageRedirect.php"</script>';
 }
 else
