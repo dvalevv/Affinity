@@ -37,11 +37,11 @@
             if(isset($_GET["eventLocation"]))
               $eventLocation = $_GET["eventLocation"];
             if(isset($_GET["eventExpirationDate"]))
-              $eventExpiration_Date = $_GET["eventExpirationDate"];
+              $eventExpirationDate = $_GET["eventExpirationDate"];
 
             echo "<div class=\"col-7\">
                 <p>$eventName</p>                    
-                <p>$eventLocation. $eventExpiration</p>
+                <p>$eventLocation. $eventExpirationDate</p>
                 <button>Click Here to Find a Match</button>
             </div>
             <div class=\"clear-both\"></div>";
