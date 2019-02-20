@@ -1,16 +1,30 @@
-Fix log:
+Change log:
+- events.php : incorect syntax on echo
+	     : you cannot use break in a non loop structure
+	     : sizeof() cannot be used in a non countable array (line 33)
+               $result is not an array, you need to fetch_assoc to get a row array.
+	     : added some code to fix the sizeof ploblem
 
--php_queries : added 'global $conn;' to all functions also fixed some typos and 
-               some overloading functions that do not work in php
+- joinevent.php : incorect syntax
 
--affinityLogin : fixing names: php_queries.php and profile.html
+-also some links to the new css and image location were not changed 
 
--affinityRegister: fixing names: php_queries.php and profile.html
-                : reversed the comparetion between password and the confirmation
-                : maybe think of a way to check the passwords in html and NOT in php
+TODO list:
+- when loged in, the Login/register button should have the name of the user
+- make the pages resizable 
+- (scroll left does not refresh the page ? )
+!- login must be with email or username, the php crashes
+- nothing happends when you press help button
+-(why not use a for loop anyway in events.php)
+- make the events not show up in a image, but in some sort of text
 
-- fixed the link between Rumaan's and Ben's pages
+Notices to fix:
+-() when tryed to log in, undefined index: username in (line 11 AffinityLogin)
+-(fixed) have you checked your loops ? (event.php line 45, 52)
 
-- fixed naming the scripts in Ben's pages
-
--toy for jason: echo '<script language="javascript">window.location.href = "redirect.php"</script>'; // using javascript to redirect. refer to: https://stackoverflow.com/questions/5411538/redirect-from-an-html-page
+Fatal errors to fix:
+-() got some 404 errors, someone check all the links and typos in them.
+-() when entering nothing, an error ocures (line 28 in AffinityLogin)
+-(fixed) syntax error in events.php (line 43)
+-(fixed) sizeof() cannot be used in a non countable array (line 33)
+-(fixed) incorect syntax (line 40 events.php)
