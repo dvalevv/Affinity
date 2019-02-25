@@ -37,7 +37,6 @@
 
     if($noOfEvents == 0)
       echo "No events to display";
-
     else
     {
       echo '<div class="body">';

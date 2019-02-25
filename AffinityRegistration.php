@@ -34,10 +34,14 @@ if($password == $cPassword && !checkForExistingUsername($username) && $username 
 
   for($l = 0; $l < sizeof($likes); $l++)
     addANewLikeableObject($username, $likes[$l]);
+
+  session_start();  // Initiating a 'Session' to allow the sending of data to subsequent pages
+  $_SESSION['username'] = $username;    // Explanation for use of 'Session' at: https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
+
   // header("Location: profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
-  echo '<script language="javascript"> window.location.href = "homepageRedirect.php"</script>';
+  echo '<script language="javascript"> window.location.href = "index.html"</script>';
 }
 else
-  echo '<script language="javascript"> window.location.href = "loginRedirect.php"</script>';
+  echo '<script language="javascript"> window.location.href = "login.html"</script>';
 exit;
 ?>
