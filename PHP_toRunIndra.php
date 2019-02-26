@@ -8,9 +8,12 @@ the output -->
 
 <?php
 function perform_Calculation($like1, $like2) {
-  echo shell_exec("python  ~/Dropbox/University/Course/Year\ 1/Semester\ 2/First\ Year\ Team\ Project/Indra.py $like1 $like2 ");
+  exec("python  ~/Dropbox/University/Course/Year\ 1/Semester\ 2/First\ Year\ Team\ Project/Indra.py $like1 $like2 2>&1", $output, $ret_code);
+  return $output;
 }
 
-perform_Calculation("computer", "robotics");
-perform_Calculation("classical music", "Mozart");
+$var1 = perform_Calculation("computer", "robotics");
+$var2 = perform_Calculation("classical music", "Mozart");
+echo ($var1[0]);
+echo ($var2[0]);
 ?>

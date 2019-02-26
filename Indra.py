@@ -25,5 +25,5 @@ pairsFromJson = wholeDataJson["pairs"]
 listInPairs = pairsFromJson[0]
 scoreOfStrings = listInPairs["score"]
 
-print(scoreOfStrings)
+sys.exit(float(scoreOfStrings))
 # Used to print the whole JSON if needed --> print(res.json())
