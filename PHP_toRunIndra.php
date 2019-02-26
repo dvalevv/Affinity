@@ -14,6 +14,6 @@ function perform_Calculation($like1, $like2) {
 
 $var1 = perform_Calculation("computer", "robotics");
 $var2 = perform_Calculation("classical music", "Mozart");
-echo ($var1[0]);
-echo ($var2[0]);
+echo ((double)$var1[0]);
+echo ((double)$var2[0]);
 ?>
