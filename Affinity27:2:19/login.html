@@ -1,0 +1,99 @@
+<!-- Web page for login/register -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login/Register</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Team Y8">
+    <meta name="description" content="Login or register to an account."/>
+	
+    <link rel="stylesheet" type="text/css" href="css/newcss.css">    
+  </head>
+  <body>
+    <!--Include the JavaScript SDK on the page.-->
+    <div id="fb-root"></div>
+    <script async defer src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=401356637298458&autoLogAppEvents=1"></script>
+    
+    <!--
+    What the body needs:
+    NavBar?
+      Section for login -
+      - email field
+      - password field
+      Section for registration -
+      Fields:
+      - name (Could separate to first/last)
+      - email
+      - password
+      - confirm password
+      - likes list
+      Buttons:
+      - Facebook
+      - LinkedIn
+    -->
+    <!-- Temp links: -->
+    <!--<iframe style="display:none;" name="login"></iframe> Removed to allow redirects to work-->
+    <!--<iframe style="display:none;" name="register"></iframe> Removed to allow redirects to work-->
+    <!-- End of temp links-->
+    
+    <header>
+      <nav>
+        <ul>
+	  <li><a href="./index.html">Home</a></li>
+          <li><a href="./profile.php">Profile</a></li>
+          <li><a href="./events.php">Events</a></li>
+          <li><a href="./settings.html">Settings</a></li>
+          <li><a href="./login.html">Login/Register</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="short"></div>
+
+    <h1 class="center">Login/Register</h1>
+    <!-- Login section: takes username/email and password -->
+    <div class="halfLeft tall">
+      <section id="login">
+        <h2>Login</h2>
+        <!-- Form should validate user on this site. -->
+        <form method="post" action="AffinityLogin.php">
+          Username: <!-- Changed from 'email' as the logIn function takes the clients username and pass, not email and pass (Jason) -->
+          <input type="text" name="username"> <br>
+          Password:
+          <input type="password" name="password"> <br>
+          <input type="submit" value="Log in">
+        </form>
+      </section>
+    </div>
+    
+    <!-- Register section: takes user info. -->
+    <div class="halfRight tall">
+      <section id="register">
+        <h2>Register</h2>
+        <!-- Form should validate user on this site. -->
+        <form method="post" action="AffinityRegistration.php">
+          Username:
+          <input type="text" name="username"> <br>
+          First name:
+          <input type="text" name="firstName"> <br>
+          Last name:
+          <input type="text" name="lastName"> <br>
+          Email:
+          <input type="text" name="email"> <br>
+          Password:
+          <input type="password" name="password"> <br>
+          Confirm password:
+          <input type="password" name="cPassword"> <br>
+          Likes:
+          <input type="text" name="likes"> <br>
+          <input type="submit" value="Register">
+        </form>
+        <h5>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; OR</h5>
+        <!-- Fb login button -->
+        <div class="fb-login-button" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>  <br>
+        <button type="button">LinkedIn</button>
+      </section>
+    </div>
+  </body>
+</html>
