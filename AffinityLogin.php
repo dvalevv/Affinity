@@ -25,7 +25,7 @@ function test_input($data)
 // Successful login means the users data will sent to the next page before redirection. Failed login means the user should
 // be redirected to the failed login page (which will likely just be the original login page with a note saying that
 // the login had failed and that they should try again)
-if(logIn($username, $password) && $username != "" && $password != "")
+if(logIn($username, $password) && $username != "" && $password != "" && !isset($_SESSION['username']))
 {
   session_start();  // Initiating a 'Session' to allow the sending of data to subsequent pages
   $_SESSION['username'] = $username;    // Explanation for use of 'Session' at: https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page

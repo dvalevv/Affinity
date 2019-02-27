@@ -28,7 +28,7 @@ function test_input($data)
 // If the username entered isn't already in the database, then everything proceeds as normal and an entry for them is created in the database.
 // If not, then the user should be redirected to an appropriate page (which will likely be the original registration page but with a message
 // indicating a failed registration
-if($password == $cPassword && !checkForExistingUsername($username) && $username != "" && $firstName != "" && $lastName != "" && $username != "" && $email != "" && $password != "" && $cPassword != "" && $likes != "" && preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $email))
+if($password == $cPassword && !checkForExistingUsername($username) && $username != "" && $firstName != "" && $lastName != "" && $username != "" && $email != "" && $password != "" && $cPassword != "" && $likes != "" && preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $email) && !isset($_SESSION['username']))
 {
   createUser($username, $firstName." ".$lastName, $email, $password);
 
