@@ -50,7 +50,7 @@
       	     echo '</div><div class="col-3">';
       	}
       	$event = getEventData($eventList[$i]);
-        echo '<div class="event"><a href="joinevent.php?eventName='.$event["Name"].'&eventLocation='.$event["Location"].'&eventExpirationDate='.$event["Expiration_Date"]. '&eventID='.$event["eventID"].'"> '.$event["Name"].' <img src="img/event.png" alt="'.$event["Name"].'"></a></div>'; // Useful info on sending data to the next page via a hyperlink: https://stackoverflow.com/questions/9696194/how-to-send-a-data-to-php-page-when-clicking-on-a-link
+        echo '<div class="event"><a href="joinevent.php?eventName='.$event["Name"].'&eventLocation='.$event["Location"].'&eventExpirationDate='.$event["Expiration_Date"] . '&eventID='.$eventList[$i].' "> '.$event["Name"].' <img src="img/event.png" alt="'.$event["Name"].'"></a></div>'; // Useful info on sending data to the next page via a hyperlink: https://stackoverflow.com/questions/9696194/how-to-send-a-data-to-php-page-when-clicking-on-a-link
       }
       echo '<div class="clear-both"></div></div>';
     }
