@@ -13,6 +13,7 @@
     <!--Include the JavaScript SDK on the page.-->
     <div id="fb-root"></div>
     <script async defer src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=401356637298458&autoLogAppEvents=1"></script>
+    <script src="FacebookLoginScript.js"></script>
     
     <!--
     What the body needs:
@@ -92,6 +93,7 @@
         <h5>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; OR</h5>
         <!-- Fb login button -->
         <div class="fb-login-button" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>  <br>
+        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
         <button type="button">LinkedIn</button>
       </section>
     </div>
