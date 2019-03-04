@@ -95,7 +95,8 @@
         <div class="fb-login-button" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>  <br>
         <!--  -->
         <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
-        <button type="button">LinkedIn</button>
+        <script> FB.logout(function(response) {   // Person is now logged out });</script>
+        <button type="button" onclick="FB.logout()" >LinkedIn</button>
       </section>
     </div>
   </body>
