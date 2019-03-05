@@ -74,7 +74,7 @@ window.fbAsyncInit = function()
     FB.api('/me', function(response)
     {
       console.log('Successful login for: ' + response.name);
-      console.log('Email is: ' + response);
+      console.log('Email is: ' + response.email);
       //document.getElementById('status').innerHTML =
       //  'Thanks for logging in, ' + response.name + '!';
     });
