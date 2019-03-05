@@ -33,7 +33,7 @@ window.fbAsyncInit = function()
         appId      : '401356637298458', // enable cookies to allow the server to access the session
         cookie     : true,
         xfbml      : true,  // parse social plugins on this page
-        version    : 'v3.2' // The Graph API version to use for the call
+        version    : 'v3.1' // The Graph API version to use for the call
       });
 
     FB.AppEvents.logPageView();
