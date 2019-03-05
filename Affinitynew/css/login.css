@@ -57,32 +57,32 @@ a
 
 header a
 {
-  color: #03b3b5;
-  font-size: 22px;
-  margin: 28px 10px;
-  display: inline-block
+    color: #03b3b5;
+    font-size: 22px;
+    margin: 28px 10px;
+    display: inline-block
 }
 
 header a:hover
 {
-  text-decoration: underline
+    text-decoration: underline
 }
 
 .user-card
 {
-	width: 389px;
-	height: 389px;
-	margin: 50px auto;
-  position: relative;
-	background: #fff;
-	overflow: hidden;
-	box-shadow:         0 1px 3px 0 rgba(0,0,0,0.08);
-	-moz-box-shadow:    0 1px 3px 0 rgba(0,0,0,0.08);
-	-webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
-  border-radius:         5px;
-  -moz-border-radius:    5px;
-  -webkit-border-radius: 5px;
-  border: solid;
+    width: 389px;
+    height: 389px;
+    margin: 50px auto;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    box-shadow:         0 1px 3px 0 rgba(0,0,0,0.08);
+    -moz-box-shadow:    0 1px 3px 0 rgba(0,0,0,0.08);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+    border-radius:         5px;
+    -moz-border-radius:    5px;
+    -webkit-border-radius: 5px;
+    border: solid;
 }
 
 input
@@ -99,89 +99,89 @@ input
 
 input:focus
 {
-	outline: none;
-	border: 1px solid #03b3b5;
-	transition:         all .5s ease-in-out;
-	-o-transition:      all .5s ease-in-out;
-	-moz-transition:    all .5s ease-in-out;
-	-webkit-transition: all .5s ease-in-out;
+    outline: none;
+    border: 1px solid #03b3b5;
+    transition:         all .5s ease-in-out;
+    -o-transition:      all .5s ease-in-out;
+    -moz-transition:    all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
 }
 
 .login-box,
 .signup-box
 {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	height: calc(100% - 25px);
-	background: #fff;
-  border-radius:         5px;
-  -moz-border-radius:    5px;
-  -webkit-border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% - 25px);
+    background: #fff;
+    border-radius:         5px;
+    -moz-border-radius:    5px;
+    -webkit-border-radius: 5px;
 }
 
 .login-box{
-	padding: 20px 40px;
-	right: 0px;
+    padding: 20px 40px;
+    right: 0px;
 }
 
 .signup-box{
-	padding: 40px;
-	right: -350px;
+    padding: 40px;
+    right: -350px;
 }
 
 .login, .signup
 {
-	text-align: center;
-	color: #fff;
-	background: #03b3b5;
-	line-height: 30px;
-	opacity: 0.95;
-  cursor: pointer
+    text-align: center;
+    color: #fff;
+    background: #03b3b5;
+    line-height: 30px;
+    opacity: 0.95;
+    cursor: pointer
 }
 
 .login:hover{opacity: 1}
 
 .or
 {
-	display: block;
-	width: 100%;
-	height: 1px;
-	border-bottom: 1px solid #dee3e4;
-	position: relative;
-	margin: 20px 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #dee3e4;
+    position: relative;
+    margin: 20px 0;
 }
 
 .or:before
 {
-	content: 'or';
-	width: 40px;
-	height: 18px;
-	position: absolute;
-	top: -5px;
-	right: calc(50% - 20px);
-	background-color: #fff;
-	text-align: center;
-	line-height: 10px;
-	color: #555
+    content: 'or';
+    width: 40px;
+    height: 18px;
+    position: absolute;
+    top: -5px;
+    right: calc(50% - 20px);
+    background-color: #fff;
+    text-align: center;
+    line-height: 10px;
+    color: #555
 }
 
 .login-with-fb,
 .login-with-google
 {
-	width: 100%;
-	height: 40px;
-	display: block;
-	margin: 15px 0;
-	color: #fff;
-	text-align: center;
-	line-height: 40px;
-	font-size: 14px;
-	opacity: .95;
-  border-radius:         3px;
-  -moz-border-radius:    3px;
-  -webkit-border-radius: 3px;
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin: 15px 0;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    opacity: .95;
+    border-radius:         3px;
+    -moz-border-radius:    3px;
+    -webkit-border-radius: 3px;
 }
 
 .login-with-fb:hover,
@@ -263,9 +263,9 @@ input:focus
 }
 
 h1, h2, h3, h4, h5 ,h6{
-	color: #666666;
-	font-family: "raleway-regular", arial;
-	letter-spacing: 1px;
+    color: #666666;
+    font-family: "raleway-regular", arial;
+    letter-spacing: 1px;
 }
 
 h1              { font-size: 2em; margin: .67em 0 }
@@ -332,7 +332,7 @@ h5, h6          { font-weight: bolder }
 
 .banner .caption.light{ /* controls colour of slogan */
     color: #fff;
-	font-size: 32px;
+    font-size: 32px;
 }
 
 
@@ -387,19 +387,20 @@ h5, h6          { font-weight: bolder }
 /*    header    */
 header{ /*the whole header width and height */
     width: 100%;
-    height: 125px;
+    height: 130px;
     overflow: hidden;
 }
 
 header .logo{ /*logo in header margin and position */
     float: left;
-    margin-top: 10px;
-    margin-left: 10%;
+    position: absolute;
+    margin-left: 30px;
 }
 
 header nav{ /*navigation bar in header */
-    float: right;
-    margin-top: 57px;
+    position: absolute;
+    right: 0;
+    bottom: 10;
     margin-right: 5%;
 }
 
@@ -440,12 +441,19 @@ header.dark nav ul li a:hover{
 }
 
 
+/* Things for help.html */
 
+.right{
+    position: absolute;
+    right: 0;
+    margin-right: 10%;
+}
 
-
-
-
-
+.left{
+    position: absolute;
+    left: 0;
+    margin-left: 10%;
+}
 
 
 /*    footer    */
