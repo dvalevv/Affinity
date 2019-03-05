@@ -92,9 +92,9 @@
         </form>
         <h5>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; OR</h5>
         <!-- Fb login button -->
-        <div class="fb-login-button" data-size="medium" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>  <br>
+        <div class="fb-login-button" data-size="medium" data-button-type="continue_with" data-auto-logout-link="true" data-use-continue-as="true"
+            scope="public_profile,email" onlogin="checkLoginState();"></div>  <br>
         <!--  -->
-        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
         <script> FB.logout(function(response) {  });</script>
         <button type="button" onclick="FB.logout()" >LinkedIn</button>
       </section>
