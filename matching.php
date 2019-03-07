@@ -4,16 +4,11 @@ include 'php_queries.php';
 include 'PHP_toRunIndra.php';
 
 ini_set("precision", 3);
-function matchNumber($username1, $username2)
+function matchNumber($likes1, $username2)
 {
-    $data1 = getListOfLikeableObjectsForUser($username1);
     $data2 = getListOfLikeableObjectsForUser($username2);
 
-    $likes1 = array();
     $likes2 = array();
-
-    while($row = $data1->fetch_assoc())
-      array_push($likes1, $row["Object"]);
 
     while($row = $data2->fetch_assoc())
       array_push($likes2, $row["Object"]);
