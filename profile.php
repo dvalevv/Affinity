@@ -26,8 +26,11 @@
           <li><a href="./profile.php">Profile</a></li>
           <li><a href="./events.php">Events</a></li>
           <li><a href="./settings.html">Settings</a></li>
+          <! -- Use php to replace login with logout when logged in -->
           <li><a href="./login.html">Login/Register</a></li>
-          <li><a href="#">Help</a></li>
+	  <li><a href="./index.html">Logout</a></li>
+	  <!-- -->
+          <li><a href="./help.html">Help</a></li>
         </ul>
       </nav>
     </header>

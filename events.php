@@ -18,6 +18,7 @@
 	  <li><a href="createevent.html">Create Event</a></li>
           <li><a href="settings.html">Settings</a></li>
           <li><a href="login.html">Login</a></li>
+          <li><a href="help.html">Help</a></li>
         </ul>
       </div>
       <div class="clear-both"></div>

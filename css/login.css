@@ -213,6 +213,10 @@ input:focus
 	border-right: 1px solid #fff;
 }
 
+.footerb {
+  position: absolute;
+}
+
 
 
 /*  Fonts  */
