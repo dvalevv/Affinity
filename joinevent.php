@@ -32,12 +32,13 @@
 
 <?php
             include "php_queries.php";
+            include "PHP_Indra.php";
             session_start();
             //ini_set('display_errors', 1);
 
-            function perform_Calculation($like1, $like2) {
-            exec("python Indra.py $like1 $like2 2>&1", $output, $ret_code);
-            return $output; }
+            //function perform_Calculation($like1, $like2) {
+            //exec("python Indra.py $like1 $like2 2>&1", $output, $ret_code);
+            //return $output; }
 
             if(isset($_GET["eventName"]))
               $eventName = $_GET["eventName"];
@@ -93,8 +94,8 @@
                     for ($l_other = 0; $l_other < sizeof($otherLikesArray); $l_other++)
                     {
                        $indraVal = perform_Calculation($userLikesArray[$l], $otherLikesArray[$l_other]);
-                       if ($localMax < (double)$indraVal[0])
-                          $localMax = (double)$indraVal[0];
+                       if ($localMax < $indraVal[0]) // Removed '(double)' as the design of the function removes the need for casting
+                          $localMax = $indraVal[0];  // Removed '(double)' as the design of the function removes the need for casting
                     }
                     $matchTotal += $localMax;
                    }
