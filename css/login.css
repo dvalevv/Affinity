@@ -215,6 +215,10 @@ input:focus
 
 .footerb {
   position: absolute;
+  margin: 0 auto;
+  bottom: 5%;
+  width: 100%;
+  left: 40%;
 }
 
 
