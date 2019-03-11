@@ -27,21 +27,19 @@
       <nav>
         <ul>
 	  <li><a href="./index.html">Home</a></li>
-          <li><a href="./profile.php">Profile</a></li>
+          
+          <?php if (isset($_SESSION['username'])) { ?>
+            <li><a href="./profile.php">Profile</a></li>
+            <li><a href="./settings.html">Settings</a></li>
+          <?php } ?>
           <li><a href="./events.php">Events</a></li>
-          <li><a href="./settings.html">Settings</a></li>
-	  <! -- Use php to replace login with logout when logged in -->
-          <!-- Could be php like: 
-            if (session is set)
-              show profile/logout
-            else
-              show login/register
-              
-            should also make logout call AffinityLogout.php
-          -->     
-          <li><a href="./login.html">Login/Register</a></li>
-	  <li><a href="./index.html">Logout</a></li>
-	  <!-- -->
+   
+          <?php if (!isset($_SESSION['username'])) { ?>
+            <li><a href="./login.html">Login/Register</a></li>
+          <?php } else { ?>
+	    <li><a href="./AffinityLogout.php">Logout</a></li>
+          <?php } ?>
+          
           <li><a href="./help.html">Help</a></li>
         </ul>
       </nav>
@@ -98,11 +96,20 @@
     <nav>
       <ul>
   <li><a href="./index.html">Home</a></li>
-        <li><a href="./profile.html">Profile</a></li>
-        <li><a href="./events.html">Events</a></li>
-        <li><a href="./settings.html">Settings</a></li>
-        <li><a href="./login.html">Login/Register</a></li>
-        <li><a href="#">Help</a></li>
+          
+          <?php if (isset($_SESSION['username'])) { ?>
+            <li><a href="./profile.php">Profile</a></li>
+            <li><a href="./settings.html">Settings</a></li>
+          <?php } ?>
+          <li><a href="./events.php">Events</a></li>
+   
+          <?php if (!isset($_SESSION['username'])) { ?>
+            <li><a href="./login.html">Login/Register</a></li>
+          <?php } else { ?>
+	    <li><a href="./AffinityLogout.php">Logout</a></li>
+          <?php } ?>
+          
+          <li><a href="./help.html">Help</a></li>
       </ul>
     </nav>
   </div>

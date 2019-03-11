@@ -13,12 +13,21 @@
       </div>
       <div class="menu">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="events.php">Events</a></li>
-	  <li><a href="createevent.html">Create Event</a></li>
-          <li><a href="settings.html">Settings</a></li>
-          <li><a href="login.html">Login</a></li>
-          <li><a href="help.html">Help</a></li>
+          <li><a href="./index.html">Home</a></li>
+          
+          <?php if (isset($_SESSION['username'])) { ?>
+            <li><a href="./profile.php">Profile</a></li>
+            <li><a href="./settings.html">Settings</a></li>
+          <?php } ?>
+          <li><a href="./events.php">Events</a></li>
+   
+          <?php if (!isset($_SESSION['username'])) { ?>
+            <li><a href="./login.html">Login/Register</a></li>
+          <?php } else { ?>
+	    <li><a href="./AffinityLogout.php">Logout</a></li>
+          <?php } ?>
+          
+          <li><a href="./help.html">Help</a></li>
         </ul>
       </div>
       <div class="clear-both"></div>

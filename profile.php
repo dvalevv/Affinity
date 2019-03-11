@@ -23,13 +23,19 @@
       <nav>
         <ul>
 	  <li><a href="./index.html">Home</a></li>
-          <li><a href="./profile.php">Profile</a></li>
+          
+          <?php if (isset($_SESSION['username'])) { ?>
+            <li><a href="./profile.php">Profile</a></li>
+            <li><a href="./settings.html">Settings</a></li>
+          <?php } ?>
           <li><a href="./events.php">Events</a></li>
-          <li><a href="./settings.html">Settings</a></li>
-          <! -- Use php to replace login with logout when logged in -->
-          <li><a href="./login.html">Login/Register</a></li>
-	  <li><a href="./index.html">Logout</a></li>
-	  <!-- -->
+   
+          <?php if (!isset($_SESSION['username'])) { ?>
+            <li><a href="./login.html">Login/Register</a></li>
+          <?php } else { ?>
+	    <li><a href="./AffinityLogout.php">Logout</a></li>
+          <?php } ?>
+          
           <li><a href="./help.html">Help</a></li>
         </ul>
       </nav>

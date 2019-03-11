@@ -16,13 +16,19 @@
       <nav>
         <ul>
 	  <li><a href="./index.html">Home</a></li>
-          <li><a href="./profile.php">Profile</a></li>
+          
+          <?php if (isset($_SESSION['username'])) { ?>
+            <li><a href="./profile.php">Profile</a></li>
+            <li><a href="./settings.html">Settings</a></li>
+          <?php } ?>
           <li><a href="./events.php">Events</a></li>
-          <li><a href="./settings.html">Settings</a></li>
-          <! -- Use php to replace login with logout when logged in -->
-          <li><a href="./login.html">Login/Register</a></li>
-	  <li><a href="./index.html">Logout</a></li>
-	  <!-- -->
+   
+          <?php if (!isset($_SESSION['username'])) { ?>
+            <li><a href="./login.html">Login/Register</a></li>
+          <?php } else { ?>
+	    <li><a href="./AffinityLogout.php">Logout</a></li>
+          <?php } ?>
+          
           <li><a href="./help.html">Help</a></li>
         </ul>
       </nav>
@@ -34,7 +40,7 @@
       <p>Find Matches At Events Near You...</p>
       <hr>
     </div>
-    <div class="container" style="	min-width: 50px;	min-height: 300px;	max-width: 300px;	background-position: top left;	background-size: 100%;	background-repeat: repeat;	background-image: url(img/matchcouple.png);	transform: translateX(1200px)  translateY(-100px);"></div>
+    <div class="container" style="min-width: 50px; min-height: 300px; max-width: 300px;	background-position: top left;	background-size: 100%;	background-repeat: repeat;	background-image: url(img/matchcouple.png);	transform: translateX(1200px)  translateY(-100px);"></div>
 
   </section><!--  End banner  -->
 
@@ -190,11 +196,20 @@
       <nav>
         <ul>
 	  <li><a href="./index.html">Home</a></li>
-          <li><a href="./profile.html">Profile</a></li>
-          <li><a href="./events.html">Events</a></li>
-          <li><a href="./settings.html">Settings</a></li>
-          <li><a href="./login.html">Login/Register</a></li>
-          <li><a href="#">Help</a></li>
+          
+          <?php if (isset($_SESSION['username'])) { ?>
+            <li><a href="./profile.php">Profile</a></li>
+            <li><a href="./settings.html">Settings</a></li>
+          <?php } ?>
+          <li><a href="./events.php">Events</a></li>
+   
+          <?php if (!isset($_SESSION['username'])) { ?>
+            <li><a href="./login.html">Login/Register</a></li>
+          <?php } else { ?>
+	    <li><a href="./AffinityLogout.php">Logout</a></li>
+          <?php } ?>
+          
+          <li><a href="./help.html">Help</a></li>
         </ul>
       </nav>
     </div>
