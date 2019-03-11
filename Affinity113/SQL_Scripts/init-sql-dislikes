@@ -1,0 +1,17 @@
+mysql -h dbhost.cs.man.ac.uk -p 2018_comp10120_y8 << IN
+
+DELETE FROM Dislikes;
+
+INSERT INTO Dislikes (Object, Username) VALUES 
+    ("humanistic studies", "Vlad.Iacob"),
+    ("smocking", "Vlad.Iacob"),
+    ("drinking", "Vlad.Iacob"),
+	("", "Ben.Rimmer"),
+	("", "Juan.Giraldo"),
+	("", "Denislav.Valev"),
+	("", "Jason.Ozuzu"),
+	("", "Rumaan.Nasir"),
+	("", "Michael.Browne");
+
+IN
+

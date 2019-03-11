@@ -1,0 +1,569 @@
+/*
+
+	Template Author : pixelhint.com
+	Author Email    : contact@pixelhint.com
+	Template Name   : Sublime
+	
+	Template Redesign: Team Y8
+	
+	
+	*****************************************
+	
+	
+   
+	
+*/
+
+
+
+/*  Fonts  */
+@font-face {
+    font-family: 'raleway-regular';
+    src: url('../fonts/raleway-regular.eot');
+    src: url('../fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-regular.woff') format('woff'),
+         url('../fonts/raleway-regular.ttf') format('truetype'),
+         url('../fonts/raleway-regular.svg#raleway-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'raleway-semibold';
+    src: url('../fonts/raleway-semibold.eot');
+    src: url('../fonts/raleway-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-semibold.woff') format('woff'),
+         url('../fonts/raleway-semibold.ttf') format('truetype'),
+         url('../fonts/raleway-semibold.svg#raleway-semibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'raleway-bold';
+    src: url('../fonts/raleway-bold.eot');
+    src: url('../fonts/raleway-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-bold.woff') format('woff'),
+         url('../fonts/raleway-bold.ttf') format('truetype'),
+         url('../fonts/raleway-bold.svg#raleway-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+/*  General CSS*/
+body{
+    background: #fff;
+}
+
+.wrapper{
+    width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 ,h6{
+	color: #666666;
+	font-family: "raleway-regular", arial;
+	letter-spacing: 1px;
+}
+
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6          { font-weight: bolder }
+
+.clearfix:before,  
+.clearfix:after {  
+    content: " ";  
+    display: table;  
+}  
+.clearfix:after {  
+    clear: both;  
+}  
+ 
+.clearfix {  
+    *zoom: 1;  
+}
+
+
+
+
+
+
+
+/*    Main Banner    */
+.banner{ /*This controls the width and height of the banner setup */
+    width: 100%;
+    height: 690px;
+    position: relative;
+}
+
+.banner.light{ /*light as there was dark version of the banner previously */
+    background: url('../img/banner.jpg') no-repeat;   
+     
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+}
+
+
+.banner .shadow{ /*shadow of banner, png in img folder */
+    position: absolute;
+    width: 100%;
+    height: 142px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -1px;
+    background: url('../img/shadow.png') repeat-x;
+}
+
+.banner .caption{ /*controls slogan layout what do we have in common */
+    margin-top: 130px;
+    text-align: center;
+}
+
+.banner .caption.light{ /* controls colour of slogan */
+    color: #fff;
+	font-size: 32px;
+}
+
+
+
+.banner .caption h1{ /*controls slogan font and margin what do we have in common */
+    font-family: "raleway-bold";
+    font-size: 50px;
+    font-weight: bold; 
+    margin-bottom: 30px;
+}
+
+.banner .caption.light h1{  /*controls slogan colour - what do we have in common */
+    color: #fff;
+}
+
+
+}
+
+.banner .caption p{ /*paragraph below slogan */
+    font-family: "raleway-regular";
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.banner .caption.light p{ /*colour of paragraph */
+    color: #fff;
+}
+
+
+
+
+.banner .caption hr{
+    display: inline-block;
+    height: 1px;
+    width: 30px;
+    border: 0!important;   
+    margin: 0;
+    padding: 0;
+}
+
+.banner .caption.light hr{
+    background: #fff;
+}
+
+
+
+
+
+
+
+
+/*    header    */
+header{ /*the whole header width and height */
+    width: 100%;
+    height: 125px;
+}
+
+header .logo{ /*logo in header margin and position */
+    float: left;
+    margin-top: 10px;
+	margin-left: -250px;
+}
+
+header nav{ /*navigation bar in header */
+    float: right;
+    margin-top: 57px;
+	margin-right: -180px;
+
+}
+
+
+header nav ul li{ /* the list of items on navigation bar */
+    list-style: none;
+    display: block;
+    float: left;
+    margin-left: 30px;
+}
+
+header nav ul li a{
+    text-decoration: none;  
+    font-family: "raleway-regular";
+    font-size: 22px;
+    font-weight:bold;
+}
+
+header.light nav ul li a{  
+    color: #fff;
+}
+
+header.light nav ul li a:hover{
+    color: #B9B9B9;
+}
+
+header.dark nav ul li a{  
+    color: #5d5d5d;
+}
+
+header.dark nav ul li a:hover{
+    color: #919191;
+}
+
+
+
+
+
+
+
+/*    Events    */
+.events {   /*Controls the border around the events section on homepage */
+	width: 100%;
+    height: 500px;
+    position: relative;
+    
+	background: url('../img/eventsbg.jpg') no-repeat; /* background found in img folder */
+}
+
+.events ul{
+    margin-top: 50px;
+	
+}
+
+.events ul li{          /*controls the events list present in the section */
+    list-style: none;
+    display: block;
+    width: 313px;
+    float: left;
+    margin-left: 80px;
+    text-align: center;
+}
+
+.events ul li:first-child{ /* Controls the first event to make its left margin 0 */ 
+    margin-left: 0;
+}
+
+.events ul li .separator{        /*This is the line seperator between each event */ 
+    display: block;
+    width: 1px;
+    height: 20px;
+    background: #f6f6f6;
+    margin: 20px auto;
+}
+
+.events ul li h2{ /*This controls the header e.g. Concerts near you */
+    color: #616161;
+    font-family: "raleway-bold";
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.events ul li p{ /*font and colour of each paragraph of text of event */ 
+   color: #838181;
+    font-family: "raleway-regular";
+    font-size: 14px;
+    line-height: 28px; 
+    margin-top: 40px;
+    letter-spacing: .5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.title{ /* Titles of each section e.g. Meet the team */ 
+    text-align: center;
+    overflow: hidden;
+}
+
+.title h2{ /*font and margin of main title of section */
+    color: #616161;
+    font-family: "raleway-bold";
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    text-transform: uppercase;
+}
+
+.title h3{ /*text below title e.g. The members of our team are match making experts! */
+    color: #9b9b9b;
+    font-family: "raleway-regular";
+    font-size: 14px;
+    margin: 0 0 20px 0;
+    font-weight: normal!important;
+}
+
+.title hr.separator{ /*seperator at end of title */
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: #ebebeb;
+    margin: 0 auto;
+    padding: 0;
+    border: 0!important;
+}
+
+
+
+
+
+
+
+/*    team    */
+.team{ /*section for meet the team */
+	width: 100%;
+    height: 500px;
+    position: relative;
+	margin-top: 50px;
+
+    
+	background: url('../img/teambg.jpg') no-repeat;   
+     
+   
+}
+
+.team ul{
+    margin-top: 100px;
+    list-style: none;
+}
+
+.team ul li{ /*each team member controlled in a list */
+    display: block;
+    float: left;
+    margin-left: 80px;
+    width: 313px;
+}
+
+.team ul li:first-child{ /*first member of team margin set left 0 */
+    margin-left: 0;
+}
+
+.team ul li .quotes{ /*quotes image in each team members quotes */
+    margin-right: 10px;
+}
+
+.team ul li p{ /*text from each team member */
+    color: #838181;
+    font-family: "raleway-regular";
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: .5px;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ecebeb;
+    position: relative;
+}
+
+.team ul li p .triangle{ /*triangle used to seperate text from name and picture of member */
+    display: block;
+    width: 10px;
+    height: 5px;
+    background: url('../img/seperator_triangle.png') no-repeat;
+    position: absolute;
+    bottom: -5px;
+    left: 40px;
+}
+
+.team ul li .member{
+    margin-left: 20px;
+}
+
+.team ul li .member img.avatar{ /*controls image for each member */
+    float: left;
+    margin-right: 20px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -o-border-radius: 100px;
+    border-radius: 100px;
+}
+
+.team ul li .member .member_details{
+    float: left;
+}
+
+.team ul li .member .member_details h4{
+    color: #7b7979;
+    font-family: "raleway-semibold";
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.team ul li .member .member_details h5{
+    color: #7b7979;
+    font-family: "raleway-regular";
+    font-size: 12px;
+    margin: 0;
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+/*    blog posts    */
+.features{
+	width: 100%;
+    height: 500px;
+    position: relative;
+    
+	background: url('../img/eventsbg.jpg') no-repeat; /* background found in img folder */
+    margin-top: 100px;
+    padding: 100px 0;
+    background: #fafafa;
+}
+
+.features ul{
+    list-style: none;
+    margin-top: 70px;
+}
+
+.features ul li{
+    display: block;
+    width: 230px;
+    margin-left: 60px;
+    float: left;
+}
+
+.features ul li:first-child{
+    margin-left: 0;
+}
+
+.features ul li .media .date{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 40px;
+    padding: 10px 0;
+    background: rgba(62, 62, 62, .7);
+    text-align: center;
+}
+
+.features ul li .media .date span{
+    display: block;
+}
+
+.features ul li .media .date .day{
+    color: #fff;
+    font-family: "raleway-bold";
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.features ul li .media .date .month{
+    color: #fff;
+    font-family: "raleway-regular";
+    font-size: 12px;
+}
+
+.features ul li .media{
+    width: 230px;
+    height: 230px;
+    position: relative;
+}
+
+.features ul li h1{
+    color: #616161;
+    font-family: "raleway-regular";
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 26px;
+    margin: 20px 0 0 0;
+}
+
+
+
+
+
+
+
+/*    footer    */
+footer{
+    padding: 35px 0;
+    overflow: hidden;
+}
+
+footer .footer_logo{
+    float: left;
+}
+
+footer .rights p{
+    float: left;
+    color: #838181;
+    font-family: "raleway-regular";
+    font-size: 13px;
+    margin: 5px 0 0 40px; 
+}
+
+footer .rights p a{
+    color: #777;
+    font-family: "raleway-semibold";
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer nav ul{
+    float: right;
+    overflow: hidden;
+    list-style: none;
+    margin-top: 5px; 
+}
+
+footer nav ul li{
+    float: left;
+    margin-left: 25px;
+}
+
+footer nav ul li a{
+    color: #838181;
+    font-family: "raleway-regular";
+    font-size: 13px;
+    text-decoration: none;
+
+    transition:all .2s linear;
+    -webkit-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -o-transition:all .2s linear;
+}
+
+footer nav ul li a:hover{
+    color: #616161;
+}

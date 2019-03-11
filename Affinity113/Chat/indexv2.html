@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <title>JQuery Team Project Chat</title>
+  <!--Add JQuery script to html file-->
+    <script
+  			  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  			  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  			  crossorigin="anonymous"></script>
+  <!--All formatting done in index.css file-->
+  <link rel="styleSheet"  type="text/css" href="indexv2.css?version=5">
+  <!-- Declare character encoding -->
+  <meta charset="utf-8" />
+</head>
+<!--Pop-up: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_popup_chat -->
+<!-- HTML forms to implement live chat https://code.tutsplus.com/tutorials/how-to-create-a-simple-web-based-chat-application--net-5931-->
+
+<body>
+
+
+  <!--Chat header/title-->
+  <div id = "header">
+      <h1>JQuery Team Chat v1</h1>
+  </div>
+
+  <!--'Container'/Box for chat-->
+  <div id = "chat_container">
+    <div id="list">
+      <iframe id="iframe" src="MikeJBrowne123DenislavValev321.html?version=2" frameborder="0" height="400" width="95%"></iframe>
+    </div>
+  </div>
+
+  <!--Controls for chat-->
+  <div id = "controls">
+
+
+    <iframe name="hiddenFrame" class="hide"></iframe>
+
+    <form action="action_page.php" target="hiddenFrame" id="myForm">
+    <input id="messagebox" type="text" name="message" placeholder="Enter Message...">
+    <input id="Send" type="submit" value="Send" onclick="clearMessageBox()">
+    </form>
+
+
+     <script> 
+      function clearMessageBox() 
+      {
+        //wait 50ms then call clearwithdelay
+        setTimeout(clearWithDelay, 50);
+        function clearWithDelay() 
+        {
+            //clear value in messagebox
+            document.getElementById("messagebox").value = "";
+        }
+      }
+    </script>
+
+    <!-- reload the iframe displaying the chat's log file -->
+    <script>
+        window.setInterval(function() {
+            reloadIFrame()
+        }, 1000);
+
+        function reloadIFrame() {
+            console.log('reloading..');
+            document.getElementById('iframe').contentWindow.location.reload();
+        }
+    </script>
+
+
+  </div>
+
+
+</body>
+</html>

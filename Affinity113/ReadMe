@@ -1,0 +1,30 @@
+Change log:
+- events.php : incorect syntax on echo
+	     : you cannot use break in a non loop structure
+	     : sizeof() cannot be used in a non countable array (line 33)
+               $result is not an array, you need to fetch_assoc to get a row array.
+	     : added some code to fix the sizeof ploblem
+
+- joinevent.php : incorect syntax
+
+-also some links to the new css and image location were not changed 
+
+TODO list:
+- when loged in, the Login/register button should have the name of the user
+- make the pages resizable 
+- (scroll left does not refresh the page ? )
+!- login must be with email or username, the php crashes
+- nothing happends when you press help button
+-(why not use a for loop anyway in events.php)
+- make the events not show up in a image, but in some sort of text
+
+Notices to fix:
+-() when tryed to log in, undefined index: username in (line 11 AffinityLogin)
+-(fixed) have you checked your loops ? (event.php line 45, 52)
+
+Fatal errors to fix:
+-() got some 404 errors, someone check all the links and typos in them.
+-() when entering nothing, an error ocures (line 28 in AffinityLogin)
+-(fixed) syntax error in events.php (line 43)
+-(fixed) sizeof() cannot be used in a non countable array (line 33)
+-(fixed) incorect syntax (line 40 events.php)
