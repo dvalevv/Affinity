@@ -54,7 +54,6 @@
               $username = $_SESSION['username'];
               $usersInEventQuery = getListOfUsersForEvent($eventID); // Function creates query for getting the list of users that are part of an event
               $nameArray = array();
-     
               while($row = $usersInEventQuery->fetch_assoc())  // First fill an array with the names of users relevant to the event
               {
                 if ($row['Username'] == $username)
@@ -75,7 +74,6 @@
 
               //$var = perform_Calculation("Football", "Basketball");
               //echo $var[0];
-
               if(sizeof($userLikesArray) != 0)
               {
                 for($personNo = 0; $personNo < sizeof($nameArray); $personNo++)
@@ -94,10 +92,11 @@
                     for ($l_other = 0; $l_other < sizeof($otherLikesArray); $l_other++)
                     {
                        $indraVal = perform_Calculation($userLikesArray[$l], $otherLikesArray[$l_other]);
-                       if ($localMax < $indraVal[0]) // Removed '(double)' as the design of the function removes the need for casting
-                          $localMax = $indraVal[0];  // Removed '(double)' as the design of the function removes the need for casting
+                       if ($localMax < $indraVal) // Removed '(double)' as the design of the function removes the need for casting
+                          $localMax = $indraVal;  // Removed '(double)' as the design of the function removes the need for casting
                     }
                     $matchTotal += $localMax;
+                    //echo $matchTotal;
                    }
                  // echo $matchTotal . " ";
                  // echo $matchTotal/sizeof($userLikesArray) . " ";
@@ -115,8 +114,8 @@
                 $thirdHighestMatchValue = max($matchValues);
                 $keyOf3rdMax = array_search($thirdHighestMatchValue, $matchValues); 
               
-                echo "You matched with " . $namesMatched[$keyOfMax] . " with a score of " . $highestMatchValue . "! (1)";
-                echo "You matched with " . $namesMatched[$keyOf2ndMax] . " with a score of " . $secondHighestMatchValue . "! (2)";
+                echo nl2br("You matched with " . $namesMatched[$keyOfMax] . " with a score of " . $highestMatchValue . "! (1)\n"); // nl2br() ensures new lines (\n) included in php echo's appear in the browser
+                echo nl2br("You matched with " . $namesMatched[$keyOf2ndMax] . " with a score of " . $secondHighestMatchValue . "! (2)\n");
                 echo "You matched with " . $namesMatched[$keyOf3rdMax] . " with a score of " . $thirdHighestMatchValue . "! (3)";
               }
              }
