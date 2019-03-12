@@ -8,12 +8,11 @@
     <meta charset="utf-8">
 
     <title>Help</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="toggle.js"></script>
+
     <meta name="description" content="Affinity Help">
     <meta name="author" content="Team Y8">
 
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/help.css">
 
 
 <body>
@@ -24,19 +23,19 @@
       <nav>
         <ul>
 	  <li><a href="./index.html">Home</a></li>
-          
+
           <?php if (isset($_SESSION['username'])) { ?>
             <li><a href="./profile.php">Profile</a></li>
             <li><a href="./settings.html">Settings</a></li>
           <?php } ?>
           <li><a href="./events.php">Events</a></li>
-   
+
           <?php if (!isset($_SESSION['username'])) { ?>
             <li><a href="./login.html">Login/Register</a></li>
           <?php } else { ?>
 	    <li><a href="./AffinityLogout.php">Logout</a></li>
           <?php } ?>
-          
+
           <li><a href="./help.html">Help</a></li>
         </ul>
       </nav>
@@ -53,7 +52,7 @@
       <p>Indra is blah blah blah.</p>
     </div>
   </div>
-  
+
   <div class="user-card right">
     <div class="login-box">
       <h2>Contact us</h2>
@@ -68,37 +67,38 @@
     </div>
   </div>
 </div>
+</body>
 
 <footer>
   <div class="wrapper">
-    <div class="rights">
-      <img src="img/logofooter.png" alt="" class="footer_logo"/>
-      <p>© Affinity. All Rights Reserved 2019 </p>
-    </div>
+      <div class="rights">
+        <img src="img/logofooter.png" alt="" class="footer_logo"/>
+        <p>© Affinity. All Rights Reserved 2019 </p>
+      </div>
 
-    <nav>
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-          
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+
           <?php if (isset($_SESSION['username'])) { ?>
             <li><a href="./profile.php">Profile</a></li>
             <li><a href="./settings.html">Settings</a></li>
           <?php } ?>
           <li><a href="./events.php">Events</a></li>
-   
+
           <?php if (!isset($_SESSION['username'])) { ?>
             <li><a href="./login.html">Login/Register</a></li>
           <?php } else { ?>
-	    <li><a href="./AffinityLogout.php">Logout</a></li>
-          <?php } ?>
-          
-          <li><a href="./help.html">Help</a></li>
-      </ul>
-    </nav>
-  </div>
-</footer>
+             <li><a href="./AffinityLogout.php">Logout</a></li>
+           <?php } ?>
+
+           <li><a href="./help.html">Help</a></li>
+         </ul>
+       </nav>
+     </div>
+   </footer>
 
 <!--  End footer  -->
 <!-- Footer -->
-</body>
+
 </html>

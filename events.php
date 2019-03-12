@@ -2,44 +2,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/login.css">
     <title>Events</title>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="logo">
-        <img src="img/logo.png" alt="Logo">
-      </div>
-      <div class="menu">
+  <section class="banner light">
+    <header class="wrapper light">
+      <a href="#"><img class="logo" src="img/logoSmall.png" alt="Affinity"/></a>
+      <nav>
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          
+	  <li><a href="./index.html">Home</a></li>
+
           <?php if (isset($_SESSION['username'])) { ?>
             <li><a href="./profile.php">Profile</a></li>
             <li><a href="./settings.html">Settings</a></li>
           <?php } ?>
           <li><a href="./events.php">Events</a></li>
-   
+
           <?php if (!isset($_SESSION['username'])) { ?>
             <li><a href="./login.html">Login/Register</a></li>
           <?php } else { ?>
 	    <li><a href="./AffinityLogout.php">Logout</a></li>
           <?php } ?>
-          
+
           <li><a href="./help.html">Help</a></li>
         </ul>
-      </div>
-      <div class="clear-both"></div>
-    </div>
+      </nav>
+    </header>
+    <br>
+  </section>
 
-    <!-- Adding code for generating events and displaying their details on the page (Jason) -->    
+    <!-- Adding code for generating events and displaying their details on the page (Jason) -->
 <?php
     // ini_set('display_errors', 1); // Useful code for displaying the cause of errors. Sourced from link: https://stackoverflow.com/questions/17693391/500-internal-server-error-for-php-file-not-for-html
     include "php_queries.php";
     $eventList = array();
     $eventQuery = getAllEventID(); // The getAllEventID function returns the query object, which we can then call in the loop below to push each ID in the database onto the eventList array
-    
+
     while($row = $eventQuery->fetch_assoc())
       array_push($eventList, $row["Event_ID"]);
 
@@ -104,9 +103,33 @@
       <div class="clear-both"></div>
     </div>
 -->
-    <div class="footer">
-      <p>© 2019 Affinity (UK). All rights reserved. </p>
-    </div>
-  </div>
-</body>
+<footer>
+  <div class="wrapper">
+      <div class="rights">
+        <img src="img/logofooter.png" alt="" class="footer_logo"/>
+        <p>© Affinity. All Rights Reserved 2019 </p>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+
+          <?php if (isset($_SESSION['username'])) { ?>
+            <li><a href="./profile.php">Profile</a></li>
+            <li><a href="./settings.html">Settings</a></li>
+          <?php } ?>
+          <li><a href="./events.php">Events</a></li>
+
+          <?php if (!isset($_SESSION['username'])) { ?>
+            <li><a href="./login.html">Login/Register</a></li>
+          <?php } else { ?>
+             <li><a href="./AffinityLogout.php">Logout</a></li>
+           <?php } ?>
+
+           <li><a href="./help.html">Help</a></li>
+         </ul>
+       </nav>
+     </div>
+   </footer>
+ </body>
 </html>

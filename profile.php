@@ -7,10 +7,10 @@
     <meta charset="utf-8">
     <meta name="author" content="Team Y8">
     <meta name="description" content="Affinity - What Do We Have In Common?"/>
-	
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="css/login.css">
   </head>
-  
+
   <body>
     <!-- What profile needs:
     NavBar? SHOULD HAVE LOG OUT ON IT.
@@ -19,30 +19,34 @@
     Name
     Likes
     -->
-    <header>
-      <nav>
-        <ul>
-	  <li><a href="./index.html">Home</a></li>
-          
-          <?php if (isset($_SESSION['username'])) { ?>
-            <li><a href="./profile.php">Profile</a></li>
-            <li><a href="./settings.html">Settings</a></li>
-          <?php } ?>
-          <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { ?>
-            <li><a href="./login.html">Login/Register</a></li>
-          <?php } else { ?>
-	    <li><a href="./AffinityLogout.php">Logout</a></li>
-          <?php } ?>
-          
-          <li><a href="./help.html">Help</a></li>
-        </ul>
-      </nav>
-    </header>
+    <section class="banner light">
+      <header class="wrapper light">
+        <a href="#"><img class="logo" src="img/logoSmall.png" alt="Affinity"/></a>
+        <nav>
+          <ul>
+  	  <li><a href="./index.html">Home</a></li>
+
+            <?php if (isset($_SESSION['username'])) { ?>
+              <li><a href="./profile.php">Profile</a></li>
+              <li><a href="./settings.html">Settings</a></li>
+            <?php } ?>
+            <li><a href="./events.php">Events</a></li>
+
+            <?php if (!isset($_SESSION['username'])) { ?>
+              <li><a href="./login.html">Login/Register</a></li>
+            <?php } else { ?>
+  	    <li><a href="./AffinityLogout.php">Logout</a></li>
+            <?php } ?>
+
+            <li><a href="./help.html">Help</a></li>
+          </ul>
+        </nav>
+      </header>
+      <br>
+    </section>
 
     <?php
-    ini_set('display_errors', 1); 
+    ini_set('display_errors', 1);
     session_start();
     include 'php_queries.php'; // Vlad's query file is imported
 
@@ -91,5 +95,34 @@
     <h2>Likes:</h2>
     <p>Likes go here...</p>
 -->
+
+<footer>
+  <div class="wrapper">
+      <div class="rights">
+        <img src="img/logofooter.png" alt="" class="footer_logo"/>
+        <p>© Affinity. All Rights Reserved 2019 </p>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+
+          <?php if (isset($_SESSION['username'])) { ?>
+            <li><a href="./profile.php">Profile</a></li>
+            <li><a href="./settings.html">Settings</a></li>
+          <?php } ?>
+          <li><a href="./events.php">Events</a></li>
+
+          <?php if (!isset($_SESSION['username'])) { ?>
+            <li><a href="./login.html">Login/Register</a></li>
+          <?php } else { ?>
+             <li><a href="./AffinityLogout.php">Logout</a></li>
+           <?php } ?>
+
+           <li><a href="./help.html">Help</a></li>
+         </ul>
+       </nav>
+     </div>
+   </footer>
   </body>
 </html>
