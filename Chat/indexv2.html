@@ -18,11 +18,6 @@
 <body>
 
 
-  <!--Chat header/title-->
-  <div id = "header">
-      <h1>JQuery Team Chat v1</h1>
-  </div>
-
   <!--'Container'/Box for chat-->
   <div id = "chat_container">
     <div id="list">
@@ -42,12 +37,12 @@
     </form>
 
 
-     <script> 
-      function clearMessageBox() 
+     <script>
+      function clearMessageBox()
       {
         //wait 50ms then call clearwithdelay
         setTimeout(clearWithDelay, 50);
-        function clearWithDelay() 
+        function clearWithDelay()
         {
             //clear value in messagebox
             document.getElementById("messagebox").value = "";

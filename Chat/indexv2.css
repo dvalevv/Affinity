@@ -25,7 +25,7 @@ body {
   margin-top: 20px;
   background-color: lightblue;
   border: 1px solid #333;
-  overflow-y: scroll;
+  /*overflow-y: scroll;*/
 }
 
 #controls{
@@ -77,12 +77,12 @@ input[type=submit] {
   position: absolute;
 }
 
-.hide { 
-    position:absolute; 
-    top:-1px; 
-    left:-1px; 
-    width:1px; 
-    height:1px; 
+.hide {
+    position:absolute;
+    top:-1px;
+    left:-1px;
+    width:1px;
+    height:1px;
 }
 
 #list  p {
@@ -90,4 +90,3 @@ input[type=submit] {
     font-size: 14px;
     background-color: yellow ;
 }
-
