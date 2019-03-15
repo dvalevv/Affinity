@@ -26,14 +26,15 @@ function test_input($data)
 // Successful login means the users data will sent to the next page before redirection. Failed login means the user should
 // be redirected to the failed login page (which will likely just be the original login page with a note saying that
 // the login had failed and that they should try again)
-
-if($username != "" && $password != "" && logIn($username, $password) && !isset($_SESSION['username']))
+if(!empty($username) && !empty($password) && logIn($username, $password) && !isset($_SESSION['username']))
 {
   $_SESSION['username'] = $username;    // Explanation for use of 'Session' at: https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
-  // header("Location: profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241 Removed to fix redirects
-  echo '<script language="javascript"> window.location.href = "index.html"</script>'; // Javascript that when echoed will redirect page as appropriate
+  // header("Location: profile.php");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241 Removed to fix redirects
+  echo '<script language="javascript"> window.location.href = "index.php";</script>'; // Javascript that when echoed will redirect page as appropriate
 }
 else
-  echo '<script language="javascript"> window.location.href = "login.html"</script>';
+{
+  echo '<script language="javascript"> window.location.href = "login.php";</script>';
+}
 exit;
 ?>

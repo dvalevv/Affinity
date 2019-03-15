@@ -1,9 +1,10 @@
 <?php
 
 include 'php_queries.php';
-include 'PHP_toRunIndra.php';
-
+include 'PHP_Indra.php';
+ini_set('max_execution_time', 300);
 ini_set("precision", 3);
+
 function matchNumber($likes1, $username2)
 {
     $data2 = getListOfLikeableObjectsForUser($username2);
@@ -33,7 +34,7 @@ function matchNumber($likes1, $username2)
   		$totalResult = $totalResult + $localMaximum;
   	}
 
-  	return $totalResult / sizeof($likes1);
+  	return $totalResult / (double)sizeof($likes1);
 }
 
 ?>

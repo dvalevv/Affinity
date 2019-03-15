@@ -1,49 +1,45 @@
 <!-- Web page for profile -->
 <!--Info on sessions https://stackoverflow.com/questions/4015729/php-session-start-->
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html>
   <head>
     <title>Your Profile</title>
     <meta charset="utf-8">
     <meta name="author" content="Team Y8">
     <meta name="description" content="Affinity - What Do We Have In Common?"/>
-	
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <link rel="stylesheet" type="text/css" href="css/login.css">
   </head>
-  
+
   <body>
-    <!-- What profile needs:
-    NavBar? SHOULD HAVE LOG OUT ON IT.
-    Profile picture
-    - decide on size later
-    Name
-    Likes
-    -->
-    <header>
-      <nav>
-        <ul>
-	  <li><a href="./index.html">Home</a></li>
-          
-          <?php if (isset($_SESSION['username'])) { ?>
-            <li><a href="./profile.php">Profile</a></li>
-            <li><a href="./settings.html">Settings</a></li>
-          <?php } ?>
+    <section class="banner light">
+      <header class="wrapper light">
+        <a href="#"><img class="logo" src="img/logoSmall.png" alt="Affinity"/></a>
+        <nav>
+          <ul>
+  	  <li><a href="./index.php">Home</a></li>
+
+            <?php if (isset($_SESSION['username'])) { 
+            echo '<li><a href="./profile.php">Profile</a></li>';
+          }?>
           <li><a href="./events.php">Events</a></li>
    
-          <?php if (!isset($_SESSION['username'])) { ?>
-            <li><a href="./login.html">Login/Register</a></li>
-          <?php } else { ?>
-	    <li><a href="./AffinityLogout.php">Logout</a></li>
-          <?php } ?>
-          
-          <li><a href="./help.html">Help</a></li>
-        </ul>
-      </nav>
-    </header>
+          <?php if (!isset($_SESSION['username'])) { 
+            echo '<li><a href="./login.php">Login/Register</a></li>';
+          } else { 
+            echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
+          } ?>
+
+            <li><a href="./help.php">Help</a></li>
+          </ul>
+        </nav>
+      </header>
+      <br>
+    </section>
 
     <?php
-    ini_set('display_errors', 1); 
-    session_start();
+    ini_set('display_errors', 1);
     include 'php_queries.php'; // Vlad's query file is imported
 
     if(isset($_SESSION['username'])) // Checking if the session variable for username has been set when this page is reached - allows there to be default values when the user visits this page for the first time.
@@ -63,13 +59,27 @@
       else
         $likeString = $likeString . $likesArray[$likeIndex] . ", ";
 
-      echo "<h1>Profile</h1>
-      <h2>Profile picture:</h2>
-      <img src='' alt='Profile picture'>
+      echo '<h1>Profile</h1>
       <h2>Name:</h2>
       <p>$userdata[Name]</p>
       <h2>Likes:</h2>
-      <p>" . $likeString . "</p>";
+      <p>" . $likeString . "</p>
+      <section class="settings">
+        <h1>Settings</h1>
+        <form name="settings" method="post" action="UpdateProfile.php">
+          Email:
+          <input type="text" name="email"> <br>
+          Password:
+          <input type="password" name="password"> <br>
+          Confirm password:
+          <input type="password" name="cPassword"> <br>
+          Add Likes:
+          <input type="text" name="addLikes"> <br>
+          Update Likes:
+          <input type="text" name="updateLikes"> <br>
+          <input type="submit" name="saveChanges" value="Save Changes">
+        </form>
+      </section>';
      }
     else
     {
@@ -79,17 +89,53 @@
     <h2>Name:</h2>
     <p>Name goes here...</p>
     <h2>Likes:</h2>
-    <p>Likes go here...</p>";
+    <p>Likes go here...</p> <br>";
     }
     ?>
 <!--
-    <h1>Profile</h1>
-    <h2>Profile picture:</h2>
-    <img src="" alt="Profile picture">
-    <h2>Name:</h2>
-    <p>Name goes here...</p>
-    <h2>Likes:</h2>
-    <p>Likes go here...</p>
+  <section class="settings">
+    <h1>Settings</h1>
+    <form name="settings" method="post" action="UpdateProfile.php">
+      Email:
+      <input type="text" name="email"> <br>
+      Password:
+      <input type="password" name="password"> <br>
+      Confirm password:
+      <input type="password" name="cPassword"> <br>
+      Add Likes:
+      <input type="text" name="addLikes"> <br>
+      Update Likes:
+      <input type="text" name="updateLikes"> <br>
+      <input type="submit" name="saveChanges" value="Save Changes">
+    </form>
+  </section>
 -->
+<footer>
+  <div class="wrapper">
+      <div class="rights">
+        <img src="img/logofooter.png" alt="" class="footer_logo"/>
+        <p>© Affinity. All Rights Reserved 2019 </p>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="./index.php">Home</a></li>
+
+          <?php if (isset($_SESSION['username'])) { 
+            echo '<li><a href="./profile.php">Profile</a></li>';
+          }?>
+          <li><a href="./events.php">Events</a></li>
+   
+          <?php if (!isset($_SESSION['username'])) { 
+            echo '<li><a href="./login.php">Login/Register</a></li>';
+          } else { 
+            echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
+          } ?>
+
+           <li><a href="./help.php">Help</a></li>
+         </ul>
+       </nav>
+     </div>
+   </footer>
   </body>
 </html>

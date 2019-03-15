@@ -1,47 +1,60 @@
 <head>
+  <?php session_start(); ?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/login.css">
     <title>Events</title>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <div class="logo">
-        <img src="img/logo.png" alt="Logo">
-      </div>
-      <div class="menu">
+  <section class="banner light">
+    <header class="wrapper light">
+      <a href="#"><img class="logo" src="img/logoSmall.png" alt="Affinity"/></a>
+      <nav>
         <ul>
-          <li><a href="./index.html">Home</a></li>
-          
+	  <li><a href="./index.php">Home</a></li>
+
           <?php if (isset($_SESSION['username'])) { ?>
             <li><a href="./profile.php">Profile</a></li>
-            <li><a href="./settings.html">Settings</a></li>
           <?php } ?>
           <li><a href="./events.php">Events</a></li>
-   
+
           <?php if (!isset($_SESSION['username'])) { ?>
-            <li><a href="./login.html">Login/Register</a></li>
+            <li><a href="./login.php">Login/Register</a></li>
           <?php } else { ?>
 	    <li><a href="./AffinityLogout.php">Logout</a></li>
           <?php } ?>
-          
-          <li><a href="./help.html">Help</a></li>
-        </ul>
-      </div>
-      <div class="clear-both"></div>
-    </div>
 
-    <!-- Adding code for generating events and displaying their details on the page (Jason) -->    
+          <li><a href="./help.php">Help</a></li>
+        </ul>
+      </nav>
+    </header>
+    <br>
+  </section>
+
+    <!-- Adding code for generating events and displaying their details on the page (Jason) -->
 <?php
     // ini_set('display_errors', 1); // Useful code for displaying the cause of errors. Sourced from link: https://stackoverflow.com/questions/17693391/500-internal-server-error-for-php-file-not-for-html
     include "php_queries.php";
     $eventList = array();
     $eventQuery = getAllEventID(); // The getAllEventID function returns the query object, which we can then call in the loop below to push each ID in the database onto the eventList array
-    
+
     while($row = $eventQuery->fetch_assoc())
-      array_push($eventList, $row["Event_ID"]);
+    {
+    	$pub = getEventData($row["Event_ID"]);
+    	if($pub["Visibility"] == "1")
+        	array_push($eventList, $row["Event_ID"]);
+    }
+    if(isset($_SESSION["username"]))
+    {
+    	$privateEvents = getListOfEventsForUser($_SESSION["username"]);
+    	while($row = $privateEvents->fetch_assoc())
+    	{
+    		$pub = getEventData($row["Event_ID"]);
+    		if($pub["Visibility"] == "0")
+        		array_push($eventList, $row["Event_ID"]);
+    	}
+    }
 
     $noOfEvents = sizeof($eventList);
 
@@ -66,47 +79,32 @@
     }
 ?>
 
-<!--
-    <div class="body">
-      <div class="col-3">
-        <div class="event">
-          <a href="joinevent.html"><img src="images/event.png" alt="Event"></a>
-        </div>
-        <div class="event">
-          <a href="joinevent.html"><img src="images/event.png" alt="Event"></a>
-        </div>
-        <div class="event">
-          <a href="joinevent.html"><img src="images/event.png" alt="Event"></a>
-        </div>
+<footer>
+  <div class="wrapper">
+      <div class="rights">
+        <img src="img/logofooter.png" alt="" class="footer_logo"/>
+        <p>© Affinity. All Rights Reserved 2019 </p>
       </div>
-      <div class="col-3">
-        <div class="event">
-          <a href="joinevent.html"><img src="images/event.png" alt="Event"></a>
-        </div>
-        <div class="event">
-          <a href="joinevent.html"><img src="images/event.png" alt="Event"></a>
-        </div>
-        <div class="event">
-          <a href="joinevent.html"><img src="images/event.png" alt="Event"></a>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="event">
-          <a href="joinevent.html"><img src="images/event.png" alt="Event"></a>
-        </div>
-        <div class="event">
-          <a href="joinevent.html"><img src="images/event.png" alt="Event"></a>
-        </div>
-        <div class="event">
-          <a href="joinevent.html"><img src="images/event.png" alt="Event"></a>
-        </div>
-      </div>
-      <div class="clear-both"></div>
-    </div>
--->
-    <div class="footer">
-      <p>© 2019 Affinity (UK). All rights reserved. </p>
-    </div>
-  </div>
-</body>
+
+      <nav>
+        <ul>
+          <li><a href="./index.php">Home</a></li>
+
+          <?php if (isset($_SESSION['username'])) { ?>
+            <li><a href="./profile.php">Profile</a></li>
+          <?php } ?>
+          <li><a href="./events.php">Events</a></li>
+
+          <?php if (!isset($_SESSION['username'])) { ?>
+            <li><a href="./login.php">Login/Register</a></li>
+          <?php } else { ?>
+             <li><a href="./AffinityLogout.php">Logout</a></li>
+           <?php } ?>
+
+           <li><a href="./help.php">Help</a></li>
+         </ul>
+       </nav>
+     </div>
+   </footer>
+ </body>
 </html>

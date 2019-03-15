@@ -82,6 +82,7 @@ h5, h6          { font-weight: bolder }
 .clearfix:before,  
 .clearfix:after {  
     content: " ";  
+    width: 100%;
     display: table;  
 }  
 .clearfix:after {  
@@ -196,13 +197,15 @@ header{ /*the whole header width and height */
 
 header .logo{ /*logo in header margin and position */
     float: left;
+    position: absolute;
     margin-top: 10px;
-    margin-left: 10%;
+    margin-left: 60px;
 }
 
 header nav{ /*navigation bar in header */
-    float: right;
-    margin-top: 57px;
+    position: absolute;
+    right: 0;
+    margin-top: 70px;
     margin-right: 5%;
 
 }
@@ -244,16 +247,42 @@ header.dark nav ul li a:hover{
     color: #919191;
 }
 
+/* 	Image transforms	*/
+.peopleImage {
+    min-width: 50px; 
+    min-height: 300px; 
+    max-width: 300px;	
+    background-position: top left;	
+    background-size: 100%;	
+    background-repeat: repeat;	
+    background-image: url(../img/matchcouple.png);	
+    transform: translateX(250px) translateY(-100px);
+    margin-left: 50%;
+}
+
+.indraImage {
+    min-width: 200px;	
+    min-height: 500px;	
+    transform: translateY(-100px);
+}
+
+.indraImage img {
+    margin-left: 50%;
+    transform:  translateX(-250px);
+}
 
 
-
-
+/*	Testing tables	*/
+.tableRow {
+    width: 50%;
+    display: table-row;
+}
 
 
 /*    Events    */
 .events {   /*Controls the border around the events section on homepage */
 	width: 100%;
-    height: 500px;
+    /*height: 500px;*/
     position: relative;
     
 	background: url('../img/eventsbg.jpg') no-repeat; /* background found in img folder */
@@ -268,13 +297,14 @@ header.dark nav ul li a:hover{
     list-style: none;
     display: block;
     width: 313px;
+    height: 400px;
     float: left;
     margin-left: 80px;
     text-align: center;
 }
 
 .events ul li:first-child{ /* Controls the first event to make its left margin 0 */ 
-    margin-left: 0;
+    margin-left: 8%;
 }
 
 .events ul li .separator{        /*This is the line seperator between each event */ 
@@ -322,7 +352,7 @@ header.dark nav ul li a:hover{
     font-family: "raleway-bold";
     font-size: 30px;
     font-weight: bold;
-    margin: 0 0 20px 0;
+    margin: 20px 0 20px 0;
     text-transform: uppercase;
 }
 
@@ -353,7 +383,7 @@ header.dark nav ul li a:hover{
 /*    team    */
 .team{ /*section for meet the team */
 	width: 100%;
-    height: 500px;
+    /*height: 500px;*/
     position: relative;
 	margin-top: 50px;
 
@@ -369,11 +399,10 @@ header.dark nav ul li a:hover{
 }
 
 .team ul li{ /*each team member controlled in a list */
-    display: block;
     float: left;
     margin-left: 80px;
     width: 185px;
-    margin-top: -100px;
+    height: 400px;
 }
 
 .team ul li:first-child{ /*first member of team margin set left 0 */

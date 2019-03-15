@@ -38,10 +38,10 @@ if($password == $cPassword && !checkForExistingUsername($username) && $username 
 
   $_SESSION['username'] = $username;    // Explanation for use of 'Session' at: https://stackoverflow.com/questions/871858/php-pass-variable-to-next-page
 
-  // header("Location: profile.html");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
-  echo '<script language="javascript"> window.location.href = "index.html"</script>';
+  // header("Location: profile.php");     // Replace html file names where appropriate. Explanation for use of 'header' at: https://my.bluehost.com/hosting/help/241
+  echo '<script language="javascript"> window.location.href = "index.php";</script>';
 }
 else
-  echo '<script language="javascript"> window.location.href = "login.html"</script>';
+  echo '<script language="javascript"> window.location.href = "login.php";</script>';
 exit;
 ?>

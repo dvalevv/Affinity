@@ -18,15 +18,10 @@
 <body>
 
 
-  <!--Chat header/title-->
-  <div id = "header">
-      <h1>JQuery Team Chat v1</h1>
-  </div>
-
   <!--'Container'/Box for chat-->
   <div id = "chat_container">
     <div id="list">
-      <iframe id="iframe" src="MikeJBrowne123DenislavValev321.html?version=2" frameborder="0" height="400" width="95%"></iframe>
+      <iframe id="iframe" src="chat.html?version=2" frameborder="0" height="400" width="95%"></iframe>
     </div>
   </div>
 
@@ -42,12 +37,12 @@
     </form>
 
 
-     <script> 
-      function clearMessageBox() 
+     <script>
+      function clearMessageBox()
       {
         //wait 50ms then call clearwithdelay
         setTimeout(clearWithDelay, 50);
-        function clearWithDelay() 
+        function clearWithDelay()
         {
             //clear value in messagebox
             document.getElementById("messagebox").value = "";

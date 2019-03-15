@@ -499,11 +499,13 @@ footer nav ul{
     margin-right: 6%;
     overflow: hidden;
     list-style: none;
+    
 }
 
 footer nav ul li{
     float: left;
-    margin-left: 25px;
+    position:relative;
+    margin-left: 20px;
 }
 
 footer nav ul li a{

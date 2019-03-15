@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start(); ?>
 <html lang="en">
 <head>
   <title>Affinity - What Do We Have In Common?</title>
@@ -7,6 +8,7 @@
   <meta name="description" content="Affinity - What Do We Have In Common?"/>
 
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  
 </head>
 
 <body>
@@ -15,21 +17,20 @@
       <a href="#"><img class="logo" src="img/logoSmall.png" alt="Affinity"/></a>
       <nav>
         <ul>
-	  <li><a href="./index.html">Home</a></li>
+	  <li><a href="./index.php">Home</a></li>
           
-          <?php if (isset($_SESSION['username'])) { ?>
-            <li><a href="./profile.php">Profile</a></li>
-            <li><a href="./settings.html">Settings</a></li>
-          <?php } ?>
+          <?php if (isset($_SESSION['username'])) { 
+            echo '<li><a href="./profile.php">Profile</a></li>';
+          }?>
           <li><a href="./events.php">Events</a></li>
    
-          <?php if (!isset($_SESSION['username'])) { ?>
-            <li><a href="./login.html">Login/Register</a></li>
-          <?php } else { ?>
-	    <li><a href="./AffinityLogout.php">Logout</a></li>
-          <?php } ?>
+          <?php if (!isset($_SESSION['username'])) { 
+            echo '<li><a href="./login.php">Login/Register</a></li>';
+          } else { 
+            echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
+          } ?>
           
-          <li><a href="./help.html">Help</a></li>
+          <li><a href="./help.php">Help</a></li>
         </ul>
       </nav>
     </header>
@@ -40,34 +41,34 @@
       <p>Find Matches At Events Near You...</p>
       <hr>
     </div>
-    <div class="container" style="min-width: 50px; min-height: 300px; max-width: 300px;	background-position: top left;	background-size: 100%;	background-repeat: repeat;	background-image: url(img/matchcouple.png);	transform: translateX(1200px)  translateY(-100px);"></div>
+    <div class="container peopleImage"></div>
 
   </section><!--  End banner  -->
 
   <section class="events wrapper">
     <ul class="clearfix">
-      <li class="event1">
+      <li class="event1 tableRow">
         <img class="event" src="img/event1.png" alt=""/>
         <span class="separator"></span>
         <h2>Concerts Near You</h2>
         <p>Find and connect with people at concerts near you, based on interests, hobbies etc...</p>
       </li>
 
-      <li class="event2">
+      <li class="event2 tableRow">
         <img class="icon" src="img/event2.png" alt=""/>
         <span class="separator"></span>
         <h2>Conferences Near You</h2>
         <p>Find and connect with people at conferences near you, based on interests, hobbies etc...</p>
       </li>
 
-      <li class="event3">
+      <li class="event3 tableRow">
         <img class="icon" src="img/event3.png" alt=""/>
         <span class="separator"></span>
         <h2>Socials Near You</h2>
         <p>Find and connect with people at socials near you, based on interests, hobbies etc...</p>
       </li>
 
-      <li class="event4">
+      <li class="event4 tableRow">
         <img class="icon" src="img/event3.png" alt=""/>
         <span class="separator"></span>
         <h2>Socials Near You</h2>
@@ -83,7 +84,7 @@
       <h3><font color="black">The members of our team are match making experts!</font></h3>
       <hr class="separator"/>
       <ul class="clearfix">
-        <li class="member1">
+        <li class="member1 tableRow">
           <p><img src="img/quotes.png" alt="" class="quotes"/>Dolor sit amet consectetur isicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud laboris.
             <span class="triangle"></span>
           </p>
@@ -95,7 +96,7 @@
           </div>
         </li>
 
-        <li class="member2"  data-wow-delay=".2s">
+        <li class="member2 tableRow"  data-wow-delay=".2s">
           <p><img src="img/quotes.png" alt="" class="quotes"/>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam sunt in culpa officia deserunt mollit anim laborum sint occaecat.
             <span class="triangle"></span>
           </p>
@@ -107,7 +108,7 @@
           </div>
         </li>
 
-        <li class="member3">
+        <li class="member3 tableRow">
           <p><img src="img/quotes.png" alt="" class="quotes"/>Aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse slum dolore eu fugiat nulla pariatursint occaecat.
             <span class="triangle"></span>
           </p>
@@ -119,7 +120,7 @@
           </div>
         </li>
 
-        <li class="member4">
+        <li class="member4 tableRow">
           <p><img src="img/quotes.png" alt="" class="quotes"/>Aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse slum dolore eu fugiat nulla pariatursint occaecat.
             <span class="triangle"></span>
           </p>
@@ -131,7 +132,7 @@
           </div>
         </li>
 
-        <li class="member5">
+        <li class="member5 tableRow">
           <p><img src="img/quotes.png" alt="" class="quotes"/>Aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse slum dolore eu fugiat nulla pariatursint occaecat.
             <span class="triangle"></span>
           </p>
@@ -143,7 +144,7 @@
           </div>
         </li>
 
-        <li class="member6">
+        <li class="member6 tableRow">
           <p><img src="img/quotes.png" alt="" class="quotes"/>Aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse slum dolore eu fugiat nulla pariatursint occaecat.
             <span class="triangle"></span>
           </p>
@@ -155,7 +156,7 @@
           </div>
         </li>
 
-        <li class="member7">
+        <li class="member7 tableRow">
           <p><img src="img/quotes.png" alt="" class="quotes"/>Aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse slum dolore eu fugiat nulla pariatursint occaecat.
           <span class="triangle"></span>
           </p>
@@ -180,9 +181,9 @@
         </ul>
       </div>
     </div>
-    <div class="container" style="	min-width: 200px;	min-height: 500px;	transform: translateY(-100px);">
+    <div class="container indraImage">
       <div class="row">
-        <div class="col-md-12"><img class="img-fluid d-block" src="img/indra_explained.jpg" style="	transform:  translateX(650px) ;" height="500px" ></div>
+        <div class="col-md-12"><img class="img-fluid d-block" src="../img/indra_explained.jpg" height="500px" ></div>
       </div>
     </div>
   </section><!--  End Indra  -->
@@ -195,25 +196,29 @@
 
       <nav>
         <ul>
-	  <li><a href="./index.html">Home</a></li>
+	  <li><a href="./index.php">Home</a></li>
           
-          <?php if (isset($_SESSION['username'])) { ?>
-            <li><a href="./profile.php">Profile</a></li>
-            <li><a href="./settings.html">Settings</a></li>
-          <?php } ?>
+          <?php if (isset($_SESSION['username'])) { 
+            echo '<li><a href="./profile.php">Profile</a></li>';
+          }?>
           <li><a href="./events.php">Events</a></li>
    
-          <?php if (!isset($_SESSION['username'])) { ?>
-            <li><a href="./login.html">Login/Register</a></li>
-          <?php } else { ?>
-	    <li><a href="./AffinityLogout.php">Logout</a></li>
-          <?php } ?>
+          <?php if (!isset($_SESSION['username'])) { 
+            echo '<li><a href="./login.php">Login/Register</a></li>';
+          } else { 
+            echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
+          } ?>
           
-          <li><a href="./help.html">Help</a></li>
+          <li><a href="./help.php">Help</a></li>
         </ul>
       </nav>
     </div>
   </footer><!--  End footer  -->
-
+  <iframe src="Chat/indexv2.html" style = "position: sticky;
+  bottom: 0px;
+  right: 0px;
+  width: 50%;
+  height: 50%;
+  border: 3px solid #73AD21;"></iframe>
 </body>
 </html>

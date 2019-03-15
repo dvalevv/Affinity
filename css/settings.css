@@ -466,16 +466,12 @@ header.dark nav ul li a:hover{
 
 /*    footer    */
 footer{
-    width: 100%;
+    padding: 35px 0;
     overflow: hidden;
-    position: absolute;
-    bottom: 0;
 }
 
 footer .footer_logo{
     float: left;
-    margin-top: 10px;
-    margin-left: 6%;
 }
 
 footer .rights p{
@@ -483,7 +479,7 @@ footer .rights p{
     color: #838181;
     font-family: "raleway-regular";
     font-size: 13px;
-    margin: 20px 0 0 40px;
+    margin: 5px 0 0 40px;
 }
 
 footer .rights p a{
@@ -496,9 +492,9 @@ footer .rights p a{
 
 footer nav ul{
     float: right;
-    margin-right: 6%;
     overflow: hidden;
     list-style: none;
+    margin-top: 5px;
 }
 
 footer nav ul li{
