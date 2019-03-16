@@ -26,14 +26,19 @@ function matchNumber($likes1, $username2)
   		$localMaximum = 0;
   		for($indexLikes2 = 0; $indexLikes2 < sizeof($likes2); $indexLikes2++)
   		{
-        	$result = perform_Calculation($likes1[$indexLikes1], 
+          $result = getCacheValue($likes1[$indexLikes1], $likes2[$indexLikes2]);
+          if($result == -1)
+        	{ 
+             $result = perform_Calculation($likes1[$indexLikes1], 
         	                              $likes2[$indexLikes2]);
+             addToCache($likes1[$indexLikes1], $likes2[$indexLikes2], $result);
+          }
+          $result = $result;
         	if($localMaximum < $result)
         		$localMaximum = $result;
   		}
   		$totalResult = $totalResult + $localMaximum;
   	}
-
   	return $totalResult / (double)sizeof($likes1);
 }
 
