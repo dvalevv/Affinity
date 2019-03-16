@@ -16,6 +16,7 @@ $conn = new mysqli($database_host, $database_user, $database_pass, $database_nam
 function createUser($username, $name, $email, $password)
 {
     global $conn;
+    $password = password_hash($password, PASSWORD_DEFAULT);
     $sql_search = "INSERT INTO `User` (`Username`, `Name`, `Email`, `Password`)"
                 ." VALUES ('".$username."','".$name."','".$email."','".$password."')";
     $conn->query($sql_search);
@@ -60,6 +61,7 @@ function checkForExistingUsername($username)
 function updateUser($username, $email, $password)
 {
     global $conn;
+    $password = password_hash($password, PASSWORD_DEFAULT);
     $sql_search = "UPDATE `User` SET `Email`= '".$email."', `Password`='"
                 .$password."' WHERE Username = '".$username."'";
     $conn->query($sql_search);
@@ -70,6 +72,7 @@ function updateUser($username, $email, $password)
 function logIn($username, $password)
 {
     global $conn;
+    $password = password_hash($password, PASSWORD_DEFAULT);
     $sql_search = "SELECT `Username`, `Password` FROM `User` WHERE Username = '"
                 .$username."' AND Password = '".$password."'";
     $result = $conn->query($sql_search);
@@ -286,4 +289,44 @@ function getListOfDislikeableObjectsForUser($username)
     $listOfDislikableObjects = $conn->query($sql_search);
     return $listOfDislikableObjects;
 }
+/*------------------------------------*//*------------------------------------*/
+//functions for cache
+/*------------------------------------*//*/*------------------------------------*/
+//get value from the cache 
+//return -1 if there was no match
+function getCacheValue($like1, $like2)
+{
+    global $conn;
+    if(strcasecmp($like1, $like2) < 0)
+    {
+        $switch = $like1;
+        $like1 = $like2;
+        $like2 = $switch;
+    }
+    $sql_search = "SELECT * FROM `Cache` WHERE Object1 = '"
+                .$like1."' AND Object2 = '"
+                .$like2."'";
+    $result = $conn->query($sql_search);
+    if($result == null)
+        return -1;
+    $data = $result->fetch_assoc();
+    if($data == null)
+        return -1;
+    return $data["Value"];
+}
+
+function addToCache($like1, $like2, $value)
+{
+    global $conn;
+    if(strcasecmp($like1, $like2) < 0)
+    {
+        $switch = $like1;
+        $like1 = $like2;
+        $like2 = $switch;
+    }
+    $sql_search = "INSERT INTO `Cache` (`Object1`, `Object2`,`Value` ) "
+                ."VALUES ('".$like1."','".$like2."','".$value."')";
+    $conn->query($sql_search);
+}
+
 ?>
