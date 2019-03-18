@@ -13,12 +13,12 @@ $conn = new mysqli($database_host, $database_user, $database_pass, $database_nam
 //functions for the user
 /*------------------------------------*//*------------------------------------*/
 //for creating a new user.
-function createUser($username, $name, $email, $password)
+function createUser($username, $email, $password)
 {
     global $conn;
-    //$password = password_hash($password, PASSWORD_DEFAULT);
+    $password = password_hash($password, PASSWORD_DEFAULT);
     $sql_search = "INSERT INTO `User` (`Username`, `Name`, `Email`, `Password`)"
-                ." VALUES ('".$username."','".$name."','".$email."','".$password."')";
+                ." VALUES ('".$username."','".$username."','".$email."','".$password."')";
     $conn->query($sql_search);
 }
 
@@ -41,6 +41,23 @@ function getUserData($username)
     */
 }
 
+//get hashed password of user from database (added by Jason)
+function getUserPassword($username)
+{
+    global $conn;
+    $sql_search = "SELECT `Password` FROM `User` WHERE Username = '"
+                .$username."'";
+    $result = $conn->query($sql_search);
+    //$row = $result->fetch_assoc();
+    $data = $result->fetch_assoc();
+
+    return $data;
+
+    /*
+    $password = $row["Password"];
+    */
+}
+
 /*------------------------------------*/
 //checking if the username is taken
 function checkForExistingUsername($username)
@@ -58,7 +75,7 @@ function checkForExistingUsername($username)
 function updateUser($username, $email, $password)
 {
     global $conn;
-    //$password = password_hash($password, PASSWORD_DEFAULT);
+    $password = password_hash($password, PASSWORD_DEFAULT);
     $sql_search = "UPDATE `User` SET `Email`= '".$email."', `Password`='"
                 .$password."' WHERE Username = '".$username."'";
     $conn->query($sql_search);
@@ -69,7 +86,9 @@ function updateUser($username, $email, $password)
 function logIn($username, $password)
 {
     global $conn;
-    //$password = password_hash($password, PASSWORD_DEFAULT);
+    //$password = password_hash($password, PASSWORD_DEFAULT);  // Wont work as the hash created by password_hash is different every time (Jason).
+    // New code must instead retrieve all the users from the database and check whether the username password combo, with the password verified against the
+    // hashed values in the database, is valid (refer to https://stackoverflow.com/questions/24024702/how-can-i-decrypt-a-password-hash-in-php for details)
     $sql_search = "SELECT `Username`, `Password` FROM `User` WHERE Username = '"
                 .$username."' AND Password = '".$password."'";
     $result = $conn->query($sql_search);

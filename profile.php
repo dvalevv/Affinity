@@ -39,13 +39,51 @@
     //ini_set('display_errors', 1);
     include 'php_queries.php'; // Vlad's query file is imported
     //session_start();
-
-    if(isset($_POST['S_Search']) && isset($_GET["eventID"]) && isset($_SESSION['username']))
+    
+   //Handling sql injection
+   function test_input($data) 
+   {
+     $data = trim($data);
+     $data = stripslashes($data);
+     $data = htmlspecialchars($data);
+     return $data; 
+   }
+    if(isset($_SESSION['username']) && isset($_POST['password']))
     {
-      
+      $userpass = getUserPassword($_SESSION['username']); // Variable for storing the users password. Used for checking if the password entered by the user is correct before letting them make changes. Currently initialised to my password until the encryption code is implemented
+      $userpass = $userpass["Password"];
     }
+    
+   // Must check if the person is logged in, their passwords match and are correct for their account
+    if((isset($_SESSION['username']) && password_verify($_POST['password'], $userpass) && $_POST['cPassword'] == $_POST['password']))  // Not possible to decrypt hashed values, so must use an in-build function to check if an entered password matches a hashed one stored in the database (details at https://stackoverflow.com/questions/24024702/how-can-i-decrypt-a-password-hash-in-php)
+    {
+      $username = $_SESSION['username'];
+      // Must also that they haven't filled in both the add likes and update likes fields at the same time for obvious reasons
+      if ($_POST['addLikes'] != "" && $_POST['updateLikes'] == "")
+      {
+           $likesAdded = explode(" ", test_input($_POST["addLikes"]));
+           for($l = 0; $l < sizeof($likesAdded); $l++)
+             addANewLikeableObject($username, $likesAdded[$l]);
+      }
+      elseif ($_POST['updateLikes'] != "" && $_POST['addLikes'] == "")
+      {
+           // First retrieve all of the users likes so that they can be deleted from the database.
+           $likesArray = array();
+           $userLikeQuery = getListOfLikeableObjectsForUser($username);
 
-    if(isset($_SESSION['username'])) // Checking if the session variable for username has been set when this page is reached - allows there to be default values when the user visits this page for the first time.
+           while($row = $userLikeQuery->fetch_assoc())
+              array_push($likesArray, $row["Object"]);
+
+           for($l = 0; $l < sizeof($likesArray); $l++)
+              deleteObjectFromLikes($username, $likesArray[$l]);
+
+           // Now that the users likes have been wiped, must then add all of the likes they wish to replace them with to the database
+           $replacementLikes = explode(" ", test_input($_POST["updateLikes"]));
+           for($l = 0; $l < sizeof($replacementLikes); $l++)
+              addANewLikeableObject($username, $replacementLikes[$l]);
+      }
+    }
+   if(isset($_SESSION['username'])) // Checking if the session variable for username has been set when this page is reached - allows there to be default values when the user visits this page for the first time.
     {
       $username = $_SESSION['username'];
       $userdata = getUserData($username);
@@ -69,9 +107,7 @@
       <p>' . $likeString . '</p>
       <section class="settings">
         <h1>Settings</h1>
-        <form name="settings" method="post" action="UpdateProfile.php">
-          Email:
-          <input type="text" name="email"> <br>
+        <form name="settings" method="post" action="">
           Password:
           <input type="password" name="password"> <br>
           Confirm password:
