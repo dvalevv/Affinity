@@ -25,8 +25,7 @@
 	  <li><a href="./index.php">Home</a></li>
 
           <?php if (isset($_SESSION['username'])) { 
-            echo '<li><a href="./profile.php">Profile</a></li>
-            <li><a href="./settings.php">Settings</a></li>';
+            echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
           <li><a href="./events.php">Events</a></li>
    
@@ -81,8 +80,7 @@
           <li><a href="./index.php">Home</a></li>
 
           <?php if (isset($_SESSION['username'])) { 
-            echo '<li><a href="./profile.php">Profile</a></li>
-            <li><a href="./settings.php">Settings</a></li>';
+            echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
           <li><a href="./events.php">Events</a></li>
    

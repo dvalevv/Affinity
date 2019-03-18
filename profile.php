@@ -36,9 +36,9 @@
     </section>
 
     <?php
-    ini_set('display_errors', 1);
+    //ini_set('display_errors', 1);
     include 'php_queries.php'; // Vlad's query file is imported
-
+    //session_start();
     if(isset($_SESSION['username'])) // Checking if the session variable for username has been set when this page is reached - allows there to be default values when the user visits this page for the first time.
     {
       $username = $_SESSION['username'];
@@ -58,9 +58,9 @@
 
       echo '<h1>Profile</h1>
       <h2>Name:</h2>
-      <p>$userdata[Name]</p>
+      <p>' . $username . '</p>
       <h2>Likes:</h2>
-      <p>" . $likeString . "</p>
+      <p>' . $likeString . '</p>
       <section class="settings">
         <h1>Settings</h1>
         <form name="settings" method="post" action="UpdateProfile.php">
