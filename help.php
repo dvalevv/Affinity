@@ -51,7 +51,19 @@
       <p>Indra is blah blah blah.</p>
     </div>
   </div>
-
+  <?php
+    // To work locally must install specific package. See first response on https://stackoverflow.com/questions/14802606/mail-function-is-not-working-in-localhost-server (# apt-get install sendmail)
+    if(isset($_GET['email']) && isset($_GET['question']) && isset($_GET['detail']) && preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $_GET['email']))
+    {
+    $to = "jason.ozuzu@student.manchester.ac.uk";
+    $subject = $_GET['question'];
+    $message = $_GET['detail'];
+    $from = $_GET['email'];
+    $headers = "From:" . $from;
+    mail($to,$subject,$message,$headers);
+    echo "Mail Sent.";
+    }
+  ?>
   <div class="user-card right">
     <div class="login-box">
       <h2>Contact us</h2>
