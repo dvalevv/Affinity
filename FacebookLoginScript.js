@@ -82,6 +82,7 @@ window.fbAsyncInit = function()
     {
       console.log('Successful login for: ' + response.name);
       console.log('Email is: ' + response.email);
+      console.log('Whole object: ' + JSON.stringify(response));
       //document.getElementById('status').innerHTML =
       //  'Thanks for logging in, ' + response.name + '!';
     });
