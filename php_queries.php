@@ -16,7 +16,7 @@ $conn = new mysqli($database_host, $database_user, $database_pass, $database_nam
 function createUser($username, $name, $email, $password)
 {
     global $conn;
-    $password = password_hash($password, PASSWORD_DEFAULT);
+    //$password = password_hash($password, PASSWORD_DEFAULT);
     $sql_search = "INSERT INTO `User` (`Username`, `Name`, `Email`, `Password`)"
                 ." VALUES ('".$username."','".$name."','".$email."','".$password."')";
     $conn->query($sql_search);
@@ -50,10 +50,7 @@ function checkForExistingUsername($username)
                 .$username."'";
     $result = $conn->query($sql_search);
     //this if can be changed
-    if($result->num_rows != 0)
-        return true;
-    else
-        return false;
+    return $result->num_rows != 0;
 }
 
 /*------------------------------------*/
@@ -61,7 +58,7 @@ function checkForExistingUsername($username)
 function updateUser($username, $email, $password)
 {
     global $conn;
-    $password = password_hash($password, PASSWORD_DEFAULT);
+    //$password = password_hash($password, PASSWORD_DEFAULT);
     $sql_search = "UPDATE `User` SET `Email`= '".$email."', `Password`='"
                 .$password."' WHERE Username = '".$username."'";
     $conn->query($sql_search);
@@ -77,10 +74,7 @@ function logIn($username, $password)
                 .$username."' AND Password = '".$password."'";
     $result = $conn->query($sql_search);
     //this if can be changed
-    if($result->num_rows != 0)
-        return true;
-    else
-        return false;
+    return $result->num_rows != 0;
 }
 
 /*------------------------------------*//*------------------------------------*/

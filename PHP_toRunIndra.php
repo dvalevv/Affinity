@@ -8,12 +8,8 @@ the output -->
 
 <?php
 function perform_Calculation($like1, $like2) {
-  exec("python  ~/Dropbox/University/Course/Year\ 1/Semester\ 2/First\ Year\ Team\ Project/Indra.py $like1 $like2 2>&1", $output, $ret_code);
+  exec("python Indra.py $like1 $like2 2>&1", $output, $ret_code);
   return $output;
 }
 
-$var1 = perform_Calculation("computer", "robotics");
-$var2 = perform_Calculation("classical music", "Mozart");
-echo ((double)$var1[0]);
-echo ((double)$var2[0]);
 ?>

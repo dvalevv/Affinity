@@ -1,11 +1,8 @@
-<!-- Designed to be run without actually calling the php page itself. Refer to the link below
-for possible methods of implementation:
-https://stackoverflow.com/questions/11958243/button-that-runs-a-php-script-without-changing-current-page
-using hidden frames seems to be simplest method so consider using -->
-<?php
+
+<?php session_start();
 // ini_set('display_errors', 1); 
 include 'php_queries.php'; // Vlad's query file is imported
-session_start();  // Initiating a 'Session' to allow the sending of data to subsequent pages
+  // Initiating a 'Session' to allow the sending of data to subsequent pages
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")       // The data is retrieved from the source and is treated for sq1
 {                                                                                         // injection

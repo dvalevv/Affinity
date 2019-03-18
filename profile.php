@@ -1,6 +1,3 @@
-<!-- Web page for profile -->
-<!--Info on sessions https://stackoverflow.com/questions/4015729/php-session-start-->
-<!DOCTYPE html>
 <?php session_start(); ?>
 <html>
   <head>

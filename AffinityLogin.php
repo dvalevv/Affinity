@@ -1,13 +1,8 @@
-<!-- Designed to be run without actually calling the php page itself. Refer to the link below
-for possible methods of implementation:
-https://stackoverflow.com/questions/11958243/button-that-runs-a-php-script-without-changing-current-page
-using hidden frames seems to be simplest method so consider using -->
-<!--Information on the security of Sessions found at https://stackoverflow.com/questions/1181105/how-safe-are-php-session-variables, good enough as no data that necessarily needs to be highly secure is stored-->
-<!--Information on ending sessions found at https://stackoverflow.com/questions/18705239/end-session-in-php and https://www.w3schools.com/php/php_sessions.asp-->
-<?php
+
+<?php session_start();
 //ini_set('display_errors', 1); 
-include 'php_queries.php'; // Vlad's query file is imported
-if (!session_id()) session_start();  // Initiating a 'Session' to allow the sending of data to subsequent pages
+include 'php_queries.php'; // Vlad's query file is imported  
+// Initiating a 'Session' to allow the sending of data to subsequent pages
 
 if ($_SERVER["REQUEST_METHOD"] == "POST")       // The data is retrieved from the source and is treated for sql
 {                                                                                         // injection

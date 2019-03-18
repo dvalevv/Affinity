@@ -1,4 +1,3 @@
-<!doctype html>
 <?php session_start(); ?>
 <!---
   <a href="https://www.facebook.com/milliomola">Abdelrahman Hamdy</a>
