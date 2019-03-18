@@ -69,7 +69,7 @@ function updateUser($username, $email, $password)
 function logIn($username, $password)
 {
     global $conn;
-    $password = password_hash($password, PASSWORD_DEFAULT);
+    //$password = password_hash($password, PASSWORD_DEFAULT);
     $sql_search = "SELECT `Username`, `Password` FROM `User` WHERE Username = '"
                 .$username."' AND Password = '".$password."'";
     $result = $conn->query($sql_search);
