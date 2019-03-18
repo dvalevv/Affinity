@@ -39,6 +39,12 @@
     //ini_set('display_errors', 1);
     include 'php_queries.php'; // Vlad's query file is imported
     //session_start();
+
+    if(isset($_POST['S_Search']) && isset($_GET["eventID"]) && isset($_SESSION['username']))
+    {
+      
+    }
+
     if(isset($_SESSION['username'])) // Checking if the session variable for username has been set when this page is reached - allows there to be default values when the user visits this page for the first time.
     {
       $username = $_SESSION['username'];

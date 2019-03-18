@@ -49,7 +49,7 @@
             if(isset($_GET["eventID"]))
               $eventID = $_GET["eventID"];
 
-            if(isset($_POST['S_Search']) && isset($_GET["eventID"]) && isset($_SESSION['username']))
+            if(isset($_POST['Search']) && isset($_GET["eventID"]) && isset($_SESSION['username']))
             {
               $username = $_SESSION['username'];
               $usersInEventQuery = getListOfUsersForEvent($eventID); // Function creates query for getting the list of users that are part of an event
@@ -106,7 +106,7 @@
             </div>
             <div class=\"clear-both\"></div>";
 */
-            echo '<div class="col-7"> <p>' . $eventName . '</p><p>' . $eventLocation . '. ' . $eventExpirationDate . '</p> <form action="" method="POST"><input type="submit" name="S_Search" value="Slow Search (More Accurate)"></form></div> <form action="" method="POST"><input type="submit" name="F_Search" value="Fast Search"></form></div> <div class="clear-both"></div><div class="clear-both">';
+            echo '<div class="col-7"> <p>' . $eventName . '</p><p>' . $eventLocation . '. ' . $eventExpirationDate . '</p> <form action="" method="POST"><input type="submit" name="Search" value="Find a Match"></form></div><div class="clear-both">';
 ?>
 
 <!--
