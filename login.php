@@ -17,7 +17,7 @@
 
 
 <body>
-    
+
   <div id="fb-root"></div>
   <script async defer src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=401356637298458&autoLogAppEvents=1"></script>
   <script src="FacebookLoginScript.js"></script>
@@ -28,18 +28,18 @@
       <nav>
         <ul>
 	  <li><a href="./index.php">Home</a></li>
-          
-          <?php if (isset($_SESSION['username'])) { 
+
+          <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
           <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
+
+          <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
+          } else {
 	          echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
           } ?>
-          
+
           <li><a href="./help.php">Help</a></li>
         </ul>
       </nav>
@@ -58,15 +58,15 @@
     </form>
 
 		<div class="or"></div>
-        <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" 
-          data-use-continue-as="true" scope="public_profile, email" onlogin="checkLoginState();"></div>
-          
+        <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="false"
+          data-use-continue-as="true" scope="user-info, email" onlogin="checkLoginState();"></div>
+
 		<a href="https://www.linkedin.com/oauth/v2/authorization?prompt=consent&response_type=code&redirect_uri=https://web.cs.manchester.ac.uk/v31679dv/Affinity&scope=r_liteprofile%20r_emailaddress&state=4hEX1BqPHFNjHEmGALnbOXeNzUO-Lobo&client_id=776mscfj8swxp4"
 		   class="login-with-google">
 			<span class="icon fa fa-google-plus"></span>
 			Login with Linkedin
 		</a>
-		
+
 	</div>
 	<div class="signup-box">
       <form class="signup-form" name="signup" method="post" action="AffinityRegistration.php">
@@ -94,18 +94,18 @@
     <nav>
       <ul>
   <li><a href="./index.php">Home</a></li>
-          
-          <?php if (isset($_SESSION['username'])) { 
+
+          <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
           <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
+
+          <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
+          } else {
             echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
           } ?>
-          
+
           <li><a href="./help.php">Help</a></li>
       </ul>
     </nav>
