@@ -521,3 +521,33 @@ footer nav ul li a{
 footer nav ul li a:hover{
     color: #616161;
 }
+
+
+.eventrow {
+    display: flex;
+    flex: 33.3%;
+    padding: 5px;
+}
+
+.eventcolumn {
+    flex: 33.3%;
+    padding: 5px;
+}
+
+.containers {
+  display: grid;
+  grid-template-columns: 500px 500px 500px;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+  margin-top: 200px;
+  margin-left: 100px;
+}
+
+.box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 50px;
+  font-size: 150%;
+}
