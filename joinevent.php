@@ -32,13 +32,11 @@
     <br>
   </section>
 
+  <!--Some javascript for opening a pop up window. Refer to http://w3schools.invisionzone.com/topic/23862-how-to-open-a-popup-window-in-php-code/ for code-->
+  <script type="text/javascript">function openRequestedPopup(){ window.open('contactMatch.php', 'ContactMatch', 'width=545,height=600,resizable=yes,scrollbars=yes,status=yes');}</script>
 <?php
             include "matching.php";
             //ini_set('display_errors', 1);
-
-            //function perform_Calculation($like1, $like2) {
-            //exec("python Indra.py $like1 $like2 2>&1", $output, $ret_code);
-            //return $output; }
 
             if(isset($_GET["eventName"]))
               $eventName = $_GET["eventName"];
@@ -95,12 +93,34 @@
 
                 echo nl2br("You matched with " . $namesMatched[$keyOfMax] . " with a score of " . $highestMatchValue . "! (1)\n"); // nl2br() ensures new lines (\n) included in php echo's appear in the browser
                 echo '<form action="" method="POST"><input type="submit" name="contact1" value="Contact First Match"></form><br>';
+                // echo '<a href="contactMatch.php" onClick="MyWindow=window.open(\'http://www.google.com\',\'MyWindow\',width=600,height=300); return false;">Click Here</a>'
                 echo nl2br("You matched with " . $namesMatched[$keyOf2ndMax] . " with a score of " . $secondHighestMatchValue . "! (2)\n");
                 echo '<form action="" method="POST"><input type="submit" name="contact2" value="Contact Second Match"></form><br>';
                 echo "You matched with " . $namesMatched[$keyOf3rdMax] . " with a score of " . $thirdHighestMatchValue . "! (3)";
                 echo '<form action="" method="POST"><input type="submit" name="contact3" value="Contact Third Match"></form><br>';
 
+                // Added to allow the pop up window to access the emails of a given contact
+                $_SESSION['contact1Email'] = getUserData($namesMatched[$keyOfMax])['Email'];
+                $_SESSION['contact2Email'] = getUserData($namesMatched[$keyOf2ndMax])['Email'];
+                $_SESSION['contact3Email'] = getUserData($namesMatched[$keyOf3rdMax])['Email'];
              }
+
+            // If statements allow checks to be performed to determine which match the user is trying to contact, and sets a session variable appropriately. This session variable is then used to check which email session variable should be used for the recipient of the email
+            if(isset($_POST['contact1']) && isset($_GET["eventID"]) && isset($_SESSION['username']))
+            {
+                $_SESSION['ContactID'] = "1";
+                echo "<script type='text/javascript'>openRequestedPopup();</script>";
+            }
+             elseif(isset($_POST['contact2']) && isset($_GET["eventID"]) && isset($_SESSION['username']))
+            {
+                $_SESSION['ContactID'] = "2";
+                echo "<script type='text/javascript'>openRequestedPopup();</script>";
+            }
+             elseif(isset($_POST['contact3']) && isset($_GET["eventID"]) && isset($_SESSION['username']))
+            {
+                $_SESSION['ContactID'] = "3";
+                echo "<script type='textjavascript'>openRequestedPopup();</script>";
+            }
 /*
             echo "<div class=\"col-7\">
                 <p>$eventName</p>
