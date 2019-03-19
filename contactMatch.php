@@ -20,31 +20,13 @@
   <section class="banner light">
     <header class="wrapper light">
       <a href="#"><img class="logo" src="img/logoSmall.png" alt="Affinity"/></a>
-      <nav>
-        <ul>
-	  <li><a href="./index.php">Home</a></li>
-
-          <?php if (isset($_SESSION['username'])) { 
-            echo '<li><a href="./profile.php">Profile</a></li>';
-          }?>
-          <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
-            echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
-            echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
-          } ?>
-
-          <li><a href="./help.php">Help</a></li>
-        </ul>
-      </nav>
     </header>
     <br>
   </section>
 
   <div class="user-card">
     <div class="login-box">
-      <h2>Contact us</h2>
+      <h2>Contact match</h2>
       <form class="login-form" name="contactMatch" action="">
         <form method="post" action=""> <!-- Action needed -->
 	  <input type="text" name="email" class="email" placeholder="email" />
@@ -63,25 +45,6 @@
         <img src="img/logofooter.png" alt="" class="footer_logo"/>
         <p>© Affinity. All Rights Reserved 2019 </p>
       </div>
-
-      <nav>
-        <ul>
-          <li><a href="./index.php">Home</a></li>
-
-          <?php if (isset($_SESSION['username'])) { 
-            echo '<li><a href="./profile.php">Profile</a></li>';
-          }?>
-          <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
-            echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
-            echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
-          } ?>
-
-           <li><a href="./help.php">Help</a></li>
-         </ul>
-       </nav>
      </div>
    </footer>
 
