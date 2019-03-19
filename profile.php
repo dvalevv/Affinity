@@ -36,7 +36,7 @@
     </section>
 
     <?php
-    //ini_set('display_errors', 1);
+    ini_set('display_errors', 0);
     include 'php_queries.php'; // Vlad's query file is imported
     //session_start();
     
