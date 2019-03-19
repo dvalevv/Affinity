@@ -1,0 +1,528 @@
+/*
+
+	Template Author : pixelhint.com
+	Author Email    : contact@pixelhint.com
+	Template Name   : Sublime
+
+	Template Redesign: Team Y8
+
+
+	*****************************************
+
+
+
+
+*/
+
+/* login css   */
+
+*
+{
+    box-sizing:         border-box;
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body
+{
+  margin: 0;
+  padding: 0;
+  font-family: arial, sans-serif;
+  background: #fff;
+  min-height: 100%;
+}
+
+a
+{
+  text-decoration: none
+}
+
+
+
+.by
+{
+  color: #a7a7a7;
+  font-size: 16px;
+  margin: 33px 0px;
+  display: inline-block
+}
+
+.heart
+{
+  color: brown;
+  display: inline-block;
+  font-size: 20px;
+  animation: heart 0.7s ease-in-out infinite;
+}
+
+header a
+{
+    color: #03b3b5;
+    font-size: 22px;
+    margin: 28px 10px;
+    display: inline-block
+}
+
+header a:hover
+{
+    text-decoration: underline
+}
+
+.user-card
+{
+    width: 389px;
+    height: 389px;
+    margin: 50px auto;
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    box-shadow:         0 1px 3px 0 rgba(0,0,0,0.08);
+    -moz-box-shadow:    0 1px 3px 0 rgba(0,0,0,0.08);
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,0.08);
+    border-radius:         5px;
+    -moz-border-radius:    5px;
+    -webkit-border-radius: 5px;
+    border: solid;
+    
+}
+
+input
+{
+	width: 100%;
+	height: 40px;
+	border-radius:         3px;
+	-moz-border-radius:    3px;
+	-webkit-border-radius: 3px;
+	border: 1px solid #dee3e4;
+	padding: 3px 12px;
+	margin: 6px 0;
+}
+
+input:focus
+{
+    outline: none;
+    border: 1px solid #03b3b5;
+    transition:         all .5s ease-in-out;
+    -o-transition:      all .5s ease-in-out;
+    -moz-transition:    all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.login-box,
+.signup-box
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: calc(100% - 25px);
+    background: #fff;
+    border-radius:         5px;
+    -moz-border-radius:    5px;
+    -webkit-border-radius: 5px;
+}
+
+.login-box{
+    padding: 20px 40px;
+    right: 0px;
+}
+
+.signup-box{
+    padding: 40px;
+    right: -350px;
+}
+
+.login, .signup
+{
+    text-align: center;
+    color: #fff;
+    background: #03b3b5;
+    line-height: 30px;
+    opacity: 0.95;
+    cursor: pointer
+}
+
+.login:hover{opacity: 1}
+
+.or
+{
+    display: block;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #dee3e4;
+    position: relative;
+    margin: 20px 0;
+}
+
+.or:before
+{
+    content: 'or';
+    width: 40px;
+    height: 18px;
+    position: absolute;
+    top: -5px;
+    right: calc(50% - 20px);
+    background-color: #fff;
+    text-align: center;
+    line-height: 10px;
+    color: #555
+}
+
+.login-with-fb,
+.login-with-google
+{
+    width: 100%;
+    height: 40px;
+    display: block;
+    margin: 15px 0;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 14px;
+    opacity: .95;
+    border-radius:         3px;
+    -moz-border-radius:    3px;
+    -webkit-border-radius: 3px;
+}
+
+.login-with-fb:hover,
+.login-with-google:hover
+{
+	opacity: 1;
+}
+
+.login-with-fb
+{
+	background: #527EBF
+}
+
+.login-with-google
+{
+	background: #DB4A37;
+}
+
+.login-with-fb .icon,
+.login-with-google .icon
+{
+	float: left;
+	font-size: 21px;
+	width: 50px;
+	height: 26px;
+	margin: 7px;
+	padding: 2px;
+	text-align: center;
+	border-right: 1px solid #fff;
+}
+
+.footerb {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 5%;
+  width: 100%;
+  left: 40%;
+}
+
+
+
+/*  Fonts  */
+@font-face {
+    font-family: 'raleway-regular';
+    src: url('../fonts/raleway-regular.eot');
+    src: url('../fonts/raleway-regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-regular.woff') format('woff'),
+         url('../fonts/raleway-regular.ttf') format('truetype'),
+         url('../fonts/raleway-regular.svg#raleway-regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'raleway-semibold';
+    src: url('../fonts/raleway-semibold.eot');
+    src: url('../fonts/raleway-semibold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-semibold.woff') format('woff'),
+         url('../fonts/raleway-semibold.ttf') format('truetype'),
+         url('../fonts/raleway-semibold.svg#raleway-semibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'raleway-bold';
+    src: url('../fonts/raleway-bold.eot');
+    src: url('../fonts/raleway-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/raleway-bold.woff') format('woff'),
+         url('../fonts/raleway-bold.ttf') format('truetype'),
+         url('../fonts/raleway-bold.svg#raleway-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+/*  General CSS*/
+
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5 ,h6{
+    color: #666666;
+    font-family: "raleway-regular", arial;
+    letter-spacing: 1px;
+}
+
+h1              { font-size: 2em; margin: .67em 0 }
+h2              { font-size: 1.5em; margin: .75em 0 }
+h3              { font-size: 1.17em; margin: .83em 0 }
+h5              { font-size: .83em; margin: 1.5em 0 }
+h6              { font-size: .75em; margin: 1.67em 0 }
+h1, h2, h3, h4,
+h5, h6          { font-weight: bolder }
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+
+
+
+
+
+/*    Main Banner    */
+.banner{ /*This controls the width and height of the banner setup */
+    width: 100%;
+    height: 150px;
+    position: relative;
+}
+
+.banner.light{ /*light as there was dark version of the banner previously */
+    background: url('../img/banner.jpg') no-repeat;
+
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+
+}
+
+
+.banner .shadow{ /*shadow of banner, png in img folder */
+    position: absolute;
+    width: 100%;
+    height: 142px;
+    bottom: 0;
+    left: 0;
+    margin-bottom: -1px;
+    background: url('../img/shadow.png') repeat-x;
+}
+
+.banner .caption{ /*controls slogan layout what do we have in common */
+    margin-top: 130px;
+    text-align: center;
+}
+
+.banner .caption.light{ /* controls colour of slogan */
+    color: #fff;
+    font-size: 32px;
+}
+
+
+
+.banner .caption h1{ /*controls slogan font and margin what do we have in common */
+    font-family: "raleway-bold";
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.banner .caption.light h1{  /*controls slogan colour - what do we have in common */
+    color: #fff;
+}
+
+
+}
+
+.banner .caption p{ /*paragraph below slogan */
+    font-family: "raleway-regular";
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.banner .caption.light p{ /*colour of paragraph */
+    color: #fff;
+}
+
+
+
+
+.banner .caption hr{
+    display: inline-block;
+    height: 1px;
+    width: 30px;
+    border: 0!important;
+    margin: 0;
+    padding: 0;
+}
+
+.banner .caption.light hr{
+    background: #fff;
+}
+
+
+
+
+
+
+
+
+/*    header    */
+header{ /*the whole header width and height */
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+}
+
+header .logo{ /*logo in header margin and position */
+    float: left;
+    position: absolute;
+    margin-left: 30px;
+}
+
+header nav{ /*navigation bar in header */
+    position: absolute;
+    right: 0;
+    bottom: 10;
+    margin-right: 5%;
+}
+
+header nav ul li{ /* the list of items on navigation bar */
+    list-style: none;
+    display: block;
+    float: left;
+    margin-left: 15px;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    font-family: "raleway-regular";
+    font-size: 22px;
+    font-weight:bold;
+
+
+    transition:all .2s linear;
+    -webkit-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -o-transition:all .2s linear;
+}
+
+header.light nav ul li a{
+    color: #fff;
+}
+
+header.light nav ul li a:hover{
+    color: #B9B9B9;
+}
+
+header.dark nav ul li a{
+    color: #5d5d5d;
+}
+
+header.dark nav ul li a:hover{
+    color: #919191;
+}
+
+
+/* Things for help.html */
+
+.right{
+    position: absolute;
+    right: 0;
+    margin-right: 10%;
+}
+
+.left{
+    position: absolute;
+    left: 0;
+    margin-left: 10%;
+    height:900px;
+}
+
+
+/*    footer    */
+footer{
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -400px
+}
+
+footer .footer_logo{
+    float: left;
+    margin-top: 10px;
+    margin-left: 6%;
+}
+
+footer .rights p{
+    float: left;
+    color: #838181;
+    font-family: "raleway-regular";
+    font-size: 13px;
+    margin: 20px 0 0 40px;
+}
+
+footer .rights p a{
+    color: #777;
+    font-family: "raleway-semibold";
+    font-size: 13px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer nav ul{
+    float: right;
+    margin-right: 6%;
+    overflow: hidden;
+    list-style: none;
+    
+}
+
+footer nav ul li{
+    float: left;
+    position:relative;
+    margin-left: 20px;
+}
+
+footer nav ul li a{
+    color: #838181;
+    font-family: "raleway-regular";
+    font-size: 13px;
+    text-decoration: none;
+
+    transition:all .2s linear;
+    -webkit-transition:all .2s linear;
+    -moz-transition:all .2s linear;
+    -o-transition:all .2s linear;
+}
+
+footer nav ul li a:hover{
+    color: #616161;
+}
