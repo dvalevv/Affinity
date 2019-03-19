@@ -85,7 +85,7 @@
       <h2>Contact us</h2>
       <form class="login-form" name="contact" action="">
         <form method="post" action="">
-	  <input type="text" name="email" class="email" placeholder="email" />
+	  <input type="text" name="email" class="email" placeholder="your email (sender)" />
 	  <input type="text" name="question" class="question" placeholder="question" />
 	  <input type="text" name="detail" class="detail" placeholder="details..." />
           <input type="submit" name="contact" value="Contact" class="contact" />

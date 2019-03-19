@@ -48,7 +48,7 @@
       <h2>Contact match</h2>
       <form class="login-form" name="contactMatch" action="">
         <form method="post" action=""> 
-	  <input type="text" name="email" class="email" placeholder="email" />
+	  <input type="text" name="email" class="email" placeholder="your email (sender)" />
 	  <input type="textarea" name="detail" class="detail" placeholder="Where do you want to meet?" />
           <input type="submit" name="contactMatch" value="Contact Match" class="contact" />
         </form>
