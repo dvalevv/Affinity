@@ -20,7 +20,7 @@
             <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
-          <li><a href="../eventoptions.html">Events</a></li>
+          <li><a href="./eventoptions.html">Events</a></li>
 
           <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
