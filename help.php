@@ -24,14 +24,14 @@
         <ul>
 	  <li><a href="./index.php">Home</a></li>
 
-          <?php if (isset($_SESSION['username'])) { 
+          <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
-          <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
+          <li><a href="../eventoptions.html">Events</a></li>
+
+          <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
+          } else {
             echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
           } ?>
 
@@ -50,13 +50,13 @@
           matches at local events, based on hobbies, interests and so much more....</p>
       <h3>What is Indra?</h3>
       <p>Indra is a multilingual work embedding-distributional semantics framework,
-         its the hidden tool we use that enables us to compare two people with the 
+         its the hidden tool we use that enables us to compare two people with the
           help of Artificial Intelligence.</p>
         <h3>How can I register?</h3>
         <p> By heading over to our "Login/Register" page, registration is open to
             anybody </p>
         <h3>How do I find a match near me?</h3>
-        <p>Head over to the "Events" page and use the "Join Event" page if 
+        <p>Head over to the "Events" page and use the "Join Event" page if
         the event has been already added by another user or "Create Event" if
         no other user has added it.</p>
         <h3>Can I edit my profile?</h3>
@@ -107,14 +107,14 @@
         <ul>
           <li><a href="./index.php">Home</a></li>
 
-          <?php if (isset($_SESSION['username'])) { 
+          <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
           <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
+
+          <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
+          } else {
             echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
           } ?>
 

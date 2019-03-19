@@ -20,14 +20,14 @@
         <ul>
 	  <li><a href="./index.php">Home</a></li>
 
-          <?php if (isset($_SESSION['username'])) { 
+          <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
-          <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
+          <li><a href="./eventoptions.html">Events</a></li>
+
+          <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
+          } else {
             echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
           } ?>
 
@@ -84,14 +84,14 @@ Event expiration date:<br>
           <ul>
             <li><a href="./index.php">Home</a></li>
 
-            <?php if (isset($_SESSION['username'])) { 
+            <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
           <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
+
+          <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
+          } else {
             echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
           } ?>
 

@@ -17,14 +17,14 @@
           <ul>
   	  <li><a href="./index.php">Home</a></li>
 
-            <?php if (isset($_SESSION['username'])) { 
+            <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
-          <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
+          <li><a href="../eventoptions.html">Events</a></li>
+
+          <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
+          } else {
             echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
           } ?>
 
@@ -39,21 +39,21 @@
     ini_set('display_errors', 0);
     include 'php_queries.php'; // Vlad's query file is imported
     //session_start();
-    
+
    //Handling sql injection
-   function test_input($data) 
+   function test_input($data)
    {
      $data = trim($data);
      $data = stripslashes($data);
      $data = htmlspecialchars($data);
-     return $data; 
+     return $data;
    }
     if(isset($_SESSION['username']) && isset($_POST['password']))
     {
       $userpass = getUserPassword($_SESSION['username']); // Variable for storing the users password. Used for checking if the password entered by the user is correct before letting them make changes. Currently initialised to my password until the encryption code is implemented
       $userpass = $userpass["Password"];
     }
-    
+
    // Must check if the person is logged in, their passwords match and are correct for their account
     if((isset($_SESSION['username']) && password_verify($_POST['password'], $userpass) && $_POST['cPassword'] == $_POST['password']))  // Not possible to decrypt hashed values, so must use an in-build function to check if an entered password matches a hashed one stored in the database (details at https://stackoverflow.com/questions/24024702/how-can-i-decrypt-a-password-hash-in-php)
     {
@@ -160,14 +160,14 @@
         <ul>
           <li><a href="./index.php">Home</a></li>
 
-          <?php if (isset($_SESSION['username'])) { 
+          <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
           <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
+
+          <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
+          } else {
             echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
           } ?>
 

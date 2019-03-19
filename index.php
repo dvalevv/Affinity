@@ -7,7 +7,7 @@
   <meta name="description" content="Affinity - What Do We Have In Common?"/>
 
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  
+
 </head>
 
 <body>
@@ -17,18 +17,18 @@
       <nav>
         <ul>
 	  <li><a href="./index.php">Home</a></li>
-          
-          <?php if (isset($_SESSION['username'])) { 
+
+          <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
-          <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
+          <li><a href="./eventoptions.html">Events</a></li>
+
+          <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
+          } else {
             echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
           } ?>
-          
+
           <li><a href="./help.php">Help</a></li>
         </ul>
       </nav>
@@ -41,10 +41,10 @@
       <hr>
     </div>
     <div class="container peopleImage"></div>
-      
+
     <!-- Live Chat Button -->
-    <div class="container chat" style="	min-width: 300px;	max-width: 300px;	max-height: 150px;	min-height: 150px;	background-image: url(&quot;img/chatbutton.png&quot;);	background-position: top left;	background-size: 50%;	background-repeat: no-repeat;	transform:  translateX(100px)  translateY(-200px) ; " ></div>  
-    
+    <div class="container chat" style="	min-width: 300px;	max-width: 300px;	max-height: 150px;	min-height: 150px;	background-image: url(&quot;img/chatbutton.png&quot;);	background-position: top left;	background-size: 50%;	background-repeat: no-repeat;	transform:  translateX(100px)  translateY(-200px) ; " ></div>
+
 
   </section><!--  End banner  -->
 
@@ -77,7 +77,7 @@
         <h2>Socials Near You</h2>
         <p>Find and connect with people at socials near you, based on interests, hobbies etc...</p>
       </li>
-      
+
     </ul>
   </section><!--  End Events  -->
 
@@ -200,18 +200,18 @@
       <nav>
         <ul>
 	  <li><a href="./index.php">Home</a></li>
-          
-          <?php if (isset($_SESSION['username'])) { 
+
+          <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
           <li><a href="./events.php">Events</a></li>
-   
-          <?php if (!isset($_SESSION['username'])) { 
+
+          <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
-          } else { 
+          } else {
             echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
           } ?>
-          
+
           <li><a href="./help.php">Help</a></li>
         </ul>
       </nav>

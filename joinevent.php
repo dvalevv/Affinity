@@ -17,7 +17,7 @@
           <?php if (isset($_SESSION['username'])) { ?>
             <li><a href="./profile.php">Profile</a></li>
           <?php } ?>
-          <li><a href="./events.php">Events</a></li>
+          <li><a href="./eventoptions.html">Events</a></li>
 
           <?php if (!isset($_SESSION['username'])) { ?>
             <li><a href="./login.php">Login/Register</a></li>
@@ -62,13 +62,13 @@
               }
               // Having problems removing the currently logged in users name from the array of names. May be easier to create a function that gets all the users names from an event excluding a specific name
               // loops are also iterating for the wrong number of times
-           
+
               $userLikesQuery = getListOfLikeableObjectsForUser($username);
               $userLikesArray = array();
-              
+
               while($row = $userLikesQuery->fetch_assoc()) //  Next fill an array with all of the likes of the currently logged in users
                 array_push($userLikesArray, $row['Object']);
-            
+
               $matchValues = array();
               $namesMatched = array();
 
@@ -88,22 +88,22 @@
                 unset($matchValues[$keyOfMax]); // must remove the current max value in the array, so that we can call the 'max' function again to get the next highest value
                 $secondHighestMatchValue = max($matchValues);
                 $keyOf2ndMax = array_search($secondHighestMatchValue, $matchValues);  // array_search finds the index of an item in the array - if it cant be found it returns false
-                
-                unset($matchValues[$keyOf2ndMax]); 
+
+                unset($matchValues[$keyOf2ndMax]);
                 $thirdHighestMatchValue = max($matchValues);
-                $keyOf3rdMax = array_search($thirdHighestMatchValue, $matchValues); 
-              
+                $keyOf3rdMax = array_search($thirdHighestMatchValue, $matchValues);
+
                 echo nl2br("You matched with " . $namesMatched[$keyOfMax] . " with a score of " . $highestMatchValue . "! (1)\n"); // nl2br() ensures new lines (\n) included in php echo's appear in the browser
                 echo '<form action="" method="POST"><input type="submit" name="contact1" value="Contact First Match"></form><br>';
                 echo nl2br("You matched with " . $namesMatched[$keyOf2ndMax] . " with a score of " . $secondHighestMatchValue . "! (2)\n");
                 echo '<form action="" method="POST"><input type="submit" name="contact2" value="Contact Second Match"></form><br>';
                 echo "You matched with " . $namesMatched[$keyOf3rdMax] . " with a score of " . $thirdHighestMatchValue . "! (3)";
                 echo '<form action="" method="POST"><input type="submit" name="contact3" value="Contact Third Match"></form><br>';
-              
+
              }
 /*
             echo "<div class=\"col-7\">
-                <p>$eventName</p>                    
+                <p>$eventName</p>
                 <p>$eventLocation. $eventExpirationDate</p>
                 <button>Click Here to Find a Match</button>
             </div>
@@ -114,7 +114,7 @@
 
 <!--
             <div class="col-7">
-                <p>Behemoth</p>                    
+                <p>Behemoth</p>
                 <p>O2 Ritz, Manchester. Saturday, 09 Feb 2019 </p>
                 <button>Click Here to Find a Match</button>
             </div>
