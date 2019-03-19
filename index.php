@@ -41,6 +41,10 @@
       <hr>
     </div>
     <div class="container peopleImage"></div>
+      
+    <!-- Live Chat Button -->
+    <div class="container chat" style="	min-width: 300px;	max-width: 300px;	max-height: 150px;	min-height: 150px;	background-image: url(&quot;img/chatbutton.png&quot;);	background-position: top left;	background-size: 50%;	background-repeat: no-repeat;	transform:  translateX(100px)  translateY(-200px) ; " ></div>  
+    
 
   </section><!--  End banner  -->
 
