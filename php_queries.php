@@ -86,14 +86,12 @@ function updateUser($username, $email, $password)
 function logIn($username, $password)
 {
     global $conn;
-    //$password = password_hash($password, PASSWORD_DEFAULT);  // Wont work as the hash created by password_hash is different every time (Jason).
-    // New code must instead retrieve all the users from the database and check whether the username password combo, with the password verified against the
-    // hashed values in the database, is valid (refer to https://stackoverflow.com/questions/24024702/how-can-i-decrypt-a-password-hash-in-php for details)
-    $sql_search = "SELECT `Username`, `Password` FROM `User` WHERE Username = '"
-                .$username."' AND Password = '".$password."'";
+    $sql_search = "SELECT `Username`, `Password` FROM `User` WHERE Username = '".$username."'";
     $result = $conn->query($sql_search);
+    $user = $result->fetch_assoc();
+    $hash = $user['Password'];
     //this if can be changed
-    return $result->num_rows != 0;
+    return password_verify($password, $hash);
 }
 
 /*------------------------------------*//*------------------------------------*/
