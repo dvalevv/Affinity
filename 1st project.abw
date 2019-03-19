@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" styles="unlocked" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:svg="http://www.w3.org/2000/svg" xid-max="44" xmlns:dc="http://purl.org/dc/elements/1.1/" fileformat="1.1" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.9.1" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-GB; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="dc.format">application/x-abiword</m>
+<m key="abiword.generator">AbiWord</m>
+</metadata>
+<history version="1" edit-time="4003" last-saved="1553004887" uid="0826429e-4a48-11e9-8775-8ad9902dbc9c">
+<version id="1" started="1553004887" uid="5a36828e-4a51-11e9-8775-8ad9902dbc9c" auto="0" top-xid="44"/>
+</history>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; text-position:normal; widows:2; font-style:normal; text-indent:0in; font-variant:normal; font-weight:normal; margin-right:0pt; font-size:12pt; text-decoration:none; margin-bottom:0pt; line-height:1.0; bgcolor:transparent; text-align:left; font-stretch:normal"/>
+<s type="C" name="Reference" props="font-size:10pt"/>
+</styles>
+<pagesize pagetype="A4" orientation="portrait" width="8.267717" height="11.692913" units="in" page-scale="1.000000"/>
+<section xid="43" props="page-margin-footer:0.5000in; page-margin-header:0.5000in; page-margin-right:1.0000in; page-margin-left:1.0000in; page-margin-top:1.0000in; page-margin-bottom:1.0000in">
+<p style="Normal" xid="44" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito">First step:</c></p>
+<p style="Normal" xid="30" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito"></c><c props="font-family:Carlito">The button code:</c></p>
+<p style="Normal" xid="26" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito"></c></p>
+<p style="Normal" xid="25" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito"></c><c props="font-family:Carlito">https://ww</c><c props="font-family:Carlito"></c>w.linkedin.com/oauth/v2/authorization<c props="font-family:Carlito; color:ff0000">?</c><c props="font-family:Carlito; color:339966">prompt=</c><c props="font-family:Carlito">consent</c><c props="font-family:Carlito; color:ff0000">&amp;</c><c props="font-family:Carlito; color:339966">response_type=</c><c props="font-family:Carlito">code</c><c props="font-family:Carlito; color:ff0000">&amp;</c><c props="font-family:Carlito; color:339966">redirect_uri=</c><c props="font-family:Carlito">https://web.cs.manchester.ac.uk/v31679dv/Affinity</c><c props="font-family:Carlito; color:ff0000">&amp;</c><c props="font-family:Carlito; color:339966">scope=</c><c props="font-family:Carlito">r_liteprofile</c><c props="font-family:Carlito; color:ff0000">%</c><c props="font-family:Carlito">20r_emailaddress</c><c props="font-family:Carlito; color:ff0000">&amp;</c><c props="font-family:Carlito; color:339966">state=</c><c props="font-family:Carlito">4hEX1BqPHFNjHEmGALnbOXeNzUO-Lobo</c><c props="font-family:Carlito; color:ff0000">&amp;</c><c props="font-family:Carlito; color:339966">client_id=</c><c props="font-family:Carlito">776mscfj8swxp4</c></p>
+<p style="Normal" xid="1" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito"></c></p>
+<p style="Normal" xid="27" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito">-If the user accepts:</c></p>
+<p style="Normal" xid="2" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito"></c></p>
+<p style="Normal" xid="3" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito">https://web.cs.manchester.ac.uk/v31679dv/Affinity/</c><c props="font-family:Carlito; color:ff0000">?</c><c props="font-family:Carlito; color:339966">code=</c><c props="font-family:Carlito">AQRUb2_VMJXOYDYXmXEWsBZBrDPI5nllwG2Bg1U16zVL0xHA5xHjB1B8EKD7dIqYSzsTl68s04s7X5zKeTeAZc8WddjiK2gMtPLwf73ruq78eL3xAJsCvLaiiTa6k-gHXFoPv-VJl3BxnA8EzGU9CM6lHqGKtn74C3rILh_lK3qUW1g4g5cw7ZVHqoU3Rg</c><c props="font-family:Carlito; color:ff0000">&amp;</c><c props="font-family:Carlito; color:339966">state=</c><c props="font-family:Carlito">4hEX1BqPHFNjHEmGALnbOXeNzUO-Lobo</c></p>
+<p style="Normal" xid="4" props="text-align:left; dom-dir:ltr"><c>-</c><c props="font-family:Carlito">If he does not accept:</c></p>
+<p style="Normal" xid="29" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito"></c></p>
+<p style="Normal" xid="5" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito">https://web.cs.manchester.ac.uk/v31679dv/Affinity/</c><c props="font-family:Carlito; color:ff0000">?</c><c props="font-family:Carlito; color:339966">error=</c><c props="font-family:Carlito">user_cancelled_authorize</c><c props="font-family:Carlito; color:ff0000">&amp;</c><c props="font-family:Carlito; color:339966">error_description=</c><c props="font-family:Carlito">The+user+cancelled+the+authorization</c><c props="font-family:Carlito; color:ff0000">&amp;</c><c props="font-family:Carlito; color:339966">state=</c><c props="font-family:Carlito">4hEX1BqPHFNjHEmGALnbOXeNzUO-Lobo</c></p>
+<p style="Normal" xid="6" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito"></c></p>
+<p style="Normal" xid="24" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito"></c></p>
+<p style="Normal" xid="7" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito">Second step:</c></p>
+<p style="Normal" xid="31" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito"></c><c props="font-family:Carlito">POST</c></p>
+<p style="Normal" xid="8" props="text-align:left; dom-dir:ltr"><c props="font-family:Carlito"></c></p>
+<p style="Normal" xid="9" props="text-align:left; dom-dir:ltr"><c props="font-weight:normal; font-variant:normal; color:#000000; text-transform:none; font-size:14.000000pt; font-style:normal">https://www.linkedin.com/oauth/v2/accessToken?</c><c props="font-family:Segoe UI; font-size:14.000000pt; font-variant:normal; color:#000000; font-weight:normal; font-style:normal; text-transform:none">grant_type=</c><c props="font-weight:normal; font-variant:normal; color:#000000; text-transform:none; font-size:14.000000pt; font-style:normal">authorization_code&amp;</c><c props="font-family:Segoe UI; font-size:14.000000pt; font-variant:normal; color:#000000; font-weight:normal; font-style:normal; text-transform:none">code=.......&amp;redirect_uri=</c><c props="font-family:Carlito; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-GB">https://web.cs.manchester.ac.uk/v31679dv/Affinity&amp;</c><c props="font-family:Segoe UI; font-size:14.000000pt; font-variant:normal; color:#000000; font-weight:normal; font-style:normal; text-transform:none">client_id=</c><c props="font-family:Carlito; font-size:12pt; color:000000; text-decoration:none; text-position:normal; font-weight:normal; font-style:normal; lang:en-GB">776mscfj8swxp4&amp;</c><c props="font-family:Segoe UI; font-size:14.000000pt; font-variant:normal; color:#000000; font-weight:normal; font-style:normal; text-transform:none">client_secret=.....</c></p>
+<p style="Normal" xid="32" props="text-align:left; dom-dir:ltr"><c props="font-family:Segoe UI; font-size:14.000000pt; font-variant:normal; color:#000000; font-weight:normal; font-style:normal; text-transform:none"></c></p>
+<p style="Normal" xid="33" props="text-align:left; dom-dir:ltr"><c props="font-family:Segoe UI; font-size:14.000000pt; font-variant:normal; color:#000000; font-weight:normal; font-style:normal; text-transform:none">this will return json object with </c><c props="font-weight:normal; font-variant:normal; color:#000000; text-transform:none; font-size:14.000000pt; font-style:normal">access_token  &amp; expires_in</c></p>
+<p style="Normal" xid="36" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="37" props="text-align:left; dom-dir:ltr"><c>Third step:</c></p>
+<p style="Normal" xid="38" props="text-align:left; dom-dir:ltr"><c>Get the data with the access_token</c></p>
+<p style="Normal" xid="39" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="40" props="text-align:left; dom-dir:ltr"><c>http://</c><c props="font-weight:normal; font-variant:normal; color:#000000; text-transform:none; font-size:14.000000pt; font-style:normal">api.linkedin.com/v1/people/~:(email-address)</c></p>
+<p style="Normal" xid="41" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="42" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="34" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="35" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="20" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="21" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="16" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="17" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="14" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="15" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="12" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="13" props="text-align:left; dom-dir:ltr"><c></c></p>
+</section>
+</abiword>
