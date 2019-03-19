@@ -94,8 +94,11 @@
                 $keyOf3rdMax = array_search($thirdHighestMatchValue, $matchValues); 
               
                 echo nl2br("You matched with " . $namesMatched[$keyOfMax] . " with a score of " . $highestMatchValue . "! (1)\n"); // nl2br() ensures new lines (\n) included in php echo's appear in the browser
+                echo '<form action="" method="POST"><input type="submit" name="contact1" value="Contact First Match"></form><br>';
                 echo nl2br("You matched with " . $namesMatched[$keyOf2ndMax] . " with a score of " . $secondHighestMatchValue . "! (2)\n");
+                echo '<form action="" method="POST"><input type="submit" name="contact2" value="Contact Second Match"></form><br>';
                 echo "You matched with " . $namesMatched[$keyOf3rdMax] . " with a score of " . $thirdHighestMatchValue . "! (3)";
+                echo '<form action="" method="POST"><input type="submit" name="contact3" value="Contact Third Match"></form><br>';
               
              }
 /*
