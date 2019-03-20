@@ -88,7 +88,7 @@
       <hr class="separator"/>
       <ul class="clearfix">
         <li class="member1 tableRow">
-          <p><img src="img/quotes.png" alt="" class="quotes"/>Dolor sit amet consectetur isicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim ad minim veniam quis nostrud laboris.
+          <p><img src="img/quotes.png" alt="" class="quotes"/>"Find a friend you haven't meet"
             <span class="triangle"></span>
           </p>
           <div class="member">
@@ -112,7 +112,7 @@
         </li>
 
         <li class="member3 tableRow">
-          <p><img src="img/quotes.png" alt="" class="quotes"/>Aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse slum dolore eu fugiat nulla pariatursint occaecat.
+          <p><img src="img/quotes.png" alt="" class="quotes"/>"Our Site will bring people closer than ever before - you truly never know who's around the corner, a friend? A business partner? A romantic interest? Whoever you  meet one thing is certain... You'll sure have a lot in common."
             <span class="triangle"></span>
           </p>
           <div class="member">
@@ -124,7 +124,7 @@
         </li>
 
         <li class="member4 tableRow">
-          <p><img src="img/quotes.png" alt="" class="quotes"/>Aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse slum dolore eu fugiat nulla pariatursint occaecat.
+          <p><img src="img/quotes.png" alt="" class="quotes"/>"Using the latest technological advances to bring people together."
             <span class="triangle"></span>
           </p>
           <div class="member">
@@ -160,7 +160,7 @@
         </li>
 
         <li class="member7 tableRow">
-          <p><img src="img/quotes.png" alt="" class="quotes"/>Aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse slum dolore eu fugiat nulla pariatursint occaecat.
+          <p><img src="img/quotes.png" alt="" class="quotes"/>"All things look good from far away."
           <span class="triangle"></span>
           </p>
           <div class="member">
