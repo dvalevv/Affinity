@@ -17,7 +17,7 @@
           <?php if (isset($_SESSION['username'])) { ?>
             <li><a href="./profile.php">Profile</a></li>
           <?php } ?>
-          <li><a href="./eventoptions.php">Events</a></li>
+          <li><a href="./eventoptions.html">Events</a></li>
 
           <?php if (!isset($_SESSION['username'])) { ?>
             <li><a href="./login.php">Login/Register</a></li>
@@ -69,16 +69,28 @@
 
               $matchValues = array();
               $namesMatched = array();
+              
+              //3 per user
+              $likesMatched = array();
 
               //$var = perform_Calculation("Football", "Basketball");
               //echo $var[0];
                 for($personNo = 0; $personNo < sizeof($nameArray); $personNo++)
                 {
-                  $matchTotal = matchNumber($userLikesArray, $nameArray[$personNo]);
-                 // echo $matchTotal . " ";
-                 // echo $matchTotal/sizeof($userLikesArray) . " ";
-                 array_push($matchValues, $matchTotal);
-                 array_push($namesMatched, $nameArray[$personNo]);
+                  $highest1 = "";
+                  $highest2 = "";
+                  $highest3 = "";
+                  $matchTotal = matchNumber($userLikesArray, $nameArray[$personNo],
+                                            $highest1, $highest2, $highest3);
+
+                  array_push($likesMatched, $highest1);
+                  array_push($likesMatched, $highest2);
+                  array_push($likesMatched, $highest3);
+
+                  // echo $matchTotal . " ";
+                  // echo $matchTotal/sizeof($userLikesArray) . " ";
+                  array_push($matchValues, $matchTotal);
+                  array_push($namesMatched, $nameArray[$personNo]);
                 }
                 $highestMatchValue = max($matchValues);
                 $keyOfMax = array_search($highestMatchValue, $matchValues);  // array_search finds the index of an item in the array - if it cant be found it returns false
@@ -91,19 +103,12 @@
                 $thirdHighestMatchValue = max($matchValues);
                 $keyOf3rdMax = array_search($thirdHighestMatchValue, $matchValues);
 
-                echo '<div class="match1">';
-                  echo nl2br("You matched with " . $namesMatched[$keyOfMax] . " with a score of " . $highestMatchValue . "! (1)\n"); // nl2br() ensures new lines (\n) included in php echo's appear in the browser
-                  echo '<form action="" method="POST"><input type="submit" name="contact1" value="Contact First Match"></form><br>';
-                echo '</div>';
+                echo nl2br("You matched with " . $namesMatched[$keyOfMax] . " with a score of " . $highestMatchValue . "! (1) matched on: ". $likesMatched[3 * $keyOfMax]. " ". $likesMatched[3 * $keyOfMax + 1]. " ". $likesMatched[3 * $keyOfMax + 2]. "\n"); // nl2br() ensures new lines (\n) included in php echo's appear in the browser
+                echo '<form action="" method="POST"><input type="submit" name="contact1" value="Contact First Match"></form><br>';
                 // echo '<a href="contactMatch.php" onClick="MyWindow=window.open(\'http://www.google.com\',\'MyWindow\',width=600,height=300); return false;">Click Here</a>'
-                
-                echo '<div class="match2">';
-                echo nl2br("You matched with " . $namesMatched[$keyOf2ndMax] . " with a score of " . $secondHighestMatchValue . "! (2)\n");
+                echo nl2br("You matched with " . $namesMatched[$keyOf2ndMax] . " with a score of " . $secondHighestMatchValue . "! (2) matched on: ". $likesMatched[3 * $keyOf2ndMax]. " ". $likesMatched[3 * $keyOf2ndMax + 1]. " ". $likesMatched[3 * $keyOf2ndMax + 2]. "\n");
                 echo '<form action="" method="POST"><input type="submit" name="contact2" value="Contact Second Match"></form><br>';
-                echo '</div>';
-                
-                echo '<div class="match3">';
-                echo "You matched with " . $namesMatched[$keyOf3rdMax] . " with a score of " . $thirdHighestMatchValue . "! (3)";
+                echo "You matched with " . $namesMatched[$keyOf3rdMax] . " with a score of " . $thirdHighestMatchValue . "! (3) matched on: ". $likesMatched[3 * $keyOf3rdMax]. " ". $likesMatched[3 * $keyOf3rdMax + 1]. " ". $likesMatched[3 * $keyOf3rdMax + 2]. "\n";
                 echo '<form action="" method="POST"><input type="submit" name="contact3" value="Contact Third Match"></form><br>';
                 echo '</div>';
 
@@ -163,7 +168,7 @@
                   <?php if (isset($_SESSION['username'])) { ?>
                     <li><a href="./profile.php">Profile</a></li>
                   <?php } ?>
-                  <li><a href="./eventoptions.php">Events</a></li>
+                  <li><a href="./events.php">Events</a></li>
 
                   <?php if (!isset($_SESSION['username'])) { ?>
                     <li><a href="./login.php">Login/Register</a></li>
