@@ -474,27 +474,38 @@ header.dark nav ul li a:hover{
     background-color: #7edd58;
 }
 
-.match1 input{
-    background-color: #83e25b;
-    font-weight: bold;
-}
-
 .match2{
     background-color: #a3dd58;
-}
-
-.match2 input{
-    background-color: #a7e25b;
-    font-weight: bold;
 }
 
 .match3{
     background-color: #dadd58;
 }
 
+/* 	Inputs		*/
+
+.match1 input{
+    background-color: #83e25b;
+}
+
+.match1 input:hover{
+    background-color: #7ae25b;
+}
+
+.match2 input{
+    background-color: #a7e25b;
+}
+
+.match2 input:hover{
+    background-color: #cee25b;
+}
+
 .match3 input{
     background-color: #dee25b;
-    font-weight: bold;
+}
+
+.match3 input:hover{
+    background-color: #d6e25b;
 }
 
 
