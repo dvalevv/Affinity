@@ -47,18 +47,24 @@
               $eventExpirationDate = $_GET["eventExpirationDate"];
             if(isset($_GET["eventID"]))
               $eventID = $_GET["eventID"];
-
-            $userString = "Users in event: \n";
+              
+            echo '<div class="user-card big left">
+	            <div class="login-box">
+                      <h2>Users in event:<h2>
+                      <ul>'
+                      
             $usersInEventQuery = getListOfUsersForEvent($eventID);
             
             while($row = $usersInEventQuery->fetch_assoc())
-                $userString = $userString . $row['Username'] . "\n";
+                echo "<li>". $row['Username'] . "</li>";
             
-            echo nl2br($userString);
+            echo     '</ul>
+                    </div>
+                  </div>'
             
-            echo '<div class="user-card big">
+            echo '<div class="user-card big right">
 	            <div class="login-box">
-                    <h1>' . $eventName . '</h1>
+                      <h1>' . $eventName . '</h1>
                       Add user:
                       <form class="login-form" name="addUser" method="post" action="">
 			<input type="text" name="user" class="user" placeholder="username">

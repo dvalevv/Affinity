@@ -506,6 +506,7 @@ header.dark nav ul li a:hover{
 /* Make form longer */
 .big{
     height: 600px!important;
+    overflow: auto!important;
 }
 
 
