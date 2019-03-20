@@ -262,25 +262,6 @@ function addANewLikeableObject($username, $object)
 }
 
 /*------------------------------------*/
-//this deletes an instance in the dislikes table
-function deleteObjectFromDislikes($username, $object) // Fixed typo
-{
-    global $conn;
-    $sql_search = "DELETE FROM `Dislikes` WHERE Username ='"
-                .$username."' AND Object = '".$object."'";
-    $conn->query($sql_search);
-}
-
-/*------------------------------------*/
-//adds a new instance in the likes table
-function addANewDislikeableObject($username, $object)
-{
-    global $conn;
-    $sql_search = "INSERT INTO `Dislikes` (`Object`, `Username`) "
-                ."VALUES ('".$object."','".$username."')";
-    $conn->query($sql_search);
-}
-/*------------------------------------*/
 //get objects from the likes table
 function getListOfLikeableObjectsForUser($username)
 {
@@ -289,16 +270,6 @@ function getListOfLikeableObjectsForUser($username)
                 .$username."'";
     $listOfLikableObjects = $conn->query($sql_search);
     return $listOfLikableObjects;
-}
-/*------------------------------------*/
-//get objects from the dislikes table
-function getListOfDislikeableObjectsForUser($username)
-{
-    global $conn;
-    $sql_search = "SELECT * FROM `Dislikes` WHERE Username = '"
-                .$username."'";
-    $listOfDislikableObjects = $conn->query($sql_search);
-    return $listOfDislikableObjects;
 }
 /*------------------------------------*//*------------------------------------*/
 //functions for cache
@@ -325,7 +296,8 @@ function getCacheValue($like1, $like2)
         return -1;
     return $data["Value"];
 }
-
+/*------------------------------------*/
+//new instance of (like1, like2, value) int the cache table
 function addToCache($like1, $like2, $value)
 {
     global $conn;
