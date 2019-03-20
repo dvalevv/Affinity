@@ -26,6 +26,7 @@ function matchNumber($likes1, $username2, &$highest1, &$highest2, &$highest3)
   	for($indexLikes1 = 0; $indexLikes1 < sizeof($likes1); $indexLikes1++)
   	{
   	    $localMaximum = 0;
+  	    $localMaximumString = "";
   	    for($indexLikes2 = 0; $indexLikes2 < sizeof($likes2); $indexLikes2++)
   	    {
                $result = getCacheValue($likes1[$indexLikes1], $likes2[$indexLikes2]);
@@ -37,10 +38,13 @@ function matchNumber($likes1, $username2, &$highest1, &$highest2, &$highest3)
                }
                $result = $result;
                if($localMaximum < $result)
+               {
                  $localMaximum = $result;
+                 $localMaximumString = $likes1[$indexLikes1];
+               }
             }
        	    $totalResult = $totalResult + $localMaximum;
-            array_push($highestLocalLikes, $localMaximum);
+            array_push($highestLocalLikes, $localMaximumString);
   	}
         $highest1 = max($highestLocalLikes);
         $keyOfMax = array_search($highest1, $highestLocalLikes);
