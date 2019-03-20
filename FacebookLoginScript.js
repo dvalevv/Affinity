@@ -6,13 +6,13 @@ function statusChangeCallback(response) {
   // app know the current login status of the person.
   // Full docs on the response object can be found in the documentation
   // for FB.getLoginStatus().
-
+  
   // This is called with the results from from FB.getLoginStatus().<br>function statusChangeCallback(response) {
 
   if (response.status === 'connected') {
     // Logged into your app and Facebook.
     testAPI();
-  }
+  } 
   else if (response.status === 'not_authorized') {
     // The person is logged into Facebook, but not your app.
     document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
@@ -81,10 +81,7 @@ window.fbAsyncInit = function()
     FB.api('/me', { locale: 'en_US', fields: 'name, email' }, function(response)
     {
       console.log('Successful login for: ' + response.name);
-      console.log('Whole object: ' + JSON.stringify(response));
       console.log('Email is: ' + response.email);
-      //document.getElementById('status').innerHTML =
-      //  'Thanks for logging in, ' + response.name + '!';
     });
   }
 
@@ -92,3 +89,4 @@ window.fbAsyncInit = function()
 //</fb:login-button>
 
 //<div id="status"></div>
+
