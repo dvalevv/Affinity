@@ -34,10 +34,19 @@
 
   <!--Some javascript for opening a pop up window. Refer to http://w3schools.invisionzone.com/topic/23862-how-to-open-a-popup-window-in-php-code/ for code-->
   <script type="text/javascript">function openRequestedPopup(){ window.open('contactMatch.php', 'ContactMatch', 'width=545,height=600,resizable=yes,scrollbars=yes,status=yes');}</script>
-<?php
+<?php  //Added functionality to event management page and fixed typo in php_queries
             //include "matching.php";
             //ini_set('display_errors', 1);
             include "php_queries.php";
+
+            //Handling sql injection
+            function test_input($data)
+            {
+               $data = trim($data);
+               $data = stripslashes($data);
+               $data = htmlspecialchars($data);
+               return $data;
+            }
 
             if(isset($_GET["eventName"]))
               $eventName = $_GET["eventName"];
@@ -57,7 +66,10 @@
             $usersInEventQuery = getListOfUsersForEvent($eventID);
             
             while($row = $usersInEventQuery->fetch_assoc())
-                echo "<li>". $row['Username'] . "</li>";
+            {
+                if($row['Username'] != $_SESSION['username'])
+                   echo "<li>". $row['Username'] . "</li>";
+            }
             
             echo     '</ul>
                     </div>
@@ -86,7 +98,29 @@
                       </form>
                     </div>
                   </div>
-                  </div>'
+                  </div>';
+
+            if(isset($_SESSION['username']) && isset($_POST['deleteEvent']) && password_verify($_POST['password'], $userpass) && $_POST['cPassword'] == $_POST['password'])
+               deleteEvent($eventID);
+            
+            elseif (isset($_SESSION['username']) && isset($_POST['addUser']))
+            {
+               $usersToAdd = explode(", ", test_input($_POST["addUser"]));
+               for($i = 0; $i < sizeof($usersToAdd); $i++)
+               {
+                  if (checkForExistingUsername($usersToAdd[$i]) && ($usersToAdd[$i] != $_SESSION['username'])
+                     addANewParticipation($usersToAdd[$i], $eventID);
+               }
+            }
+            elseif (isset($_SESSION['username']) && isset($_POST['removeUser']))
+            {
+               $usersToRemove = explode(", ", test_input($_POST["addUser"]));
+               for($i = 0; $i < sizeof($usersToRemove); $i++)
+               {
+                  if (checkForExistingUsername($usersToRemove[$i]) && $usersToRemove[$i] != $_SESSION['username'])
+                     removeAParticipation($usersToRemove[$i], $eventID);
+               }
+            }
 ?>
 
 <!--

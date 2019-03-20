@@ -191,7 +191,7 @@ function deleteEvent($eventId)  // Fixed spelling of function
     $conn->query($sql_search);
 
     //deleting any relations with the User table
-    deteleAllEventEntriesInParticipating($eventId);
+    deleteAllEventEntriesInParticipating($eventId);
 
     //change all the other variables
 }
@@ -240,6 +240,16 @@ function addANewParticipation($username, $eventID)
     $conn->query($sql_search);
 }
 
+/*------------------------------------*/
+//removes an instance in the participating table (Added by Jason)
+function removeAParticipation($username, $eventID)
+{
+    global $conn;
+    $sql_search = "DELETE FROM `Participating` WHERE Event_ID ='"
+                .$eventId."' AND Username ='"
+                .$username."'";
+    $conn->query($sql_search);
+}
 
 /*------------------------------------*/
 //this deletes an instance in the likes table
