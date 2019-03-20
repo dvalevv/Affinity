@@ -445,7 +445,7 @@ header.dark nav ul li a:hover{
 
 /* Things for help.html */
 
-.group{
+.groupBox{
     width: 100%;
     transform: translate(-50%, -50%);
     position: absolute;
@@ -454,10 +454,12 @@ header.dark nav ul li a:hover{
 }
 
 .right{
+    position: relative;
     margin-left: 25%;
 }
 
 .left{  
+    position: relative;
     margin-right: 25%;
 }
 
