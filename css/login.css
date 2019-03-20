@@ -167,7 +167,7 @@ input:focus
     color: #555
 }
 
-.login-with-fb,
+.fb-login-button,
 .login-with-google
 {
     width: 100%;
@@ -184,13 +184,13 @@ input:focus
     -webkit-border-radius: 3px;
 }
 
-.login-with-fb:hover,
+.fb-login-button:hover,
 .login-with-google:hover
 {
 	opacity: 1;
 }
 
-.login-with-fb
+.fb-login-button
 {
 	background: #527EBF
 }
@@ -200,7 +200,7 @@ input:focus
 	background: #DB4A37;
 }
 
-.login-with-fb .icon,
+.fb-login-button .icon,
 .login-with-google .icon
 {
 	float: left;
