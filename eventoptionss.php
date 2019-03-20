@@ -1,5 +1,6 @@
-
-<!doctype html>
+<?php session_start(); ?>
+<html lang="en">
+<head>
 <!---
   <a href="https://www.facebook.com/milliomola">Abdelrahman Hamdy</a>
   Redesigned = Team Y8
@@ -7,13 +8,11 @@
     <meta charset="utf-8">
 
     <title>Events</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="toggle.js"></script>
     <meta name="description" content="Affinity Help">
     <meta name="author" content="Team Y8">
 
     <link rel="stylesheet" href="css/login.css">
-
+</head>
 <body>
 
   <section class="banner light">
