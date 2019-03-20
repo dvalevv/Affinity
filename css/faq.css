@@ -468,6 +468,10 @@ header.dark nav ul li a:hover{
     transform: translateX(-450px);
 }
 
+.showverflow{
+    overflow: auto;
+}
+
 
 /*    footer    */
 footer{

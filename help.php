@@ -43,7 +43,7 @@
   </section>
 
   <div class="groupBox">
-  <div class="user-card left">
+  <div class="user-card left showverflow">
     <div class="login-box">
       <h2>FAQ</h2>
       <h3>What is Affinity?</h3>
