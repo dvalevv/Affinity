@@ -59,7 +59,7 @@
 
 		<div class="or"></div>
         <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" 
-          data-use-continue-as="true" scope="public_profile, email" onlogin="checkLoginState();"></div>
+          data-use-continue-as="false" scope="public_profile, email" onlogin="checkLoginState();"></div>
 
 		<a href="https://www.linkedin.com/oauth/v2/authorization?prompt=consent&response_type=code&redirect_uri=https://web.cs.manchester.ac.uk/y67040br/Affinity/linkedin.php&scope=r_liteprofile%20r_emailaddress&state=4hEX1BqPHFNjHEmGALnbOXeNzUO-Lobo&client_id=776mscfj8swxp4"
 		   class="login-with-google">
