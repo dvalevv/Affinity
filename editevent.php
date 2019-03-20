@@ -47,7 +47,7 @@
             if(isset($_GET["eventID"]))
               $eventID = $_GET["eventID"];
             
-            echo '<div class="user-card round5">
+            echo '<div class="user-card long">
 	            <div class="login-box">
                     <h1>' . $eventName . '</h1>
                       Add user:
@@ -60,6 +60,13 @@
 			<input type="text" name="user" class="user" placeholder="username">
 			<input type="submit" name="removeUser" value="Remove User" class="login">
                       </form>
+                      <div class="or"></div>
+                      <form class="login-form" name="deleteEvent" method="post" action="">
+                        Password:
+                        <input type="password" name="password"> <br>
+                        Confirm password:
+                        <input type="password" name="cPassword"> <br>                        
+			<input type="submit" name="deleteEvent" value="Delete Event" class="login">
                     </div>
                   </div>'
 ?>

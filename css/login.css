@@ -503,6 +503,12 @@ header.dark nav ul li a:hover{
 }
 
 
+/* Make form longer */
+.long{
+    height: 600px!important;
+}
+
+
 /*    footer    */
 footer{
     width: 100%;
