@@ -448,18 +448,16 @@ header.dark nav ul li a:hover{
 .groupBox{
     width: 100%;
     position: absolute;
-    top: 50%;
-    left: 50%;
 }
 
 .right{
     position: absolute;
-    transform: translateX(250px);
+    transform: translateX(50px);
 }
 
 .left{  
     position: absolute;
-    transform: translateX(-250px);
+    transform: translateX(-550px);
 }
 
 

@@ -42,6 +42,7 @@
     <br>
   </section>
 
+  <div class="groupBox">
   <div class="user-card left">
     <div class="login-box">
       <h2>FAQ</h2>
@@ -93,6 +94,7 @@
       </form>
     </div>
   </div>
+</div>
 </div>
 </body>
 
