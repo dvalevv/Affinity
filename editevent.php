@@ -48,7 +48,8 @@
             if(isset($_GET["eventID"]))
               $eventID = $_GET["eventID"];
               
-            echo '<div class="user-card big left">
+            echo '<div class="group">
+                  <div class="user-card big left">
 	            <div class="login-box">
                       <h2>Users in event:<h2>
                       <ul>';
@@ -84,6 +85,7 @@
 			<input type="submit" name="deleteEvent" value="Delete Event" class="login">
                       </form>
                     </div>
+                  </div>
                   </div>'
 ?>
 
