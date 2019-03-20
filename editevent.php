@@ -51,7 +51,7 @@
             echo '<div class="user-card big left">
 	            <div class="login-box">
                       <h2>Users in event:<h2>
-                      <ul>'
+                      <ul>';
                       
             $usersInEventQuery = getListOfUsersForEvent($eventID);
             
@@ -60,7 +60,7 @@
             
             echo     '</ul>
                     </div>
-                  </div>'
+                  </div>';
             
             echo '<div class="user-card big right">
 	            <div class="login-box">
