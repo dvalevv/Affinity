@@ -464,6 +464,24 @@ header.dark nav ul li a:hover{
 }
 
 
+/*	Matches		*/
+.match1, .match2, .match3{
+    width: 100%;
+}
+
+.match1{
+    background-color: #7edd58;
+}
+
+.match2{
+    background-color: #a3dd58;
+}
+
+.match3{
+    background-color: #dadd58;
+}
+
+
 /*    footer    */
 footer{
     width: 100%;

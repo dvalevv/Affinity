@@ -91,13 +91,21 @@
                 $thirdHighestMatchValue = max($matchValues);
                 $keyOf3rdMax = array_search($thirdHighestMatchValue, $matchValues);
 
-                echo nl2br("You matched with " . $namesMatched[$keyOfMax] . " with a score of " . $highestMatchValue . "! (1)\n"); // nl2br() ensures new lines (\n) included in php echo's appear in the browser
-                echo '<form action="" method="POST"><input type="submit" name="contact1" value="Contact First Match"></form><br>';
+                echo '<div class="match1">'
+                  echo nl2br("You matched with " . $namesMatched[$keyOfMax] . " with a score of " . $highestMatchValue . "! (1)\n"); // nl2br() ensures new lines (\n) included in php echo's appear in the browser
+                  echo '<form action="" method="POST"><input type="submit" name="contact1" value="Contact First Match"></form><br>';
+                echo '</div>'
                 // echo '<a href="contactMatch.php" onClick="MyWindow=window.open(\'http://www.google.com\',\'MyWindow\',width=600,height=300); return false;">Click Here</a>'
+                
+                echo '<div class="match2">'
                 echo nl2br("You matched with " . $namesMatched[$keyOf2ndMax] . " with a score of " . $secondHighestMatchValue . "! (2)\n");
                 echo '<form action="" method="POST"><input type="submit" name="contact2" value="Contact Second Match"></form><br>';
+                echo '</div>'
+                
+                echo '<div class="match3">'
                 echo "You matched with " . $namesMatched[$keyOf3rdMax] . " with a score of " . $thirdHighestMatchValue . "! (3)";
                 echo '<form action="" method="POST"><input type="submit" name="contact3" value="Contact Third Match"></form><br>';
+                echo '</div>'
 
                 // Added to allow the pop up window to access the emails of a given contact
                 $_SESSION['contact1Email'] = getUserData($namesMatched[$keyOfMax])['Email'];
