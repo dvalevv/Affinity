@@ -40,7 +40,7 @@ function matchNumber($likes1, $username2, &$highest1, &$highest2, &$highest3)
                if($localMaximum < $result)
                {
                  $localMaximum = $result;
-                 $localMaximumString = $likes1[$indexLikes1];
+                 $localMaximumString = $likes1[$indexLikes1] + ",";
                }
             }
        	    $totalResult = $totalResult + $localMaximum;
