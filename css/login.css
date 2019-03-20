@@ -454,13 +454,11 @@ header.dark nav ul li a:hover{
 }
 
 .right{
-    position: relative;
-    margin-left: 25%;
+    transform: translateX(250px);
 }
 
 .left{  
-    position: relative;
-    margin-right: 25%;
+    transform: translateX(-250px);
 }
 
 
