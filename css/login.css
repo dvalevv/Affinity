@@ -475,7 +475,8 @@ header.dark nav ul li a:hover{
 }
 
 .match1 input{
-    color: #83e25b;
+    background-color: #83e25b;
+    font-weight: bold;
 }
 
 .match2{
@@ -483,7 +484,8 @@ header.dark nav ul li a:hover{
 }
 
 .match2 input{
-    color: #a7e25b;
+    background-color: #a7e25b;
+    font-weight: bold;
 }
 
 .match3{
@@ -491,7 +493,8 @@ header.dark nav ul li a:hover{
 }
 
 .match3 input{
-    color: #dee25b;
+    background-color: #dee25b;
+    font-weight: bold;
 }
 
 
