@@ -55,7 +55,7 @@
 			<input type="text" name="user" class="user" placeholder="username">
 			<input type="submit" name="addUser" value="Add User" class="login">
                       </form>
-                      Remove user
+                      Remove user:
                       <form class="login-form" name="removeUser" method="post" action="">
 			<input type="text" name="user" class="user" placeholder="username">
 			<input type="submit" name="removeUser" value="Remove User" class="login">
