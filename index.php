@@ -136,7 +136,7 @@
         </li>
 
         <li class="member5 tableRow">
-          <p><img src="img/quotes.png" alt="" class="quotes"/>Aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse slum dolore eu fugiat nulla pariatursint occaecat.
+          <p><img src="img/quotes.png" alt="" class="quotes"/>"Solving the worlds biggest problems with the worlds best technology."
             <span class="triangle"></span>
           </p>
           <div class="member">
@@ -148,7 +148,7 @@
         </li>
 
         <li class="member6 tableRow">
-          <p><img src="img/quotes.png" alt="" class="quotes"/>Aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse slum dolore eu fugiat nulla pariatursint occaecat.
+          <p><img src="img/quotes.png" alt="" class="quotes"/>"Affinity is a revolutionary project, AI for match making has never been used before."
             <span class="triangle"></span>
           </p>
           <div class="member">
