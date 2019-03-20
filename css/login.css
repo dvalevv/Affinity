@@ -454,10 +454,12 @@ header.dark nav ul li a:hover{
 }
 
 .right{
+    position: absolute;
     transform: translateX(250px);
 }
 
 .left{  
+    position: absolute;
     transform: translateX(-250px);
 }
 

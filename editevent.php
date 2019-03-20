@@ -48,7 +48,7 @@
             if(isset($_GET["eventID"]))
               $eventID = $_GET["eventID"];
               
-            echo '<div class="group">
+            echo '<div class="groupBox">
                   <div class="user-card big left">
 	            <div class="login-box">
                       <h2>Users in event:<h2>
