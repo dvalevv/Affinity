@@ -49,7 +49,7 @@
             
             echo '<div class="user-card round5">
 	            <div class="login-box">
-                    ' . $eventName . '
+                    <h1>' . $eventName . '</h1>
                       Add user:
                       <form class="login-form" name="addUser" method="post" action="">
 			<input type="text" name="user" class="user" placeholder="username">
