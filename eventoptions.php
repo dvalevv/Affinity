@@ -1,5 +1,6 @@
-
-<!doctype html>
+<?php session_start(); ?>
+<html lang="en">
+<head>
 <!---
   <a href="https://www.facebook.com/milliomola">Abdelrahman Hamdy</a>
   Redesigned = Team Y8
@@ -7,14 +8,11 @@
     <meta charset="utf-8">
 
     <title>Events</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="toggle.js"></script>
     <meta name="description" content="Affinity Help">
     <meta name="author" content="Team Y8">
 
     <link rel="stylesheet" href="css/login.css">
-
-
+</head>
 <body>
 
   <section class="banner light">
@@ -27,7 +25,7 @@
           <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
-          <li><a href="./eventoptions.html">Events</a></li>
+          <li><a href="./eventoptions.php">Events</a></li>
 
           <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
@@ -42,14 +40,17 @@
     <br>
   </section>
 
-<div style="display:flex">
-     <div style="flex:0;padding-right:5px; margin-left:500px; margin-top:60px;">
-          <a href="createevent.php"><img src="img/createevent.png">
-     </div>
-     <div style="flex:1;padding-left:50px; margin-top:60px;">
-          <a href="events.php"><img src="img/joinevent.png">
-     </div>
-</div>
+  <div style="display:flex">
+       <div style="flex:0;padding-right:5px; margin-left:310px; margin-top:60px;">
+            <a href="createevent.php"><img src="img/manageevents.png">
+       </div>
+       <div style="flex:1;padding-left:50px; margin-top:60px;">
+            <a href="events.php"><img src="img/createevent.png">
+       </div>
+       <div style="flex:2;padding-left:50px; margin-top:60px;">
+            <a href="events.php"><img src="img/joinevent.png">
+       </div>
+  </div>
 
 <footer>
   <div class="wrapper">
@@ -65,7 +66,7 @@
           <?php if (isset($_SESSION['username'])) {
             echo '<li><a href="./profile.php">Profile</a></li>';
           }?>
-          <li><a href="./eventoptions.html">Events</a></li>
+          <li><a href="./eventoptions.php">Events</a></li>
 
           <?php if (!isset($_SESSION['username'])) {
             echo '<li><a href="./login.php">Login/Register</a></li>';
