@@ -56,7 +56,29 @@
               $eventExpirationDate = $_GET["eventExpirationDate"];
             if(isset($_GET["eventID"]))
               $eventID = $_GET["eventID"];
-              
+            
+            if(isset($_SESSION['username']) && isset($_POST['deleteEvent']) && password_verify($_POST['password'], $userpass) && $_POST['cPassword'] == $_POST['password'])
+               deleteEvent($eventID);
+            
+            elseif (isset($_SESSION['username']) && isset($_POST['addUser']))
+            {
+               $usersToAdd = explode(", ", test_input($_POST["userA"]));
+               for($i = 0; $i < sizeof($usersToAdd); $i++)
+               {
+                  if (checkForExistingUsername($usersToAdd[$i]) && $usersToAdd[$i] != $_SESSION['username'])
+                     addANewParticipation($usersToAdd[$i], $eventID);
+               }
+            }
+            elseif (isset($_SESSION['username']) && isset($_POST['removeUser']))
+            {
+               $usersToRemove = explode(", ", test_input($_POST["userR"]));
+               for($i = 0; $i < sizeof($usersToRemove); $i++)
+               {
+                  if (checkForExistingUsername($usersToRemove[$i]) && $usersToRemove[$i] != $_SESSION['username'])
+                     removeAParticipation($usersToRemove[$i], $eventID);
+               }
+            }
+
             echo '<div class="groupBox">
                   <div class="user-card big left">
 	            <div class="login-box">
@@ -80,12 +102,12 @@
                       <h1>' . $eventName . '</h1>
                       Add user(s):
                       <form class="login-form" name="addUser" method="post" action="">
-			<input type="text" name="user" class="user" placeholder="username">
+			<input type="text" name="userA" class="user" placeholder="username">
 			<input type="submit" name="addUser" value="Add User(s)" class="login">
                       </form>
                       Remove user(s):
                       <form class="login-form" name="removeUser" method="post" action="">
-			<input type="text" name="user" class="user" placeholder="username">
+			<input type="text" name="userR" class="user" placeholder="username">
 			<input type="submit" name="removeUser" value="Remove User(s)" class="login">
                       </form>
                       <div class="or"></div>
@@ -99,28 +121,6 @@
                     </div>
                   </div>
                   </div>';
-
-            if(isset($_SESSION['username']) && isset($_POST['deleteEvent']) && password_verify($_POST['password'], $userpass) && $_POST['cPassword'] == $_POST['password'])
-               deleteEvent($eventID);
-            
-            elseif (isset($_SESSION['username']) && isset($_POST['addUser']))
-            {
-               $usersToAdd = explode(", ", test_input($_POST["addUser"]));
-               for($i = 0; $i < sizeof($usersToAdd); $i++)
-               {
-                  if (checkForExistingUsername($usersToAdd[$i]) && ($usersToAdd[$i] != $_SESSION['username'])
-                     addANewParticipation($usersToAdd[$i], $eventID);
-               }
-            }
-            elseif (isset($_SESSION['username']) && isset($_POST['removeUser']))
-            {
-               $usersToRemove = explode(", ", test_input($_POST["addUser"]));
-               for($i = 0; $i < sizeof($usersToRemove); $i++)
-               {
-                  if (checkForExistingUsername($usersToRemove[$i]) && $usersToRemove[$i] != $_SESSION['username'])
-                     removeAParticipation($usersToRemove[$i], $eventID);
-               }
-            }
 ?>
 
 <!--

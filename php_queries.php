@@ -236,7 +236,7 @@ function addANewParticipation($username, $eventID)
 {
     global $conn;
     $sql_search = "INSERT INTO `Participating` (`Username`, `Event_ID`) "
-                ."VALUES ('".$username."','".$eventId."')";
+                ."VALUES ('".$username."','".$eventID."')";
     $conn->query($sql_search);
 }
 
@@ -246,7 +246,7 @@ function removeAParticipation($username, $eventID)
 {
     global $conn;
     $sql_search = "DELETE FROM `Participating` WHERE Event_ID ='"
-                .$eventId."' AND Username ='"
+                .$eventID."' AND Username ='"
                 .$username."'";
     $conn->query($sql_search);
 }
