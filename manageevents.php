@@ -39,21 +39,14 @@
     $eventList = array();
     $eventQuery = getAllEventID(); // The getAllEventID function returns the query object, which we can then call in the loop below to push each ID in the database onto the eventList array
 
-    while($row = $eventQuery->fetch_assoc())
-    {
-    	$pub = getEventData($row["Event_ID"]);
-    	if($pub["Visibility"] == "1")
-        	array_push($eventList, $row["Event_ID"]);
-    }
     if(isset($_SESSION["username"]))
     {
-    	$privateEvents = getListOfEventsForUser($_SESSION["username"]);
-    	while($row = $privateEvents->fetch_assoc())
-    	{
-    		$pub = getEventData($row["Event_ID"]);
-    		if($pub["Visibility"] == "0")
-        		array_push($eventList, $row["Event_ID"]);
-    	}
+       while($row = $eventQuery->fetch_assoc())
+       {
+    	  $pub = getEventData($row["Event_ID"]);
+    	  if($pub["Master"] == $_SESSION["username"])
+             array_push($eventList, $row["Event_ID"]);
+       }	
     }
 
     $noOfEvents = sizeof($eventList);

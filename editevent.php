@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/login.css">
-    <title>Page2</title>
+    <title> Event Management </title>
 </head>
 <body>
   <section class="banner light">
@@ -37,6 +37,7 @@
 <?php
             //include "matching.php";
             //ini_set('display_errors', 1);
+            include "php_queries.php";
 
             if(isset($_GET["eventName"]))
               $eventName = $_GET["eventName"];
@@ -46,6 +47,14 @@
               $eventExpirationDate = $_GET["eventExpirationDate"];
             if(isset($_GET["eventID"]))
               $eventID = $_GET["eventID"];
+
+            $userString = "Users in event: \n";
+            $usersInEventQuery = getListOfUsersForEvent($eventID);
+            
+            while($row = $usersInEventQuery->fetch_assoc())
+                $userString = $userString . $row['Username'] . "\n";
+            
+            echo nl2br($userString);
             
             echo '<div class="user-card big">
 	            <div class="login-box">
