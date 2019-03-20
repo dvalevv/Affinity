@@ -4,6 +4,7 @@
   Redesigned = Team Y8
 
 -->
+<head>
     <meta charset="utf-8">
 
     <title>Login/Register</title>
@@ -14,7 +15,7 @@
 
     <link rel="stylesheet" href="css/login.css">
 
-
+</head>
 <body>
 
   <div id="fb-root"></div>
