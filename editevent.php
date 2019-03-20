@@ -47,7 +47,21 @@
             if(isset($_GET["eventID"]))
               $eventID = $_GET["eventID"];
             
-            
+            echo '<div class="user-card round5">
+	            <div class="login-box">
+                    ' . $eventName . '
+                      Add user:
+                      <form class="login-form" name="addUser" method="post" action="">
+			<input type="text" name="user" class="user" placeholder="username">
+			<input type="submit" name="addUser" value="Add User" class="login">
+                      </form>
+                      Remove user
+                      <form class="login-form" name="removeUser" method="post" action="">
+			<input type="text" name="user" class="user" placeholder="username">
+			<input type="submit" name="removeUser" value="Remove User" class="login">
+                      </form>
+                    </div>
+                  </div>'
 ?>
 
 <!--
