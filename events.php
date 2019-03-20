@@ -17,7 +17,7 @@
           <?php if (isset($_SESSION['username'])) { ?>
             <li><a href="./profile.php">Profile</a></li>
           <?php } ?>
-          <li><a href="./events.php">Events</a></li>
+          <li><a href="./eventoptions.php">Events</a></li>
 
           <?php if (!isset($_SESSION['username'])) { ?>
             <li><a href="./login.php">Login/Register</a></li>
@@ -93,7 +93,7 @@
           <?php if (isset($_SESSION['username'])) { ?>
             <li><a href="./profile.php">Profile</a></li>
           <?php } ?>
-          <li><a href="./events.php">Events</a></li>
+          <li><a href="./eventoptions.php">Events</a></li>
 
           <?php if (!isset($_SESSION['username'])) { ?>
             <li><a href="./login.php">Login/Register</a></li>
