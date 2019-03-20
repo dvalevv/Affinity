@@ -447,14 +447,14 @@ header.dark nav ul li a:hover{
 
 .right{
     position: absolute;
-    right: 0;
-    margin-right: 10%;
+    margin-left: 40%;
+    transform: translateX(250px);
 }
 
 .left{
     position: absolute;
-    left: 0;
-    margin-left: 10%;
+    margin-left: 40%;
+    transform: translateX(-250px);
 }
 
 

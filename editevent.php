@@ -65,15 +65,15 @@
             echo '<div class="user-card big right">
 	            <div class="login-box">
                       <h1>' . $eventName . '</h1>
-                      Add user:
+                      Add user(s):
                       <form class="login-form" name="addUser" method="post" action="">
 			<input type="text" name="user" class="user" placeholder="username">
-			<input type="submit" name="addUser" value="Add User" class="login">
+			<input type="submit" name="addUser" value="Add User(s)" class="login">
                       </form>
-                      Remove user:
+                      Remove user(s):
                       <form class="login-form" name="removeUser" method="post" action="">
 			<input type="text" name="user" class="user" placeholder="username">
-			<input type="submit" name="removeUser" value="Remove User" class="login">
+			<input type="submit" name="removeUser" value="Remove User(s)" class="login">
                       </form>
                       <div class="or"></div>
                       <form class="login-form" name="deleteEvent" method="post" action="">
