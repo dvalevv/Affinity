@@ -1,5 +1,5 @@
-<html>
 <?php session_start(); ?>
+<html>
 <body>
 
 Welcome <?php 
