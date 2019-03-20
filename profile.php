@@ -112,19 +112,27 @@
           <input type="password" name="password"> <br>
           Confirm password:
           <input type="password" name="cPassword"> <br>
-          Add Likes:
+          Add Likes (separated by commas):
           <input type="text" name="addLikes"> <br>
-          Update Likes:
+          Update Likes (separated by commas):
           <input type="text" name="updateLikes"> <br>
           <input type="submit" name="saveChanges" value="Save Changes">
+        </form>
+        <h3>Delete account:</h3>
+        <form name="account" method="post" action="">
+          Yes:
+          <input type="radio" name="deleteAcc" value="yes">
+          No:
+          <input type="radio" name="deleteAcc" value="no" checked>
+          Confirm:
+          <input type="checkbox" name="cDeleteAcc" value="confirm">
+          <input type="submit" name="deleteAccount" value="Delete Account">
         </form>
       </section>';
      }
     else
     {
     echo "<h1>Profile</h1>
-    <h2>Profile picture:</h2>
-    <img src='' alt='Profile picture'>
     <h2>Name:</h2>
     <p>Name goes here...</p>
     <h2>Likes:</h2>

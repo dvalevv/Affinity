@@ -54,9 +54,9 @@
       <textarea name="description" rows="4" cols="30"></textarea> <br>
       Event publicity: <br>
       private:
-      <input type="radio" name="publicity" value="private">
+      <input type="radio" name="publicity" value="0">
       public:
-      <input type="radio" name="publicity" value="public"> <br><br>
+      <input type="radio" name="publicity" value="1"> <br><br>
 Event expiration date:<br>
 <input type="text" name="expirationDate"> <br>
       <input type="submit" value="Submit Event">

@@ -23,15 +23,20 @@
       <a href="#"><img class="logo" src="img/logoSmall.png" alt="Affinity"/></a>
       <nav>
         <ul>
-	  <li><a href="./index.html">Home</a></li>
-          <li><a href="./profile.php">Profile</a></li>
+	  <li><a href="./index.php">Home</a></li>
+
+          <?php if (isset($_SESSION['username'])) {
+            echo '<li><a href="./profile.php">Profile</a></li>';
+          }?>
           <li><a href="./eventoptions.html">Events</a></li>
-          <li><a href="./settings.html">Settings</a></li>
-	  <! -- Use php to replace login with logout when logged in -->
-          <li><a href="./login.html">Login/Register</a></li>
-	  <li><a href="./index.html">Logout</a></li>
-	  <!-- -->
-          <li><a href="./help.html">Help</a></li>
+
+          <?php if (!isset($_SESSION['username'])) {
+            echo '<li><a href="./login.php">Login/Register</a></li>';
+          } else {
+            echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
+          } ?>
+
+          <li><a href="./help.php">Help</a></li>
         </ul>
       </nav>
     </header>
@@ -56,12 +61,20 @@
 
     <nav>
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./profile.html">Profile</a></li>
-        <li><a href="./events.html">Events</a></li>
-        <li><a href="./settings.html">Settings</a></li>
-        <li><a href="./login.html">Login/Register</a></li>
-        <li><a href="./help.html">Help</a></li>
+        <li><a href="./index.php">Home</a></li>
+
+          <?php if (isset($_SESSION['username'])) {
+            echo '<li><a href="./profile.php">Profile</a></li>';
+          }?>
+          <li><a href="./eventoptions.html">Events</a></li>
+
+          <?php if (!isset($_SESSION['username'])) {
+            echo '<li><a href="./login.php">Login/Register</a></li>';
+          } else {
+            echo '<li><a href="./AffinityLogout.php">Logout</a></li>';
+          } ?>
+
+          <li><a href="./help.php">Help</a></li>
       </ul>
     </nav>
   </div>
