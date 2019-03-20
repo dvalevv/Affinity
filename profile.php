@@ -61,7 +61,7 @@
       // Must also that they haven't filled in both the add likes and update likes fields at the same time for obvious reasons
       if ($_POST['addLikes'] != "" && $_POST['updateLikes'] == "")
       {
-           $likesAdded = explode(" ", test_input($_POST["addLikes"]));
+           $likesAdded = explode(", ", test_input($_POST["addLikes"]));
            for($l = 0; $l < sizeof($likesAdded); $l++)
              addANewLikeableObject($username, $likesAdded[$l]);
       }
@@ -78,7 +78,7 @@
               deleteObjectFromLikes($username, $likesArray[$l]);
 
            // Now that the users likes have been wiped, must then add all of the likes they wish to replace them with to the database
-           $replacementLikes = explode(" ", test_input($_POST["updateLikes"]));
+           $replacementLikes = explode(", ", test_input($_POST["updateLikes"]));
            for($l = 0; $l < sizeof($replacementLikes); $l++)
               addANewLikeableObject($username, $replacementLikes[$l]);
       }
