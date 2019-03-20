@@ -48,7 +48,6 @@
               $eventID = $_GET["eventID"];
             
             echo '<div class="user-card big">
-                  <div class="left">
 	            <div class="login-box">
                     <h1>' . $eventName . '</h1>
                       Add user:
@@ -70,7 +69,6 @@
 			<input type="submit" name="deleteEvent" value="Delete Event" class="login">
                       </form>
                     </div>
-                  </div>
                   </div>'
 ?>
 
