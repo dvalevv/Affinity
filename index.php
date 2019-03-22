@@ -88,7 +88,7 @@
       <hr class="separator"/>
       <ul class="clearfix">
         <li class="member1 tableRow">
-          <p><img src="img/quotes.png" alt="" class="quotes"/>"Find a friend you haven't meet"
+          <p><img src="img/quotes.png" alt="" class="quotes"/>"Find a friend you haven't met"
             <span class="triangle"></span>
           </p>
           <div class="member">
@@ -112,7 +112,7 @@
         </li>
 
         <li class="member3 tableRow">
-          <p><img src="img/quotes.png" alt="" class="quotes"/>"Our Site will bring people closer than ever before - you truly never know who's around the corner, a friend? A business partner? A romantic interest? Whoever you  meet one thing is certain... You'll sure have a lot in common."
+          <p><img src="img/quotes.png" alt="" class="quotes"/>"Our Site will bring people closer than ever before - you truly never know who's around the corner, a friend? A business partner? A romantic interest?"
             <span class="triangle"></span>
           </p>
           <div class="member">
@@ -129,7 +129,7 @@
           </p>
           <div class="member">
             <img src="img/member1.png" class="avatar"/>
-            <div class="membert_details">
+            <div class="member_details">
               <h4>Juan Garcia Giraldo</h4>
             </div>
           </div>
