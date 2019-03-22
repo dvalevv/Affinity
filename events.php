@@ -68,9 +68,9 @@
       	if($i % 3 == 0)
       	{
       	   if($i == 0)
-      	     echo '<div class="col-3">';
+      	     echo '<div class="containers">';
       	   else
-      	     echo '</div><div class="col-3">';
+      	     echo '</div><div class="containers">';
       	}
       	$event = getEventData($eventList[$i]);
         echo '<div class="box 1"><a href="joinevent.php?eventName='.$event["Name"].'&eventLocation='.$event["Location"].'&eventExpirationDate='.$event["Expiration_Date"] . '&eventID='.$eventList[$i].' "> '.$event["Name"].'</a></div>'; // Useful info on sending data to the next page via a hyperlink: https://stackoverflow.com/questions/9696194/how-to-send-a-data-to-php-page-when-clicking-on-a-link
