@@ -188,7 +188,7 @@
       </div>
     </div>
     <div class="container indraImage">
-      <img src="img/indraexplain.png" height="500px" ></div>
+      <img src="img/indraexplained.png" height="500px" ></div>
       </div>
     </div>
   </section><!--  End Indra  -->
