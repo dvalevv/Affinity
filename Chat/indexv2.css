@@ -1,27 +1,27 @@
 body {
-    background-color: lightgreen;
+    background-color: lightblue;
     margin: 0;
     font-family: arial,sans-serif;;
 }
 
 #header{
-  width:96%;
-  height: 10%;
+  width:100%;
+  height: 60px;
   background-color: #333;
   box-shadow: 0px 4px 2px #333;
 }
 
 #header>h1{
-  width:96%;
-  margin: 0 auto;
+  width:1024px;
+  margin:0px auto;
   color:green;
   padding:12px;
 }
 
 #chat_container{
-  width: 96%;
-  height: 70%;
-  margin: 0 auto;
+  width: 1024px;
+  height: 500px;
+  margin: 0px auto;
   margin-top: 20px;
   background-color: lightblue;
   border: 1px solid #333;
@@ -29,8 +29,8 @@ body {
 }
 
 #controls{
-  width: 96%;
-  margin: 0 auto;
+  width: 1024px;
+  margin: 0px auto;
 }
 
 #controls>label{
@@ -39,7 +39,7 @@ body {
 
 textarea{
   resize: none;
-  width: 96%;
+  width: 935px;
   background-color: lightblue;
   color: green;
   font-family: arial;
@@ -48,12 +48,7 @@ textarea{
 #send_button{
   font-size: 28.2px;
   position: absolute;
-  height: 50px;
-}
-
-#myForm{
-  width: 96%;
-  transform: translateX(20px);
+  height: 52px;
 }
 
 .username{
@@ -69,16 +64,15 @@ input[type=text] {
   background-color: lightblue;
   border: 2px solid black;
   border-radius: 6px;
-  width: 80%;
-  height: 50px;
+  width: 935px;
+  height:52px;
   word-break: break-word;
   color: green;
   font-family: arial;
 }
 
 input[type=submit] {
-  width: 100px;
-  height: 50px;
+  height:54px;
   font-size: 30px;
   position: absolute;
 }
@@ -95,4 +89,15 @@ input[type=submit] {
     font: arial;
     font-size: 14px;
     background-color: yellow ;
+}
+
+
+.returnbutton button {
+  background-color: #01C6F4; /* Green background */
+  border: 1px solid green; /* Green border */
+  color: white; /* White text */
+  padding: 30px 50px; /* Some padding */
+  cursor: pointer; /* Pointer/hand icon */
+  float: left; /* Float the buttons side by side */
+  font-size:24px;
 }
