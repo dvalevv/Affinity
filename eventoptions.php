@@ -41,7 +41,7 @@
   </section>
 
   <div style="display:flex">
-       <div style="flex:0;padding-right:5px; margin-left:310px; margin-top:60px;">
+       <div style="flex:0;padding-right:5px; margin-left:140px; margin-top:60px;">
             <a href="manageevents.php"><img src="img/manageevents.png">
        </div>
        <div style="flex:1;padding-left:50px; margin-top:60px;">
