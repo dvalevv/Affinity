@@ -5,21 +5,21 @@ body {
 }
 
 #header{
-  width:88%;
+  width:96%;
   height: 10%;
   background-color: #333;
   box-shadow: 0px 4px 2px #333;
 }
 
 #header>h1{
-  width:88%;
+  width:96%;
   margin: 0 auto;
   color:green;
   padding:12px;
 }
 
 #chat_container{
-  width: 88%;
+  width: 96%;
   height: 70%;
   margin: 0 auto;
   margin-top: 20px;
@@ -29,7 +29,7 @@ body {
 }
 
 #controls{
-  width: 88%;
+  width: 96%;
   margin: 0 auto;
 }
 
@@ -39,7 +39,7 @@ body {
 
 textarea{
   resize: none;
-  width: 88%;
+  width: 96%;
   background-color: lightblue;
   color: green;
   font-family: arial;
@@ -52,7 +52,7 @@ textarea{
 }
 
 #myForm{
-  width: 86%;
+  width: 96%;
   transform: translateX(1%);
 }
 
