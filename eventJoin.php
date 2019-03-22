@@ -2,8 +2,8 @@
 
 include 'php_queries.php';
 
-if(isset($_GET["eventID"]))
-  $eventID = $_GET["eventID"];
+if(isset($_SESSION["jeventID"]))
+  $eventID = $_SESSION["jeventID"];
 if(isset($_SESSION['username']))
   $username = $_SESSION['username'];
 
