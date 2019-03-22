@@ -124,7 +124,7 @@ function createEvent($master, $expirationDate, $visibility, $name, $location,
 {
     global $conn;
     $sql_nextEventID = "SELECT Event_ID FROM `Event` ORDER BY `Event`.`Event_ID` DESC";
-    $result = $conn->querry($sql_nextEventID);
+    $result = $conn->query($sql_nextEventID);
     $eventIdArray = $result->fetch_assoc();
     $eventId = $eventIdArray["Event_ID"] + 1;//test if this works
 
