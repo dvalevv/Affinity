@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/login.css">
-    <title>Page2</title>
+    <title>Join Event</title>
 </head>
 <body>
   <section class="banner light">
@@ -72,7 +72,7 @@
 
               $matchValues = array();
               $namesMatched = array();
-              
+
               //3 per user
               $likesMatched = array();
 
@@ -154,7 +154,7 @@
           Join the event
           <input type="submit" name="joinB" value="Join Event">
         </form></div><div class="clear-both">';
-	
+
 
 ?>
 
