@@ -5,14 +5,14 @@ body {
 }
 
 #header{
-  width:100%;
+  width:88%;
   height: 10%;
   background-color: #333;
   box-shadow: 0px 4px 2px #333;
 }
 
 #header>h1{
-  width:100%;
+  width:88%;
   margin: 0 auto;
   color:green;
   padding:12px;
@@ -29,7 +29,7 @@ body {
 }
 
 #controls{
-  width: 100%;
+  width: 88%;
   margin: 0 auto;
 }
 
@@ -52,8 +52,8 @@ textarea{
 }
 
 #myForm{
-  width: 100%;
-  transform: translateX(20px);
+  width: 86%;
+  transform: translateX(1%);
 }
 
 .username{
