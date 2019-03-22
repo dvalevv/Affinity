@@ -13,15 +13,15 @@ body {
 
 #header>h1{
   width:100%;
-  margin:0px auto;
+  margin: 0 auto;
   color:green;
   padding:12px;
 }
 
 #chat_container{
-  width: 100%;
+  width: 86%;
   height: 70%;
-  margin: 0px auto;
+  margin: 0 auto;
   margin-top: 20px;
   background-color: lightblue;
   border: 1px solid #333;
@@ -30,7 +30,7 @@ body {
 
 #controls{
   width: 100%;
-  margin: 0px auto;
+  margin: 0 auto;
 }
 
 #controls>label{
@@ -48,7 +48,7 @@ textarea{
 #send_button{
   font-size: 28.2px;
   position: absolute;
-  height: 5%;
+  height: 50px;
 }
 
 #myForm{
