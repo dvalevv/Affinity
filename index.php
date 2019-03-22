@@ -43,7 +43,10 @@
     <div class="container peopleImage"></div>
 
     <!-- Live Chat Button -->
-    <div class="container chat" style="	min-width: 300px;	max-width: 300px;	max-height: 150px;	min-height: 150px;	background-image: url(&quot;img/chatbutton.png&quot;);	background-position: top left;	background-size: 50%;	background-repeat: no-repeat;	transform:  translateX(100px)  translateY(-200px) ; " ></div>
+  <a href = "Chat/indexv2.html">  <div class="container chat" style="	min-width: 300px;	max-width: 300px;	max-height: 150px;
+    min-height: 150px;	background-image: url(&quot;img/chatbutton.png&quot;);
+    background-position: top left;	background-size: 50%;	background-repeat:
+    no-repeat;	transform:  translateX(100px)  translateY(-200px) ; "> </div> </a>
 
 
   </section><!--  End banner  -->
@@ -100,7 +103,7 @@
         </li>
 
         <li class="member2 tableRow"  data-wow-delay=".2s">
-          <p><img src="img/quotes.png" alt="" class="quotes"/>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam sunt in culpa officia deserunt mollit anim laborum sint occaecat.
+          <p><img src="img/quotes.png" alt="" class="quotes"/>"Innovation is what drives us to be succesful"
             <span class="triangle"></span>
           </p>
           <div class="member">
@@ -185,8 +188,7 @@
       </div>
     </div>
     <div class="container indraImage">
-      <div class="row">
-        <div class="col-md-12"><img class="img-fluid d-block" src="../img/indra_explained.jpg" height="500px" ></div>
+      <img src="img/indraexplain.png" height="500px" ></div>
       </div>
     </div>
   </section><!--  End Indra  -->
@@ -217,11 +219,11 @@
       </nav>
     </div>
   </footer><!--  End footer  -->
-  <iframe src="Chat/indexv2.html" style = "position: sticky;
+<!--  <iframe src="Chat/indexv2.html" style = "position: sticky;
   bottom: 0px;
   right: 0px;
   width: 50%;
   height: 50%;
-  border: 3px solid #73AD21;"></iframe>
+  border: 3px solid #73AD21;"></iframe> -->
 </body>
 </html>
