@@ -456,7 +456,7 @@ header.dark nav ul li a:hover{
     transform: translateX(50px);
 }
 
-.left{  
+.left{
     position: absolute;
     transform: translateX(-450px);
 }
@@ -590,14 +590,25 @@ footer nav ul li a:hover{
   grid-gap: 10px;
   background-color: #fff;
   color: #444;
-  margin-top: 200px;
-  margin-left: 100px;
+  margin-top: 50px;
+  margin-left: 30px;
 }
 
 .box {
-  background-color: #444;
+  background-image: url('../img/event.jpg');
   color: #fff;
   border-radius: 5px;
   padding: 50px;
   font-size: 150%;
+
+}
+
+
+
+.box a:link{
+    color:#fff;
+}
+
+.box a:visited{
+    color:#fff;
 }
