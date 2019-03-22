@@ -52,11 +52,12 @@ textarea{
 }
 
 #myForm{
+  margin-left: 0.5%;
   width: 99%;
 }
 
 #messageBox{
-  height: 70%;
+  height: 70%!important;
 }
 
 .username{
