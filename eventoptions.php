@@ -42,13 +42,13 @@
 
   
   <div class="groupBox">
-       <div style="margin-top:60px; position: absolute; transform: translateX(-550px);">
+       <div style="margin-top:60px; position: absolute; transform: translateX(-560px);">
             <a href="manageevents.php"><img src="img/manageevents.png">
        </div>
-       <div style="margin-top:60px; position: absolute; transform: translateX(-140px);">
+       <div style="margin-top:60px; position: absolute; transform: translateX(-155px);">
             <a href="createevent.php"><img src="img/createevent.png">
        </div>
-       <div style="margin-top:60px; position: absolute; transform: translateX(250px);">
+       <div style="margin-top:60px; position: absolute; transform: translateX(240px);">
             <a href="events.php"><img src="img/joinevent.png">
        </div>
   </div>
