@@ -1,4 +1,4 @@
 <?php
-createEventWithID($eventId, $master, $expirationDate, $visibility, $name,
+createEvent($master, $expirationDate, $visibility, $name,
                            $location, $description);
 ?>

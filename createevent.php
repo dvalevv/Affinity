@@ -45,7 +45,7 @@
   <div id="createEvent">
     <h2>Create your own event:</h2>
     <!-- Form should validate user on this site. -->
-    <form method="post">
+    <form method="post" action = 'eventCreation.php'>
       Event name:<br>
       <input type="text" name="name"> <br>
       Event location:<br>
@@ -67,9 +67,6 @@ Event expiration date:<br>
   Maybe something here to browse events that relate to the one they
   are creating/are nearby, so they can automatically join that event.
   -->
-  <div id="browsePublicEvents">
-    <h2>Possibly some facility here to browse current public events</h2>
-  </div>
 
 </body>
 

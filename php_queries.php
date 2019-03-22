@@ -133,7 +133,6 @@ function createEvent($master, $expirationDate, $visibility, $name, $location,
                 ."VALUES('".$eventId."','".$master."','".$expirationDate."','"
                 .$visibility."','".$name."','".$location."','".$description."')";
     $conn->query($sql_search);
-    addANewParticipation($master, $eventId);
 }
 
 /*------------------------------------*/
