@@ -57,10 +57,12 @@
             if(isset($_GET["eventID"]))
               $eventID = $_GET["eventID"];
             
-            if(isset($_SESSION['username']) && isset($_POST['deleteEvent']) && password_verify($_POST['password'], $userpass) && $_POST['cPassword'] == $_POST['password'])
+            if(isset($_POST['password']) && strcmp($_POST['cPassword'], $_POST['password']) == 0 && isset($_SESSION['username']) && isset($_POST['deleteEvent']) && password_verify($_POST['password'], getUserPassword($_SESSION['username'])['Password']))
+            {
                deleteEvent($eventID);
-            
-            elseif (isset($_SESSION['username']) && isset($_POST['addUser']))
+               echo '<script language="javascript"> window.location.href = "index.php";</script>';
+            }
+            else if (isset($_SESSION['username']) && isset($_POST['addUser']))
             {
                $usersToAdd = explode(", ", test_input($_POST["userA"]));
                for($i = 0; $i < sizeof($usersToAdd); $i++)
@@ -69,7 +71,7 @@
                      addANewParticipation($usersToAdd[$i], $eventID);
                }
             }
-            elseif (isset($_SESSION['username']) && isset($_POST['removeUser']))
+            else if (isset($_SESSION['username']) && isset($_POST['removeUser']))
             {
                $usersToRemove = explode(", ", test_input($_POST["userR"]));
                for($i = 0; $i < sizeof($usersToRemove); $i++)
