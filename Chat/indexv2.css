@@ -51,6 +51,14 @@ textarea{
   height: 10%;
 }
 
+#myForm{
+  width: 99%;
+}
+
+#messageBox{
+  height: 70%;
+}
+
 .username{
   color: green;
   font-weight: bold;
