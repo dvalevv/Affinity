@@ -19,7 +19,7 @@ body {
 }
 
 #chat_container{
-  width: 100%;
+  width: 99%;
   height: 70%;
   margin: 0px auto;
   margin-top: 20px;
@@ -39,7 +39,7 @@ body {
 
 textarea{
   resize: none;
-  width: 90%;
+  width: 88%;
   background-color: lightblue;
   color: green;
   font-family: arial;
@@ -65,7 +65,7 @@ input[type=text] {
   border: 2px solid black;
   border-radius: 6px;
   width: 90%;
-  height:10%;
+  height:20%;
   word-break: break-word;
   color: green;
   font-family: arial;
