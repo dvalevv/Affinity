@@ -271,7 +271,7 @@ function deleteObjectFromLikes($username, $object) // Fixed typo
 
 /*------------------------------------*/
 //this deletes all instances from likes for a user
-function deleteObjectFromLikes($username) // Fixed typo
+function deleteAllObjectsFromLikes($username) // Fixed typo
 {
     global $conn;
     $sql_search = "DELETE FROM `Likes` WHERE Username ='"

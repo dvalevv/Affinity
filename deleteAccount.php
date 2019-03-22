@@ -10,7 +10,7 @@ if($_POST['cDeleteAcc'] == 'confirm')
    for($i = 0; $i < count($events); $i++)
       deleteEvent($events[$i]);
 
-   deleteObjectFromLikes($username);
+   deleteAllObjectsFromLikes($username);
    
    deleteUser($username);
 }
