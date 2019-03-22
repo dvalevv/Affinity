@@ -40,7 +40,8 @@
     <br>
   </section>
 
-  <div style="display:flex">
+  
+  <div style="display:flex" class="groupBox">
        <div style="flex:0;padding-right:5px; margin-left:140px; margin-top:60px;">
             <a href="manageevents.php"><img src="img/manageevents.png">
        </div>
