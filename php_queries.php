@@ -217,7 +217,15 @@ function getListOfEventsForUser($username)
     $listOfEvent_IDs = $conn->query($sql_search);
     return $listOfEvent_IDs;
 }
-
+//is the user participating in that event
+function isUserParticipating($username, $eventID)
+{
+    global $conn;
+    $sql_search = "SELECT * FROM `Participating` WHERE Username = '"
+                .$username."' AND Event_ID = '".$eventID."'";
+    $result = $conn->query($sql_search);
+    return $result->num_rows != 0;
+}
 /*------------------------------------*/
 //this returns an array of Usernames for each user that is participating
 function getListOfUsersForEvent($eventId)
