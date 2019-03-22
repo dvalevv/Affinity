@@ -52,8 +52,8 @@ textarea{
 }
 
 #myForm{
-  margin-left: 2%;
-  width: 96%;
+  width: 100%;
+  transform: translateX(10px);
 }
 
 .username{
@@ -77,7 +77,7 @@ input[type=text] {
 }
 
 input[type=submit] {
-  height:10%;
+  height: 50px;
   font-size: 30px;
   position: absolute;
 }
