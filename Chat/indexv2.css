@@ -52,8 +52,8 @@ textarea{
 }
 
 #myForm{
-  margin-left: 0.5%;
-  width: 99%;
+  margin-left: 2%;
+  width: 96%;
 }
 
 .username{
@@ -70,7 +70,7 @@ input[type=text] {
   border: 2px solid black;
   border-radius: 6px;
   width: 90%;
-  height:60%;
+  height:60%!important;
   word-break: break-word;
   color: green;
   font-family: arial;
