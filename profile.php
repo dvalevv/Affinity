@@ -119,11 +119,7 @@
           <input type="submit" name="saveChanges" value="Save Changes">
         </form>
         <h3>Delete account:</h3>
-        <form name="account" method="post" action="">
-          Yes:
-          <input type="radio" name="deleteAcc" value="yes">
-          No:
-          <input type="radio" name="deleteAcc" value="no" checked>
+        <form name="account" method="post" action="deleteAccount.php">
           Confirm:
           <input type="checkbox" name="cDeleteAcc" value="confirm">
           <input type="submit" name="deleteAccount" value="Delete Account">

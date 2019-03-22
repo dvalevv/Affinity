@@ -69,6 +69,14 @@ function checkForExistingUsername($username)
     //this if can be changed
     return $result->num_rows != 0;
 }
+//deleting a new user.
+function deleteUser($username)
+{
+    global $conn;
+    $sql_search = "DELETE FROM `User` WHERE USERNAME = '".$username."'";
+    $conn->query($sql_search);
+}
+
 
 /*------------------------------------*/
 //updating an existing user's private details (email and password only)
@@ -258,6 +266,16 @@ function deleteObjectFromLikes($username, $object) // Fixed typo
     global $conn;
     $sql_search = "DELETE FROM `Likes` WHERE Username ='"
                 .$username."' AND Object = '".$object."'";
+    $conn->query($sql_search);
+}
+
+/*------------------------------------*/
+//this deletes all instances from likes for a user
+function deleteObjectFromLikes($username) // Fixed typo
+{
+    global $conn;
+    $sql_search = "DELETE FROM `Likes` WHERE Username ='"
+                .$username."'";
     $conn->query($sql_search);
 }
 
