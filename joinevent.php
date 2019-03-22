@@ -150,12 +150,11 @@
             </div>
             <div class=\"clear-both\"></div>";
 */
-            echo '<div class="col-7"> <p>' . $eventName . '</p><p>' . $eventLocation . '. ' . $eventExpirationDate . '</p> <form action="" method="POST"><input type="submit" name="Search" value="Find a Match"></form></div><div class="clear-both">';
-	
-echo '<form name="join" method="post" action="eventJoin.php>
+            echo '<div class="col-7"> <p>' . $eventName . '</p><p>' . $eventLocation . '. ' . $eventExpirationDate . '</p> <form action="" method="POST"><input type="submit" name="Search" value="Find a Match"></form><form name="join" method="post" action="eventJoin.php">
           Join the event
           <input type="submit" name="joinB" value="Join Event">
-        </form>';
+        </form></div><div class="clear-both">';
+	
 
 ?>
 
