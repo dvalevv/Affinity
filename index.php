@@ -74,8 +74,8 @@
       <li class="event4 tableRow">
         <img class="icon" src="img/event3.png" alt=""/>
         <span class="separator"></span>
-        <h2>Socials Near You</h2>
-        <p>Find and connect with people at socials near you, based on interests, hobbies etc...</p>
+        <h2>Clubs Near You</h2>
+        <p>Find and connect with people at clubs near you, based on interests, hobbies etc...</p>
       </li>
 
     </ul>
