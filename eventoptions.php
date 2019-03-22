@@ -41,14 +41,14 @@
   </section>
 
   
-  <div style="display:flex" class="groupBox">
-       <div style="flex:0; margin-top:60px;">
+  <div class="groupBox">
+       <div style="margin-top:60px;">
             <a href="manageevents.php"><img src="img/manageevents.png">
        </div>
-       <div style="flex:1; margin-top:60px;">
+       <div style="margin-top:60px;">
             <a href="createevent.php"><img src="img/createevent.png">
        </div>
-       <div style="flex:2; margin-top:60px;">
+       <div style="margin-top:60px;">
             <a href="events.php"><img src="img/joinevent.png">
        </div>
   </div>
